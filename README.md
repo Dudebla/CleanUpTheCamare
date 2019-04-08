@@ -2,4 +2,4 @@
 # README.txt
 净摄App开发Rep
 
-o
+This is the test.
