@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+login_logoImage_imageView
+
+login_username_textView
+login_password_textView
+login_rememberPW_checkBox|login_rememberPW_textView|login_signIn_textView|login_forgetPW_textView
+login_login_button
+
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayBackground"
+    >
+
+    <ImageView
+        android:id="@+id/login_logoImage_imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/user_image"
+        android:layout_above="@id/login_relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"/>
+
+    <RelativeLayout
+        android:id="@+id/login_relativeLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+        <EditText
+            android:id="@+id/login_username_editText"
+            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_corner_border_edittext_layout"
+            android:typeface="normal"
+            android:maxLines="1"
+            android:textSize="25dp"
+            android:hint="输入用户名"
+            />
+
+        <EditText
+            android:id="@+id/login_password_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入密码"
+            android:inputType="textPassword"
+            android:layout_below="@id/login_username_editText"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_corner_border_edittext_layout"
+            android:typeface="normal"
+            android:maxLines="1"
+            android:textSize="25dp"
+            />
+
+        <CheckBox
+            android:id="@+id/login_rememberPW_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_below="@id/login_password_editText"
+            android:theme="@style/MyCheckBox"
+            android:text="记住密码"
+            />
+
+        <TextView
+            android:id="@+id/login_signIn_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/login_password_editText"
+            android:layout_toLeftOf="@id/login_forgetPW_textView"
+            android:layout_marginRight="10dp"
+            android:typeface="normal"
+            android:textColor="@drawable/textview_selector"
+            android:enabled="true"
+            android:text="注册"
+            />
+
+        <TextView
+            android:id="@+id/login_forgetPW_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/login_password_editText"
+            android:layout_alignParentRight="true"
+            android:enabled="true"
+            android:typeface="normal"
+            android:textColor="@drawable/textview_selector"
+            android:text="忘记密码"
+            />
+
+        <Button
+            android:id="@+id/login_login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_rememberPW_checkBox"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_selector"
+            android:enabled="true"
+            android:textSize="25dp"
+            android:text="登录"
+            />
+
+
+    </RelativeLayout>
+</RelativeLayout>

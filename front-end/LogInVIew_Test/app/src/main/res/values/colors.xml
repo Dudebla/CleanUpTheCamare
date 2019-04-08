@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <!--color for login background and signIn background-->
+    <color name="grayBackground">#B7FFFFFF</color>
+
+    <!-- color for border-->
+    <color name="colorBorder">#83000000</color>
+
+    <!--color for checkBox -->
+    <color name="colorCheckBoxNormal">#80464545</color>
+    <color name="colorCheckBoxActivity">#AEFA0505</color>
+
+    <!--color for button-->
+    <color name="colorButtonNormal">#0090ff</color>
+    <color name="colorButtonShadow">#1B78CA</color>
+
+    <!--color for textView on press-->
+    <color name="colorTextViewOnPress">#FF5722</color>
+
+</resources>

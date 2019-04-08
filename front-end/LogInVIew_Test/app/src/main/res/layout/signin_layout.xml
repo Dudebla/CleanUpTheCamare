@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+signin_***_textView: description for input
+signin_***_editText:
+tip_***_textView: detail require for input, visible while signin_***_textView on focus
+
+
+***:    username
+        tellNumber
+        password
+        passwordReview
+-->
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayBackground"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/signin_relativeLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <ImageView
+            android:id="@+id/login_logoImage_imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/user_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="30dp"/>
+
+        <!--choose user type-->
+        <RadioGroup
+            android:id="@+id/signin_usertype_radioGroup"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/login_logoImage_imageView">
+            <RadioButton
+                android:id="@+id/signin_customer_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="90dp"
+                android:checked="true"
+                android:text="消费者"
+                />
+            <RadioButton
+                android:id="@+id/signin_seller_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商家"/>
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/signin_username_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signin_usertype_radioGroup"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:text="请输入用户名:"/>
+
+        <EditText
+            android:id="@+id/signin_username_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/signin_username_textView"
+            android:background="@drawable/round_corner_border_edittext_layout"
+            android:typeface="normal"
+            android:maxLines="1"
+            android:textSize="20dp"
+            android:hint="输入用户名"
+            />
+
+        <TextView
+            android:id="@+id/tip_username_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/signin_username_editText"
+            android:visibility="invisible"
+            android:textSize="10dp"
+            android:textColor="@color/colorBorder"
+            android:text="输入2~16个字符（汉字、数字、字母、_）"/>
+
+
+
+        <TextView
+            android:id="@+id/signin_tellNumber_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tip_username_textView"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:text="请输入联系号码:"/>
+
+        <EditText
+            android:id="@+id/signin_tellNumber_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signin_tellNumber_textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_corner_border_edittext_layout"
+            android:typeface="normal"
+            android:maxLines="1"
+            android:textSize="20dp"
+            android:hint="输入联系号码"/>
+
+        <TextView
+            android:id="@+id/tip_teleNumber_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/signin_tellNumber_editText"
+            android:visibility="invisible"
+            android:textSize="10dp"
+            android:textColor="@color/colorBorder"
+            />
+
+
+
+        <TextView
+            android:id="@+id/signin_password_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signin_tellNumber_editText"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:text="请输入密码:"/>
+
+        <EditText
+            android:id="@+id/signin_password_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入密码"
+            android:inputType="textPassword"
+            android:layout_below="@id/signin_password_textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_corner_border_edittext_layout"
+            android:typeface="normal"
+            android:maxLines="1"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tip_Password_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/signin_password_editText"
+            android:visibility="invisible"
+            android:textSize="10dp"
+            android:textColor="@color/colorBorder"
+            android:text="输入8~16个字符（数字、字母、特殊符号_@#）"/>
+
+
+        <TextView
+            android:id="@+id/signin_passwordReview_tip_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signin_password_editText"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:text="请确定密码:" />
+
+        <EditText
+            android:id="@+id/signin_passwordReview_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入密码"
+            android:inputType="textPassword"
+            android:layout_below="@id/signin_passwordReview_tip_textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_corner_border_edittext_layout"
+            android:typeface="normal"
+            android:maxLines="1"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/tip_PasswordReview_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/signin_passwordReview_editText"
+            android:visibility="invisible"
+            android:textSize="10dp"
+            android:textColor="@color/colorBorder"
+            android:text="确认密码"/>
+
+
+        <Button
+            android:id="@+id/signin_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signin_passwordReview_editText"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_selector"
+            android:enabled="true"
+            android:textSize="20dp"
+            android:text="注册"
+            />
+
+        <TextView
+            android:id="@+id/signin_hadId_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signin_button"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@drawable/textview_selector"
+            android:text="已有账号，直接登录"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>
