@@ -5,5 +5,150 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/45968ef/
+APP_BASE_NAME	front-end/LogInVIew_Test/gradlew.bat	/^set APP_BASE_NAME=%~n0$/;"	v
+APP_HOME	front-end/LogInVIew_Test/gradlew.bat	/^set APP_HOME=%DIRNAME%$/;"	v
+Address	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    private String Address;$/;"	f	class:Merchant	file:
+CLASSPATH	front-end/LogInVIew_Test/gradlew.bat	/^set CLASSPATH=%APP_HOME%\\gradle\\wrapper\\gradle-wrapper.jar$/;"	v
+CMD_LINE_ARGS	front-end/LogInVIew_Test/gradlew.bat	/^set CMD_LINE_ARGS=$/;"	v
+CMD_LINE_ARGS	front-end/LogInVIew_Test/gradlew.bat	/^set CMD_LINE_ARGS=%*$/;"	v
 Clean_Up_The_Camera_APP	README.md	/^# Clean_Up_The_Camera_APP$/;"	c
-README.txt	README.md	/^# README.txt$/;"	c
+Controller	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/web/Controller.java	/^public class Controller {$/;"	c
+DEFAULT_JVM_OPTS	front-end/LogInVIew_Test/gradlew.bat	/^set DEFAULT_JVM_OPTS=$/;"	v
+DIRNAME	front-end/LogInVIew_Test/gradlew.bat	/^if "%DIRNAME%" == "" set DIRNAME=.$/;"	v
+DIRNAME	front-end/LogInVIew_Test/gradlew.bat	/^set DIRNAME=%~dp0$/;"	v
+EMPTY_MSG	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private static final int EMPTY_MSG = 0;$/;"	f	class:LogIn_Activity	file:
+Email	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    private String Email;$/;"	f	class:Merchant	file:
+Email	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    private String Email;$/;"	f	class:User	file:
+ExampleInstrumentedTest	front-end/LogInVIew_Test/app/src/androidTest/java/com/example/loginview_test/ExampleInstrumentedTest.java	/^public class ExampleInstrumentedTest {$/;"	c
+ExampleUnitTest	front-end/LogInVIew_Test/app/src/test/java/com/example/loginview_test/ExampleUnitTest.java	/^public class ExampleUnitTest {$/;"	c
+Id	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    private String Id;$/;"	f	class:Merchant	file:
+Id	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    private String Id;$/;"	f	class:User	file:
+Introduction	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    private String Introduction;$/;"	f	class:Merchant	file:
+JAVA_EXE	front-end/LogInVIew_Test/gradlew.bat	/^set JAVA_EXE=%JAVA_HOME%\/bin\/java.exe$/;"	v
+JAVA_EXE	front-end/LogInVIew_Test/gradlew.bat	/^set JAVA_EXE=java.exe$/;"	v
+JAVA_HOME	front-end/LogInVIew_Test/gradlew.bat	/^set JAVA_HOME=%JAVA_HOME:"=%$/;"	v
+LogIn_Activity	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^public class LogIn_Activity extends AppCompatActivity {$/;"	c
+MSG_LEGAL	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private static final int MSG_LEGAL = 5;$/;"	f	class:LogIn_Activity	file:
+Merchant	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^public class Merchant {$/;"	c
+PASSWORD_INCLUDE_ILLEGAL_CHAR	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private static final int PASSWORD_INCLUDE_ILLEGAL_CHAR = 4;$/;"	f	class:LogIn_Activity	file:
+PASSWORD_OUT_OF_RANGE	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private static final int PASSWORD_OUT_OF_RANGE = 2;$/;"	f	class:LogIn_Activity	file:
+Phone	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    private String Phone;$/;"	f	class:Merchant	file:
+Phone	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    private String Phone;$/;"	f	class:User	file:
+SignIn_Activity	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^public class SignIn_Activity extends AppCompatActivity {$/;"	c
+Status	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    private String Status;$/;"	f	class:Merchant	file:
+USERNAME_INCLUDE_ILLEGAL_CHAR	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private static final int USERNAME_INCLUDE_ILLEGAL_CHAR = 3;$/;"	f	class:LogIn_Activity	file:
+USERNAME_NOT_FOUND	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private static final int USERNAME_NOT_FOUND = 6;$/;"	f	class:LogIn_Activity	file:
+USERNAME_OUT_OF_RANGE	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private static final int USERNAME_OUT_OF_RANGE = 1;$/;"	f	class:LogIn_Activity	file:
+User	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^public class User {$/;"	c
+_SKIP	front-end/LogInVIew_Test/gradlew.bat	/^set _SKIP=2$/;"	v
+addition_isCorrect	front-end/LogInVIew_Test/app/src/test/java/com/example/loginview_test/ExampleUnitTest.java	/^    public void addition_isCorrect() {$/;"	m	class:ExampleUnitTest
+checkMsgChar	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private int checkMsgChar(String username, String password){$/;"	m	class:LogIn_Activity	file:
+com.example.loginview_test	front-end/LogInVIew_Test/app/src/androidTest/java/com/example/loginview_test/ExampleInstrumentedTest.java	/^package com.example.loginview_test;$/;"	p
+com.example.loginview_test	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^package com.example.loginview_test;$/;"	p
+com.example.loginview_test	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^package com.example.loginview_test;$/;"	p
+com.example.loginview_test	front-end/LogInVIew_Test/app/src/test/java/com/example/loginview_test/ExampleUnitTest.java	/^package com.example.loginview_test;$/;"	p
+customerUserType	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private RadioButton customerUserType;$/;"	f	class:SignIn_Activity	file:
+dao	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/dao/userDao.java	/^package dao;$/;"	p
+die	front-end/LogInVIew_Test/gradlew	/^die () {$/;"	f
+distributionBase	front-end/LogInVIew_Test/gradle/wrapper/gradle-wrapper.properties	/^distributionBase=GRADLE_USER_HOME$/;"	k
+distributionPath	front-end/LogInVIew_Test/gradle/wrapper/gradle-wrapper.properties	/^distributionPath=wrapper\/dists$/;"	k
+distributionUrl	front-end/LogInVIew_Test/gradle/wrapper/gradle-wrapper.properties	/^distributionUrl=https\\:\/\/services.gradle.org\/distributions\/gradle-4.10.1-all.zip$/;"	k
+domain	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^package domain;$/;"	p
+domain	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^package domain;$/;"	p
+end	front-end/LogInVIew_Test/gradlew.bat	/^:end$/;"	l
+execute	front-end/LogInVIew_Test/gradlew.bat	/^:execute$/;"	l
+fail	front-end/LogInVIew_Test/gradlew.bat	/^:fail$/;"	l
+findJavaFromJavaHome	front-end/LogInVIew_Test/gradlew.bat	/^:findJavaFromJavaHome$/;"	l
+forgetPW_textView	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private TextView signin_textView, forgetPW_textView;$/;"	f	class:LogIn_Activity	file:
+getAddress	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public String getAddress() {$/;"	m	class:Merchant
+getEmail	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public String getEmail() {$/;"	m	class:Merchant
+getEmail	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    public String getEmail() {$/;"	m	class:User
+getId	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public String getId() {$/;"	m	class:Merchant
+getId	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    public String getId() {$/;"	m	class:User
+getIntroduction	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public String getIntroduction() {$/;"	m	class:Merchant
+getLogInMsg	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private int getLogInMsg(){$/;"	m	class:LogIn_Activity	file:
+getPassWord	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public String getPassWord() {$/;"	m	class:Merchant
+getPassWord	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    public String getPassWord() {$/;"	m	class:User
+getPath	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public String getPath() {$/;"	m	class:Merchant
+getPhone	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public String getPhone() {$/;"	m	class:Merchant
+getPhone	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    public String getPhone() {$/;"	m	class:User
+getScore	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public double getScore() {$/;"	m	class:Merchant
+getStatus	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public String getStatus() {$/;"	m	class:Merchant
+getUserName	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public String getUserName() {$/;"	m	class:Merchant
+getUserName	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    public String getUserName() {$/;"	m	class:User
+hasId_textView	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private TextView hasId_textView;$/;"	f	class:SignIn_Activity	file:
+init	front-end/LogInVIew_Test/gradlew.bat	/^:init$/;"	l
+log4j.appender.A1	Back-End/BackEndOfCleanUpTheCameraApp/src/main/resources/log4j.properties	/^log4j.appender.A1=org.apache.log4j.ConsoleAppender$/;"	k
+log4j.appender.A1	Back-End/BackEndOfCleanUpTheCameraApp/src/main/webapp/log4j.properties	/^log4j.appender.A1=org.apache.log4j.ConsoleAppender$/;"	k
+log4j.appender.A1	Back-End/BackEndOfCleanUpTheCameraApp/target/classes/log4j.properties	/^log4j.appender.A1=org.apache.log4j.ConsoleAppender$/;"	k
+log4j.appender.A1	Back-End/BackEndOfCleanUpTheCameraApp/target/test-1.0/WEB-INF/classes/log4j.properties	/^log4j.appender.A1=org.apache.log4j.ConsoleAppender$/;"	k
+log4j.appender.A1	Back-End/BackEndOfCleanUpTheCameraApp/target/test-1.0/log4j.properties	/^log4j.appender.A1=org.apache.log4j.ConsoleAppender$/;"	k
+log4j.appender.A1.layout	Back-End/BackEndOfCleanUpTheCameraApp/src/main/resources/log4j.properties	/^log4j.appender.A1.layout=org.apache.log4j.PatternLayout$/;"	k
+log4j.appender.A1.layout	Back-End/BackEndOfCleanUpTheCameraApp/src/main/webapp/log4j.properties	/^log4j.appender.A1.layout=org.apache.log4j.PatternLayout$/;"	k
+log4j.appender.A1.layout	Back-End/BackEndOfCleanUpTheCameraApp/target/classes/log4j.properties	/^log4j.appender.A1.layout=org.apache.log4j.PatternLayout$/;"	k
+log4j.appender.A1.layout	Back-End/BackEndOfCleanUpTheCameraApp/target/test-1.0/WEB-INF/classes/log4j.properties	/^log4j.appender.A1.layout=org.apache.log4j.PatternLayout$/;"	k
+log4j.appender.A1.layout	Back-End/BackEndOfCleanUpTheCameraApp/target/test-1.0/log4j.properties	/^log4j.appender.A1.layout=org.apache.log4j.PatternLayout$/;"	k
+log4j.appender.A1.layout.ConversionPattern	Back-End/BackEndOfCleanUpTheCameraApp/src/main/resources/log4j.properties	/^log4j.appender.A1.layout.ConversionPattern=%d %5p [%t] (%F:%L) - %m%n$/;"	k
+log4j.appender.A1.layout.ConversionPattern	Back-End/BackEndOfCleanUpTheCameraApp/src/main/webapp/log4j.properties	/^log4j.appender.A1.layout.ConversionPattern=%d %5p [%t] (%F:%L) - %m%n$/;"	k
+log4j.appender.A1.layout.ConversionPattern	Back-End/BackEndOfCleanUpTheCameraApp/target/classes/log4j.properties	/^log4j.appender.A1.layout.ConversionPattern=%d %5p [%t] (%F:%L) - %m%n$/;"	k
+log4j.appender.A1.layout.ConversionPattern	Back-End/BackEndOfCleanUpTheCameraApp/target/test-1.0/WEB-INF/classes/log4j.properties	/^log4j.appender.A1.layout.ConversionPattern=%d %5p [%t] (%F:%L) - %m%n$/;"	k
+log4j.appender.A1.layout.ConversionPattern	Back-End/BackEndOfCleanUpTheCameraApp/target/test-1.0/log4j.properties	/^log4j.appender.A1.layout.ConversionPattern=%d %5p [%t] (%F:%L) - %m%n$/;"	k
+log4j.logger.org.springframework	Back-End/BackEndOfCleanUpTheCameraApp/src/main/resources/log4j.properties	/^log4j.logger.org.springframework=debug$/;"	k
+log4j.logger.org.springframework	Back-End/BackEndOfCleanUpTheCameraApp/target/classes/log4j.properties	/^log4j.logger.org.springframework=debug$/;"	k
+log4j.logger.org.springframework	Back-End/BackEndOfCleanUpTheCameraApp/target/test-1.0/WEB-INF/classes/log4j.properties	/^log4j.logger.org.springframework=debug$/;"	k
+log4j.rootLogger	Back-End/BackEndOfCleanUpTheCameraApp/src/main/resources/log4j.properties	/^log4j.rootLogger=DEBUG,A1$/;"	k
+log4j.rootLogger	Back-End/BackEndOfCleanUpTheCameraApp/src/main/webapp/log4j.properties	/^log4j.rootLogger=INFO,A1$/;"	k
+log4j.rootLogger	Back-End/BackEndOfCleanUpTheCameraApp/target/classes/log4j.properties	/^log4j.rootLogger=DEBUG,A1$/;"	k
+log4j.rootLogger	Back-End/BackEndOfCleanUpTheCameraApp/target/test-1.0/WEB-INF/classes/log4j.properties	/^log4j.rootLogger=DEBUG,A1$/;"	k
+log4j.rootLogger	Back-End/BackEndOfCleanUpTheCameraApp/target/test-1.0/log4j.properties	/^log4j.rootLogger=INFO,A1$/;"	k
+login_button	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private Button login_button;$/;"	f	class:LogIn_Activity	file:
+mainEnd	front-end/LogInVIew_Test/gradlew.bat	/^:mainEnd$/;"	l
+msgIsLegal	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private Boolean msgIsLegal;$/;"	f	class:SignIn_Activity	file:
+omega	front-end/LogInVIew_Test/gradlew.bat	/^:omega$/;"	l
+onCreate	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    protected void onCreate(Bundle savedInstanceState) {$/;"	m	class:LogIn_Activity
+onCreate	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    protected void onCreate(Bundle savedInstanceState) {$/;"	m	class:SignIn_Activity
+org.gradle.jvmargs	front-end/LogInVIew_Test/gradle.properties	/^org.gradle.jvmargs=-Xmx1536m$/;"	k
+passWord	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    private String passWord;$/;"	f	class:Merchant	file:
+passWord	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    private String passWord;$/;"	f	class:User	file:
+passwordRV_editText	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private EditText passwordRV_editText;$/;"	f	class:SignIn_Activity	file:
+password_editText	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private EditText username_editText, password_editText;$/;"	f	class:LogIn_Activity	file:
+password_editText	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private EditText password_editText;$/;"	f	class:SignIn_Activity	file:
+path	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    private String path;            \/\/图片存储路径$/;"	f	class:Merchant	file:
+save	front-end/LogInVIew_Test/gradlew	/^save () {$/;"	f
+score	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    private double score;$/;"	f	class:Merchant	file:
+sellerUserType	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private RadioButton sellerUserType;$/;"	f	class:SignIn_Activity	file:
+setAddress	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public void setAddress(String address) {$/;"	m	class:Merchant
+setEmail	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public void setEmail(String email) {$/;"	m	class:Merchant
+setEmail	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    public void setEmail(String email) {$/;"	m	class:User
+setId	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public void setId(String id) {$/;"	m	class:Merchant
+setId	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    public void setId(String id) {$/;"	m	class:User
+setIntroduction	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public void setIntroduction(String introduction) {$/;"	m	class:Merchant
+setListenerOfWidget	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private void setListenerOfWidget(){$/;"	m	class:SignIn_Activity	file:
+setOnClickListenerOfWidget	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private void setOnClickListenerOfWidget(){$/;"	m	class:LogIn_Activity	file:
+setPassWord	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public void setPassWord(String passWord) {$/;"	m	class:Merchant
+setPassWord	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    public void setPassWord(String passWord) {$/;"	m	class:User
+setPath	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public void setPath(String path) {$/;"	m	class:Merchant
+setPhone	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public void setPhone(String phone) {$/;"	m	class:Merchant
+setPhone	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    public void setPhone(String phone) {$/;"	m	class:User
+setScore	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public void setScore(double score) {$/;"	m	class:Merchant
+setStatus	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public void setStatus(String status) {$/;"	m	class:Merchant
+setUserName	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    public void setUserName(String userName) {$/;"	m	class:Merchant
+setUserName	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    public void setUserName(String userName) {$/;"	m	class:User
+signIn_button	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private Button signIn_button;$/;"	f	class:SignIn_Activity	file:
+signin_textView	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private TextView signin_textView, forgetPW_textView;$/;"	f	class:LogIn_Activity	file:
+tellNumber_editText	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private EditText tellNumber_editText;$/;"	f	class:SignIn_Activity	file:
+tip_password	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private TextView tip_password;$/;"	f	class:SignIn_Activity	file:
+tip_passwordRV	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private TextView tip_passwordRV;$/;"	f	class:SignIn_Activity	file:
+tip_username	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private TextView tip_username;$/;"	f	class:SignIn_Activity	file:
+useAppContext	front-end/LogInVIew_Test/app/src/androidTest/java/com/example/loginview_test/ExampleInstrumentedTest.java	/^    public void useAppContext() {$/;"	m	class:ExampleInstrumentedTest
+userDao	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/dao/userDao.java	/^public class userDao {$/;"	c
+userName	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/Merchant.java	/^    private String userName;$/;"	f	class:Merchant	file:
+userName	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/domain/User.java	/^    private String userName;$/;"	f	class:User	file:
+username_editText	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/LogIn_Activity.java	/^    private EditText username_editText, password_editText;$/;"	f	class:LogIn_Activity	file:
+username_editText	front-end/LogInVIew_Test/app/src/main/java/com/example/loginview_test/SignIn_Activity.java	/^    private EditText username_editText;$/;"	f	class:SignIn_Activity	file:
+warn	front-end/LogInVIew_Test/gradlew	/^warn () {$/;"	f
+web	Back-End/BackEndOfCleanUpTheCameraApp/src/main/java/web/Controller.java	/^package web;$/;"	p
+win9xME_args	front-end/LogInVIew_Test/gradlew.bat	/^:win9xME_args$/;"	l
+win9xME_args_slurp	front-end/LogInVIew_Test/gradlew.bat	/^:win9xME_args_slurp$/;"	l
+zipStoreBase	front-end/LogInVIew_Test/gradle/wrapper/gradle-wrapper.properties	/^zipStoreBase=GRADLE_USER_HOME$/;"	k
+zipStorePath	front-end/LogInVIew_Test/gradle/wrapper/gradle-wrapper.properties	/^zipStorePath=wrapper\/dists$/;"	k
