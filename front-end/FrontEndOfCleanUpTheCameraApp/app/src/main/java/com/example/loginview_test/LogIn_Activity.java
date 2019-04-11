@@ -73,6 +73,9 @@ public class LogIn_Activity extends AppCompatActivity {
                         tipMsg = "密码长度为8～16，只包含数字、字母、特殊符号_@#";
                         break;
                     default:
+                        Intent intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
+                        startActivity(intent);
+                        return;
                 }
                 if(!"".equals(statement)) {
                     Toast.makeText(v.getContext(), tipMsg, Toast.LENGTH_SHORT).show();
