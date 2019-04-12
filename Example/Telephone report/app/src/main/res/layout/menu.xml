@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/shopsignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@layout/menu_button_item"
+        android:textColor="#fff"
+        android:text="商户注册"/>
+
+    <Button
+        android:id="@+id/businesssignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@layout/menu_button_item"
+        android:textColor="#fff"
+        android:text="营业厅注册"/>
+
+    <Button
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@layout/menu_button_item"
+        android:textColor="#fff"
+        android:text="关于"/>
+
+</LinearLayout>

@@ -16,14 +16,6 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="www.baidu.com" method="post">
-        username:
-        <input type="text" name="username">
-        <br>
-        password:
-        <input type="text" name="password">
-        <br>
-        <input type="submit" value="login">
-    </form>
+    hello
 </body>
 </html>

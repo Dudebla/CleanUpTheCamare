@@ -6,6 +6,7 @@ public class User {
     private String Id;
     private String Phone;
     private String Email;
+    private int flag;
 
     public String getUserName() {
         return userName;
@@ -27,6 +28,10 @@ public class User {
         return Email;
     }
 
+    public int getFlag(){
+        return flag;
+    }
+
     public void setUserName(String userName) {
         this.userName = userName;
     }
@@ -45,5 +50,9 @@ public class User {
 
     public void setEmail(String email) {
         Email = email;
+    }
+
+    public void setFlag(int flag){
+        this.flag = flag;
     }
 }

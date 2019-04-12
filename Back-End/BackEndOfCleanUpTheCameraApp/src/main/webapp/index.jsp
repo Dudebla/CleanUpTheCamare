@@ -16,14 +16,6 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="<c:url value="loginCheck.html"/>" method="post">
-        username:
-        <input type="text" name="username">
-        <br>
-        password:
-        <input type="text" name="password">
-        <br>
-        <input type="submit" value="login">
-    </form>
+    hello
 </body>
 </html>
