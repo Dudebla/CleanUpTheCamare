@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/seller_item_height"
+    android:background="@drawable/round_corner_border_edittext_layout"
+    android:layout_margin="@dimen/seller_item_margin"
+    >
+    <!--seller_item_sellerName_textView: textView for sellerName showing-->
+    <TextView
+        android:id="@+id/seller_item_sellerName_textView"
+        android:layout_width="@dimen/seller_item_title_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/seller_item_left_widget_marginLeft"
+        android:layout_marginTop="@dimen/seller_item_top_widget_marginTop"
+        android:textSize="@dimen/seller_item_title_size"
+        android:maxLines="1"
+        android:textColor="@color/colorBlack"
+        android:text="SellerName"/>
+
+    <!--seller_item_sellerAddress_textView: textView for seller address showing-->
+    <TextView
+        android:id="@+id/seller_item_sellerAddress_textView"
+        android:layout_width="@dimen/seller_item_subTitle_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_item_sellerName_textView"
+        android:layout_marginLeft="@dimen/seller_item_left_widget_marginLeft"
+        android:layout_marginBottom="@dimen/seller_item_bottom_widget_marginBottom"
+        android:textSize="@dimen/seller_item_subTitle_size"
+        android:textColor="@color/colorPrimaryDark"
+        android:maxLines="1"
+        android:text="SellerAddress"
+        />
+
+    <!--seller_item_sellerScore_textView-->
+    <TextView
+        android:id="@+id/seller_item_sellerScore_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/seller_item_sellerName_textView"
+        android:layout_marginLeft="@dimen/seller_item_left_widget_marginLeft"
+        android:layout_marginTop="@dimen/seller_item_top_widget_marginTop"
+        android:textSize="@dimen/seller_item_sellerScore_size"
+        android:textStyle="italic"
+        android:maxLines="1"
+        android:textColor="@color/colorCheckBoxActivity"
+        android:text="5.0"
+        />
+
+    <TextView
+        android:id="@+id/seller_item_distance_textView"
+        android:layout_width="@dimen/seller_item_distance_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/seller_item_bottom_widget_marginBottom"
+        android:layout_toRightOf="@+id/seller_item_sellerAddress_textView"
+        android:textSize="@dimen/seller_item_subTitle_size"
+        android:text="距离1.4km"/>
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/seller_item_top_widget_marginTop"
+        android:layout_marginRight="@dimen/seller_item_right_widget_marginRight"
+        android:layout_marginEnd="@dimen/seller_item_right_widget_marginRight"
+        android:gravity="right"
+        android:textSize="@dimen/seller_item_button_size"
+        android:text="$10.00"/>
+
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/seller_item_button_size"
+        android:background="@drawable/button_selector"
+        android:layout_marginBottom="@dimen/seller_item_bottom_widget_marginBottom"
+        android:textColor="@color/colorWhite"
+        android:text="下单"/>
+
+</RelativeLayout>
