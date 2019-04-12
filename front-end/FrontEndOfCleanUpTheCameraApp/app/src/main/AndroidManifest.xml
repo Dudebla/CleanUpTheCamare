@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.front_end_of_clean_up_the_camera_app">
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Seller_List_Activity"/>
+        <activity android:name=".ContentUserHomeActivity" />
         <activity
             android:name=".UserHomeActivity"
-            android:theme="@style/AppTheme.Base"></activity>
+            android:theme="@style/AppTheme.Base" />
         <activity android:name=".SignIn_Activity" />
         <activity android:name=".LogIn_Activity">
             <intent-filter>

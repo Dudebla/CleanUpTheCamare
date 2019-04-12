@@ -5,4 +5,31 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+
+    <!--margin of seller_item-->
+    <dimen name="seller_item_height">100dp</dimen>
+    <dimen name="seller_item_margin">10dp</dimen>
+
+    <!--textSize of widget at seller_item-->
+    <dimen name="seller_item_title_size">35dp</dimen>
+    <dimen name="seller_item_sellerScore_size">30dp</dimen>
+    <dimen name="seller_item_subTitle_size">15dp</dimen>
+
+    <!--textView width at seller_item-->
+    <dimen name="seller_item_title_width">200dp</dimen>
+    <dimen name="seller_item_subTitle_width">180dp</dimen>
+    <dimen name="seller_item_distance_width">80dp</dimen>
+
+    <!--margin of widget at the left/top/bottom/right of seller_item-->
+    <dimen name="seller_item_left_widget_marginLeft">10dp</dimen>
+    <dimen name="seller_item_top_widget_marginTop">10dp</dimen>
+    <dimen name="seller_item_right_widget_marginRight">10dp</dimen>
+
+    <!--style of price/button-->
+    <dimen name="seller_item_button_size">20dp</dimen>
+    <dimen name="seller_item_button_marginBottom">3dp</dimen>
+    <dimen name="seller_item_bottom_widget_marginBottom">10dp</dimen>
+
+
 </resources>

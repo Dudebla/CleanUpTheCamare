@@ -24,4 +24,7 @@
     <!--color for textView on press-->
     <color name="colorTextViewOnPress">#FF5722</color>
 
+    <!--color for seller score-->
+    <color name="colorSellerScore">#8BC34A</color>
+
 </resources>
