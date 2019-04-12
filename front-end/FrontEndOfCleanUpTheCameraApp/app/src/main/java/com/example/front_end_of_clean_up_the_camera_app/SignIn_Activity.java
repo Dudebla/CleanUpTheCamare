@@ -4,7 +4,7 @@
 //  username, tellNumber, password, passwordRV: for editView of signin_layout, for sign in msg
 //  tip_***: textView of signin_layout, visible while *** on focus
 
-package com.example.loginview_test;
+package com.example.front_end_of_clean_up_the_camera_app;
 
 import android.content.Intent;
 import android.provider.MediaStore;

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--set item of the navigation-->
+<!--nav_sound: for warning tone with switch
+    nav_shake: for phone shake with switch
+    nav_feedback: for edit feedback of app
+    nav_help: for helping message
+    nav_about: about the app?company? perhaps-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_sound"
+            android:icon="@drawable/warning_tone_icon"
+            app:actionViewClass="android.support.v7.widget.SwitchCompat"
+            android:title="声音" >
+        </item>
+        <item
+            android:id="@+id/nav_shake"
+            android:icon="@drawable/phone_shake_icon"
+            app:actionViewClass="android.support.v7.widget.SwitchCompat"
+            android:title="震动" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/edit_icon"
+                android:title="反馈" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/help_icon"
+                android:title="帮助" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/about_icon"
+                android:title="关于" />
+        </menu>
+    </item>
+
+</menu>

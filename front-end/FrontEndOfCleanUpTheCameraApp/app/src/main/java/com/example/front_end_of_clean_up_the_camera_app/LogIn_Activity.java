@@ -1,5 +1,5 @@
 //  LogIn_Activity.java   ----    login_activity.xml
-package com.example.loginview_test;
+package com.example.front_end_of_clean_up_the_camera_app;
 
 import android.content.Intent;
 import android.service.autofill.RegexValidator;

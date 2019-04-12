@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--topBar item for drawerLayout-->
+<!--location_action: for location reset, clickable-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/location_action"
+        android:title=""
+        android:icon="@drawable/location_icon"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        />
+</menu>
