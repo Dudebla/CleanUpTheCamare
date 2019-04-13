@@ -13,6 +13,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,6 +40,12 @@ public class LogIn_Activity extends AppCompatActivity {
     private static final int MSG_LEGAL = 5;
     private static final int USERNAME_NOT_FOUND = 6;
 
+    //  dude TestButton
+    private Button dudeTestButton;
+    //  test for login
+    private String IP = "192.168.43.86";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +59,9 @@ public class LogIn_Activity extends AppCompatActivity {
         login_button = (Button)findViewById(R.id.login_login_button);
         signin_textView = (TextView)findViewById(R.id.login_signIn_textView);
         forgetPW_textView = (TextView)findViewById(R.id.login_forgetPW_textView);
+
+        //  dude Test Button
+        dudeTestButton = (Button)findViewById(R.id.tmpButtonForDudeTest);
 
         setOnClickListenerOfWidget();
 
@@ -73,12 +91,19 @@ public class LogIn_Activity extends AppCompatActivity {
                         tipMsg = "密码长度为8～16，只包含数字、字母、特殊符号_@#";
                         break;
                     default:
-                        Intent intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
-                        startActivity(intent);
-                        return;
+
                 }
-                if(!"".equals(statement)) {
+                if(!"".equals(tipMsg)) {
                     Toast.makeText(v.getContext(), tipMsg, Toast.LENGTH_SHORT).show();
+                }else{
+//                    Intent intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
+//                    startActivity(intent);
+
+                    //================================
+                    //  test login
+                    //================================
+                    sendLoginMessage();
+
                 }
             }
         });
@@ -91,6 +116,83 @@ public class LogIn_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        //  Dude Test Button
+        dudeTestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LogIn_Activity.this, Seller_List_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    //  send login message
+    private void sendLoginMessage(){
+        //  create new thread
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                HttpURLConnection connection = null;
+                BufferedReader reader = null;
+                try{
+                    String urlString = "http://" + IP + ":8080/login.html";
+                    URL url = new URL(urlString);
+                    connection = (HttpURLConnection)url.openConnection();
+                    connection.setConnectTimeout(8000);
+                    connection.setReadTimeout(8000);
+                    connection.setRequestMethod("POST");
+                    connection.setDoInput(true);
+                    connection.setDoInput(true);
+                    connection.connect();
+
+                    OutputStream outputStream = connection.getOutputStream();
+                    String loginMsg = "username=" + username_editText.getText().toString() +
+                            "&password=" + password_editText.getText().toString();
+                    outputStream.write(loginMsg.getBytes());
+                    outputStream.flush();
+                    outputStream.close();
+
+                    InputStream inputStream = connection.getInputStream();
+                    reader = new BufferedReader(new InputStreamReader(inputStream));
+                    StringBuffer respond = new StringBuffer();
+                    String line;
+                    while((line = reader.readLine()) != null){
+                        respond.append(line);
+                    }
+                    JSONObject jsonObject = new JSONObject(respond.toString());
+                    String result = jsonObject.getString("result");
+                    if(result!=null){
+                        switch (result){
+                            case "200":
+                                //  login
+                                String userType = jsonObject.getString("flag");
+                                Intent intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
+                                intent.putExtra("username", username_editText.getText().toString());
+                                intent.putExtra("userType", userType);
+                                startActivity(intent);
+                                break;
+                            case "404":
+                                //  username not exited
+                                Toast.makeText(LogIn_Activity.this, "用户名不存在，请重新输入", Toast.LENGTH_SHORT).show();
+                                break;
+                            case "401":
+                                //  wrong password
+                                Toast.makeText(LogIn_Activity.this, "用户名或密码不正确，请重新输入", Toast.LENGTH_SHORT).show();
+                                break;
+                                default:
+                        }
+                    }
+
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                    Log.d("Login_Activity", e + e.getMessage());
+                }
+            }
+        }).start();
     }
 
 

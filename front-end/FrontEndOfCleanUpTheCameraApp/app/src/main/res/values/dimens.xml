@@ -7,9 +7,13 @@
     <dimen name="fab_margin">16dp</dimen>
 
 
-    <!--margin of seller_item-->
+    <!--layout_size of seller_item-->
     <dimen name="seller_item_height">100dp</dimen>
     <dimen name="seller_item_margin">10dp</dimen>
+
+    <!--margin of seller_item-->
+    <dimen name="seller_item_marginHorizontal">10dp</dimen>
+    <dimen name="seller_item_marginVertical">5dp</dimen>
 
     <!--textSize of widget at seller_item-->
     <dimen name="seller_item_title_size">35dp</dimen>

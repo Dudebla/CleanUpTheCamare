@@ -11,15 +11,15 @@ public class SellerMessage {
     private String sellerId;
     private String sellerName;
     private String sellerAddress;
-    private double sellerScore;
-    private double sellerDistance;
-    private double sellerCost;
+    private String sellerScore;
+    private String sellerDistance;
+    private String sellerCost;
 
 
 
 
-    public SellerMessage(String sellerId, String sellerName, String sellerAddress, Double sellerDistance,
-                         double sellerScore, double sellerCost){
+    public SellerMessage(String sellerId, String sellerName, String sellerAddress, String sellerDistance,
+                         String sellerScore, String sellerCost){
         this.sellerId = sellerId;
         this.sellerName = sellerName;
         this.sellerAddress = sellerAddress;
@@ -41,15 +41,15 @@ public class SellerMessage {
         return sellerAddress;
     }
 
-    public double getSellerScore() {
+    public String getSellerScore() {
         return sellerScore;
     }
 
-    public double getSellerDistance() {
+    public String getSellerDistance() {
         return sellerDistance;
     }
 
-    public double getSellerCost() {
+    public String getSellerCost() {
         return sellerCost;
     }
 
