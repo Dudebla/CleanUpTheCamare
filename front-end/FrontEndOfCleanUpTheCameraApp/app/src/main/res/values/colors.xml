@@ -27,4 +27,11 @@
     <!--color for seller score-->
     <color name="colorSellerScore">#8BC34A</color>
 
+    <!--Basic color-->
+    <color name="deepGrey">#83000000</color>
+    <color name="lightGrey">#C4C4C4</color>
+    <color name="deepOrange">#AEFA0505</color>
+
+
+
 </resources>

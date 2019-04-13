@@ -10,4 +10,13 @@
     <string name="user_home">主页</string>
     <string name="user_order">订单</string>
     <string name="user_chat">消息</string>
+
+    <string name="mechant_orderHandle">订单处理</string>
+    <string name="mechant_orderInqury">订单查询</string>
+    <string name="mechant_chat">聊天</string>
+    <string name="mechant_storeManage">店铺管理</string>
+    <string name="morder_handlePending">待处理</string>
+    <string name="morder_handleGoing">进行中</string>
+    <string name="morder_handleCanceled">已取消</string>
+    <string name="morder_handleCompleted">已完成</string>
 </resources>

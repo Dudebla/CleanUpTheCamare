@@ -108,10 +108,11 @@ login_login_button
             />
 
         <Button
+            android:id="@+id/btn_testForPH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/login_login_button"
-            android:text="test button For PW" />
+            android:text="test button For PH" />
 
         <Button
             android:id="@+id/tmpButtonForDudeTest"

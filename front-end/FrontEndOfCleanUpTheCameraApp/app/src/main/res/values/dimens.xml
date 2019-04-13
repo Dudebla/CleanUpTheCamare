@@ -35,5 +35,14 @@
     <dimen name="seller_item_button_marginBottom">3dp</dimen>
     <dimen name="seller_item_bottom_widget_marginBottom">10dp</dimen>
 
+    <!--margin of widget at the left/top/bottom/right of mechant order handle pending-->
+    <dimen name="mechant_order_handle_pending_marginLeft">10dip</dimen>
+    <dimen name="mechant_order_handle_pending_marginTop">10dip</dimen>
+    <dimen name="mechant_order_handle_pending_marginRight">10dip</dimen>
+    <dimen name="mechant_order_handle_pending_marginBottom">10dip</dimen>
+    <dimen name="mechant_order_handle_pending_marginVertical">10dip</dimen>
+    <dimen name="mechant_order_handle_pending_marginHorizontal">15dip</dimen>
+
+
 
 </resources>

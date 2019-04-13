@@ -14,6 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Seller_List_Activity"/>
         <activity android:name=".ContentUserHomeActivity" />
+        <activity android:name=".MechanthomeActivity"/>
         <activity
             android:name=".UserHomeActivity"
             android:theme="@style/AppTheme.Base" />

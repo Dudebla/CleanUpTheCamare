@@ -2,10 +2,9 @@
 package com.example.front_end_of_clean_up_the_camera_app;
 
 import android.content.Intent;
-import android.service.autofill.RegexValidator;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +20,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,6 +28,7 @@ public class LogIn_Activity extends AppCompatActivity {
     private EditText username_editText, password_editText;
     private TextView signin_textView, forgetPW_textView;
     private Button login_button;
+
 
     //  statement of username and password
     private static final int EMPTY_MSG = 0;
@@ -44,6 +43,9 @@ public class LogIn_Activity extends AppCompatActivity {
     private Button dudeTestButton;
     //  test for login
     private String IP = "192.168.43.86";
+
+    //PH TestButton
+    private Button PHtestButton;
 
 
     @Override
@@ -62,6 +64,9 @@ public class LogIn_Activity extends AppCompatActivity {
 
         //  dude Test Button
         dudeTestButton = (Button)findViewById(R.id.tmpButtonForDudeTest);
+
+        //PH Test Button
+        PHtestButton=(Button)findViewById(R.id.btn_testForPH);
 
         setOnClickListenerOfWidget();
 
@@ -126,6 +131,18 @@ public class LogIn_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //PH Test Button
+        PHtestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(LogIn_Activity.this, MechanthomeActivity.class);
+
+                startActivity(intent);
+            }
+        });
+
 
     }
 
