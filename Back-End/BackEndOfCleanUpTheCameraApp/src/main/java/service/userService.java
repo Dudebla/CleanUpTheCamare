@@ -24,6 +24,10 @@ public class userService {
         return userDao.findUserByName(username);
     }
 
+    public boolean insertUser(User user){
+        return userDao.insertUser(user);
+    }
+
     @Transactional
     public void loginSuccess(){
         ;

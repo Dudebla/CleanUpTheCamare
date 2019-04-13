@@ -62,4 +62,43 @@ public class MainController {
         }
         return map;
     }
+
+    @RequestMapping(value = "/signUp.html")
+    public ModelAndView signUp(HttpServletRequest request){
+        return new ModelAndView("signUp");
+    }
+
+    @RequestMapping(value = "/signUp")
+    public Map dealSignUp(HttpServletRequest request){
+        String name = request.getParameter("username");
+        String pass = request.getParameter("password");
+        System.out.println("尝试注册" + name + "用户，密码为" + pass);
+        boolean isHaveUser = userService.hasMatchUser(name);
+        Map<String, String> map = new HashMap<String, String>();
+        if(!isHaveUser){
+            User user = new User();
+            user.setUserName(name);
+            user.setPassWord(pass);
+            user.setFlag(1);
+            user.setEmail(null);
+            user.setPhone(null);
+            user.setId("tset"+name);
+            boolean success = userService.insertUser(user);
+            //System.out.println("success:" + success);
+            if(success){
+                System.out.println(name + "注册成功!");
+                map.put("result","200");
+            }
+            else{
+                System.out.println(name + "注册失败");
+                map.put("result","401");
+            }
+
+        }
+        else{
+            map.put("result","404");
+            System.out.println(name + "用户已存在！");
+        }
+        return map;
+    }
 }
