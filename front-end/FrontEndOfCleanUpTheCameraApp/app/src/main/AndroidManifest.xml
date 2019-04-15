@@ -4,17 +4,19 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
-        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Seller_List_Activity"/>
+        <activity android:name=".Seller_Msg_Activity" />
+        <activity android:name=".Seller_List_Activity" />
         <activity android:name=".ContentUserHomeActivity" />
-        <activity android:name=".MechanthomeActivity"/>
+        <activity android:name=".MechanthomeActivity" />
         <activity
             android:name=".UserHomeActivity"
             android:theme="@style/AppTheme.Base" />

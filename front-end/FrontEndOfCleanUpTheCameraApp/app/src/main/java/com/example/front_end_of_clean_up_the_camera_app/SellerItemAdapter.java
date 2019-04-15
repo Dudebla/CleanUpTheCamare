@@ -15,8 +15,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.BufferedReader;
 import java.util.List;
 
 public class SellerItemAdapter extends RecyclerView.Adapter<SellerItemAdapter.SMViewHolder> {
