@@ -43,6 +43,10 @@
     <dimen name="mechant_order_handle_pending_marginVertical">10dip</dimen>
     <dimen name="mechant_order_handle_pending_marginHorizontal">15dip</dimen>
 
+    <!--padding of widget at the left/top/bottom/right of mechant order handle pending-->
+    <dimen name="mechant_order_handle_pending_paddingHorizontal">15dip</dimen>
+    <dimen name="mechant_order_handle_pending_paddingVertical">10dip</dimen>
+
 
 
 </resources>

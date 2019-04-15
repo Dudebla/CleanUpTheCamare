@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corner_border_edittext_layout"
+    android:layout_marginTop="@dimen/mechant_order_handle_pending_marginTop"
+    android:layout_marginBottom="@dimen/mechant_order_handle_pending_marginBottom"
+    android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+    android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+    tools:context="com.example.front_end_of_clean_up_the_camera_app.MechantFragment.MOHPendingFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_orderTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_orderTimeLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+            android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+            android:text="下单时间:"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/tv_orderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14:00"
+            android:textColor="@color/colorBlack"
+            android:layout_toRightOf="@+id/tv_orderTimeLable"
+            android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+            />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/v_dividerOne"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_orderTime"
+        android:layout_marginBottom="5dip"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+        android:background="@color/colorBlack"  />
+
+    <ImageView
+        android:id="@+id/iv_userImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/v_dividerOne"
+        android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+        android:src="@drawable/portrait"/>
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_toRightOf="@+id/iv_userImage"
+        android:layout_below="@+id/v_dividerOne"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+        android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+        android:textSize="20dp"
+        android:text="用户名"/>
+
+    <ImageView
+        android:id="@+id/iv_userPhoneImage"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:src="@drawable/phone"
+        android:layout_below="@+id/tv_username"
+        android:layout_toRightOf="@+id/iv_userImage"
+        android:layout_marginHorizontal="5dip"
+        android:layout_marginTop="10dip"
+        />
+
+    <TextView
+        android:id="@+id/tv_userPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_username"
+        android:layout_toRightOf="@+id/iv_userPhoneImage"
+        android:layout_marginLeft="@dimen/mechant_order_handle_pending_marginLeft"
+        android:layout_marginTop="@dimen/mechant_order_handle_pending_marginTop"
+        android:text="11111111"
+        android:textSize="20dp"
+        android:textColor="@color/colorBlack"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_userAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+        android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+        android:layout_below="@+id/iv_userImage">
+
+        <TextView
+            android:id="@+id/tv_userAddressLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址："
+            android:textColor="@color/deepOrange"
+            android:textSize="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_userAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="华南师范大学"
+            android:textColor="@color/colorBlack"
+            android:layout_toRightOf="@+id/tv_userAddressLable"
+            android:textSize="20dip"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_userRemarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_userAddress"
+        android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_userRemarksLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备注:"
+            android:textSize="20dp"
+            android:textColor="@color/deepOrange"
+            />
+
+        <TextView
+            android:id="@+id/tv_userRemarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这是备注这是备注这是备注这是备注这是备注这是备注这是备注这是备注这是备注这是备注"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+            android:textColor="@color/colorBlack"
+            android:layout_toRightOf="@+id/tv_userRemarksLable"
+            android:textSize="20dip"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_dividerTwo"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_userRemarks"
+        android:layout_marginBottom="5dip"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+        android:background="@color/colorBlack"  />
+
+    <RelativeLayout
+        android:id="@+id/rl_estimatedAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v_dividerTwo">
+
+        <TextView
+            android:id="@+id/tv_estimatedAmountLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预计金额："
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+            android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+            />
+
+        <TextView
+            android:id="@+id/tv_estimatedAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22"
+            android:textSize="20dp"
+            android:textColor="@color/colorBlack"
+            android:layout_toRightOf="@+id/tv_estimatedAmountLable"
+            android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"/>
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/chat"
+        android:layout_toRightOf="@id/rl_estimatedAmount"
+        android:layout_marginLeft="160dp"
+        android:layout_below="@id/v_dividerTwo"
+        android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+        />
+
+    <View
+        android:id="@+id/v_dividerThree"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_estimatedAmount"
+        android:layout_marginBottom="5dip"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+        android:background="@color/colorBlack"  />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_dividerThree"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/btn_acceptOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_dividerThree"
+            android:layout_marginLeft="@dimen/mechant_order_handle_pending_marginLeft"
+            android:background="@drawable/button_selector"
+            android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+            android:paddingHorizontal="@dimen/mechant_order_handle_pending_paddingHorizontal"
+            android:paddingVertical="@dimen/mechant_order_handle_pending_paddingVertical"
+            android:text="接收订单"
+            android:textSize="20dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_dividerThree"
+            android:layout_marginLeft="@dimen/mechant_order_handle_pending_marginLeft"
+            android:background="@drawable/button_selector"
+            android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+            android:paddingHorizontal="@dimen/mechant_order_handle_pending_paddingHorizontal"
+            android:paddingVertical="@dimen/mechant_order_handle_pending_paddingVertical"
+            android:text="拒绝订单"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
