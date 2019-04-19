@@ -4,14 +4,15 @@
     android:layout_height="match_parent">
 
     <ListView
-        android:id="@+id/lv_morderHandlGoing"
+        android:id="@+id/lv_morderHandleInqury"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
-        android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+        android:layout_marginVertical="@dimen/mechant_order_inqury_marginVertical"
+        android:layout_marginHorizontal="@dimen/mechant_order_inqury_marginHorizontal"
         android:layout_alignParentBottom="true"
-        android:dividerHeight="@dimen/mechant_order_handle_pending_dividerHeight"
+        android:dividerHeight="@dimen/mechant_order_inqury_dividerHeight"
         android:divider="@color/colorWhite"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="0dp" />
+
 
 </RelativeLayout>

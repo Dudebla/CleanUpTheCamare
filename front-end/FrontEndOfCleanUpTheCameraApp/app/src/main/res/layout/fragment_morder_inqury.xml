@@ -1,20 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="com.example.front_end_of_clean_up_the_camera_app.MechantFragment.MOrderInquryFragment">-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="This is order inqury page"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="20dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/colorBlack"/>&ndash;&gt;-->
+
+
+<!--</LinearLayout>-->
+<com.example.front_end_of_clean_up_the_camera_app.DropDownMenu.DropDownMenu
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/DropDownMenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.front_end_of_clean_up_the_camera_app.MechantFragment.MOrderInquryFragment">
+    app:ddmaskColor="@color/mask_color"
+    app:ddmenuBackgroundColor="@color/colorWhite"
+    app:ddmenuMaxHeight="280dp"
+    app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
+    app:ddmenuTextSize="13sp"
+    app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon"
+    app:ddneedSetSlectedColor="true"
+    app:ddtextSelectedColor="@color/drop_down_selected"
+    app:ddtextUnselectedColor="@color/drop_down_unselected" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This is order inqury page"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:textColor="@color/colorBlack"/>
-
-
-
-</LinearLayout>

@@ -42,7 +42,7 @@ public class LogIn_Activity extends AppCompatActivity {
     //  dude TestButton
     private Button dudeTestButton;
     //  test for login
-    private String IP = "192.168.43.86";
+    private String IP = "54.37.47.153";
 
     //PH TestButton
     private Button PHtestButton;
@@ -155,7 +155,7 @@ public class LogIn_Activity extends AppCompatActivity {
                 HttpURLConnection connection = null;
                 BufferedReader reader = null;
                 try{
-                    String urlString = "http://" + IP + ":8080/login.html";
+                    String urlString = "http://" + IP + ":8080/login";
                     URL url = new URL(urlString);
                     connection = (HttpURLConnection)url.openConnection();
                     connection.setConnectTimeout(8000);

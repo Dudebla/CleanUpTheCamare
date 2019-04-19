@@ -4,11 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/round_corner_border_edittext_layout"
-    android:layout_marginTop="@dimen/mechant_order_handle_pending_marginTop"
     android:layout_marginBottom="@dimen/mechant_order_handle_pending_marginBottom"
-    android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
-    android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+    android:background="@drawable/round_corner_border_edittext_layout"
     tools:context="com.example.front_end_of_clean_up_the_camera_app.MechantFragment.MOHPendingFragment">
 
     <RelativeLayout
@@ -23,14 +20,14 @@
             android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
             android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
             android:text="下单时间:"
-            android:textColor="@color/colorBlack"/>
+            android:textColor="@color/deepGrey"/>
 
         <TextView
             android:id="@+id/tv_orderTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="14:00"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/deepGrey"
             android:layout_toRightOf="@+id/tv_orderTimeLable"
             android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
             />
@@ -76,7 +73,7 @@
         android:src="@drawable/phone"
         android:layout_below="@+id/tv_username"
         android:layout_toRightOf="@+id/iv_userImage"
-        android:layout_marginHorizontal="5dip"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
         android:layout_marginTop="10dip"
         />
 
@@ -86,12 +83,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_username"
         android:layout_toRightOf="@+id/iv_userPhoneImage"
-        android:layout_marginLeft="@dimen/mechant_order_handle_pending_marginLeft"
         android:layout_marginTop="@dimen/mechant_order_handle_pending_marginTop"
         android:text="11111111"
         android:textSize="20dp"
         android:textColor="@color/colorBlack"
         />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/chat"
+        android:layout_toRightOf="@id/tv_userPhone"
+        android:layout_below="@id/v_dividerOne"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        />
+
 
 
     <RelativeLayout
@@ -106,6 +113,8 @@
             android:id="@+id/tv_userAddressLable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/mechant_order_handle_pending_margin"
             android:text="地址："
             android:textColor="@color/deepOrange"
             android:textSize="20dp"/>
@@ -115,6 +124,7 @@
             android:id="@+id/tv_userAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mechant_order_handle_pending_margin"
             android:text="华南师范大学"
             android:textColor="@color/colorBlack"
             android:layout_toRightOf="@+id/tv_userAddressLable"
@@ -138,7 +148,9 @@
             android:id="@+id/tv_userRemarksLable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="备注:"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/mechant_order_handle_pending_margin"
+            android:text="备注："
             android:textSize="20dp"
             android:textColor="@color/deepOrange"
             />
@@ -147,6 +159,7 @@
             android:id="@+id/tv_userRemarks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mechant_order_handle_pending_margin"
             android:text="这是备注这是备注这是备注这是备注这是备注这是备注这是备注这是备注这是备注这是备注"
             android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
             android:textColor="@color/colorBlack"
@@ -155,6 +168,7 @@
 
 
     </RelativeLayout>
+
 
     <View
         android:id="@+id/v_dividerTwo"
@@ -175,6 +189,7 @@
             android:id="@+id/tv_estimatedAmountLable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="预计金额："
             android:textColor="@color/colorBlack"
             android:textSize="20dp"
@@ -186,25 +201,18 @@
             android:id="@+id/tv_estimatedAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="22"
+            android:textStyle="bold"
+            android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+            android:text="22￥"
             android:textSize="20dp"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/deepOrange"
             android:layout_toRightOf="@+id/tv_estimatedAmountLable"
-            android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"/>
+            />
 
 
     </RelativeLayout>
 
 
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/chat"
-        android:layout_toRightOf="@id/rl_estimatedAmount"
-        android:layout_marginLeft="160dp"
-        android:layout_below="@id/v_dividerTwo"
-        android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
-        />
 
     <View
         android:id="@+id/v_dividerThree"

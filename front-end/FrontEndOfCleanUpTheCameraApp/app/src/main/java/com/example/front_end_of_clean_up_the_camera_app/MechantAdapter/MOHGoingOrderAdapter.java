@@ -8,21 +8,21 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.front_end_of_clean_up_the_camera_app.MechantData.MOHPendingOrder;
+import com.example.front_end_of_clean_up_the_camera_app.MechantData.MOHGoingOrder;
 import com.example.front_end_of_clean_up_the_camera_app.R;
 
 import java.util.List;
 
-public class MOHPendingOrderAdapter extends BaseAdapter {
+public class MOHGoingOrderAdapter extends BaseAdapter {
 
     private Context context;
-    private List<MOHPendingOrder> datas;
+    private List<MOHGoingOrder> datas;
 
     //构造函数需要传入两个必要的参数：上下文对象和数据源
-    public MOHPendingOrderAdapter(Context context,List<MOHPendingOrder> datas) {
+    public MOHGoingOrderAdapter(Context context,List<MOHGoingOrder> datas) {
 
         this.context=context;
-
+        //list类型的数据,多个对象
         this.datas=datas;
 
     }
@@ -45,21 +45,23 @@ public class MOHPendingOrderAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        MOHPendingOrder mohPendingOrder= (MOHPendingOrder) getItem(position);
+        MOHGoingOrder mohGoingOrder= (MOHGoingOrder) getItem(position);
 
         View view;
-        //创建了内部类ViewHolder，可以避免每次调用getView方法
-        ViewHolder viewHolder;
+        //创建内部类ViewHolder，可以避免每次调用getView方法
+        MOHGoingOrderAdapter.ViewHolder viewHolder;
 
         if(convertView==null){
 
-            view = LayoutInflater.from(context).inflate(R.layout.fragment_morder_handle_pending_chirld,null);
+            view = LayoutInflater.from(context).inflate(R.layout.fragment_morder_handle_going_chirld,null);
 
-            viewHolder=new ViewHolder();
+            viewHolder=new MOHGoingOrderAdapter.ViewHolder();
 
             viewHolder.userImage=(ImageView)view.findViewById(R.id.iv_userImage);
 
             viewHolder.orderTime=(TextView)view.findViewById(R.id.tv_orderTime);
+
+            viewHolder.reciveTime=(TextView)view.findViewById(R.id.tv_reciveTime);
 
             viewHolder.userName=(TextView)view.findViewById(R.id.tv_username) ;
 
@@ -78,23 +80,25 @@ public class MOHPendingOrderAdapter extends BaseAdapter {
 
             view=convertView;
 
-            viewHolder= (ViewHolder) view.getTag();
+            viewHolder= (MOHGoingOrderAdapter.ViewHolder) view.getTag();
 
         }
 
-        viewHolder.orderTime.setText(mohPendingOrder.getOrderTime());
+        viewHolder.orderTime.setText(mohGoingOrder.getOrderTime());
 
-        viewHolder.userName.setText(mohPendingOrder.getUserName());
+        viewHolder.reciveTime.setText(mohGoingOrder.getReciveTime());
 
-        viewHolder.userAddress.setText(mohPendingOrder.getUserAddress());
+        viewHolder.userName.setText(mohGoingOrder.getUserName());
 
-        viewHolder.userRemark.setText(mohPendingOrder.getUserRemarks());
+        viewHolder.userAddress.setText(mohGoingOrder.getUserAddress());
 
-        viewHolder.userPhone.setText(mohPendingOrder.getUserPhone());
+        viewHolder.userRemark.setText(mohGoingOrder.getUserRemarks());
 
-        viewHolder.estimatedAmount.setText(mohPendingOrder.getEstimatedAmount());
+        viewHolder.userPhone.setText(mohGoingOrder.getUserPhone());
 
-        viewHolder.userImage.setImageResource(mohPendingOrder.getUserImage());
+        viewHolder.estimatedAmount.setText(mohGoingOrder.getEstimatedAmount());
+
+        viewHolder.userImage.setImageResource(mohGoingOrder.getUserImage());
 
         return view;
 
@@ -108,6 +112,8 @@ public class MOHPendingOrderAdapter extends BaseAdapter {
 
         TextView orderTime;
 
+        TextView reciveTime;
+
         TextView userPhone;
 
         TextView userAddress;
@@ -117,4 +123,5 @@ public class MOHPendingOrderAdapter extends BaseAdapter {
         TextView estimatedAmount;
 
     }
+
 }

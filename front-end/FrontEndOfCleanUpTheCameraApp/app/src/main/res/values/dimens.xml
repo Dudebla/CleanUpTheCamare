@@ -42,10 +42,43 @@
     <dimen name="mechant_order_handle_pending_marginBottom">10dip</dimen>
     <dimen name="mechant_order_handle_pending_marginVertical">10dip</dimen>
     <dimen name="mechant_order_handle_pending_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_order_handle_pending_margin">5dp</dimen>
 
     <!--padding of widget at the left/top/bottom/right of mechant order handle pending-->
     <dimen name="mechant_order_handle_pending_paddingHorizontal">15dip</dimen>
     <dimen name="mechant_order_handle_pending_paddingVertical">10dip</dimen>
+    <dimen name="mechant_order_handle_pending_dividerHeight">10dip</dimen>
+
+    <!--margin of widget at the left/top/bottom/right of mechant order handle going-->
+    <dimen name="mechant_order_handle_going_marginLeft">10dip</dimen>
+    <dimen name="mechant_order_handle_going_marginTop">10dip</dimen>
+    <dimen name="mechant_order_handle_going_marginRight">10dip</dimen>
+    <dimen name="mechant_order_handle_going_marginBottom">10dip</dimen>
+    <dimen name="mechant_order_handle_going_marginVertical">10dip</dimen>
+    <dimen name="mechant_order_handle_going_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_order_handle_going_margin">5dp</dimen>
+
+
+    <!--padding of widget at the left/top/bottom/right of mechant order handle going-->
+    <dimen name="mechant_order_handle_going_paddingHorizontal">15dip</dimen>
+    <dimen name="mechant_order_handle_going_paddingVertical">10dip</dimen>
+
+
+    <!--margin of widget at the left/top/bottom/right of mechant order inqury-->
+    <dimen name="mechant_order_inqury_marginLeft">10dip</dimen>
+    <dimen name="mechant_order_inqury_marginTop">10dip</dimen>
+    <dimen name="mechant_order_inqury_marginRight">10dip</dimen>
+    <dimen name="mechant_order_inqury_marginBottom">10dip</dimen>
+    <dimen name="mechant_order_inqury_marginVertical">10dip</dimen>
+    <dimen name="mechant_order_inqury_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_order_inqury_margin">5dp</dimen>
+
+
+    <!--padding of widget at the left/top/bottom/right of mechant order inqury-->
+    <dimen name="mechant_order_inqury_paddingHorizontal">15dip</dimen>
+    <dimen name="mechant_order_inqury_paddingVertical">10dip</dimen>
+    <dimen name="mechant_order_inqury_dividerHeight">10dip</dimen>
+
 
 
 

@@ -51,7 +51,7 @@ public class MOHPendingFragment extends Fragment {
 
         ButterKnife.bind(this, view);
 
-        listView = (ListView)view.findViewById(R.id.lv_morderHandlePending);
+        listView = view.findViewById(R.id.lv_morderHandlePending);
 
         mohPendingOrderAdapter = new MOHPendingOrderAdapter(getActivity(),datas);
 
@@ -64,12 +64,12 @@ public class MOHPendingFragment extends Fragment {
 
     //String orderTime,String userName,String userPhone,String userAddress,String userRemarks,String estimatedAmount,int userImage
     private void initDatas() {
-        MOHPendingOrder order0 = new MOHPendingOrder("12:00","小李","1234567890","华师","","12",R.drawable.user_image);
-        MOHPendingOrder order1 = new MOHPendingOrder("12:00","小黑","1234567890","华师","","12",R.drawable.user_image);
-        MOHPendingOrder order2 = new MOHPendingOrder("12:00","小红","1234567890","华师","快点","12",R.drawable.user_image);
-        MOHPendingOrder order3 = new MOHPendingOrder("12:00","小百","1234567890","华师","hahaha","12",R.drawable.user_image);
-        MOHPendingOrder order4 = new MOHPendingOrder("12:00","小和","1234567890","华师","取消","12",R.drawable.user_image);
-        MOHPendingOrder order5 = new MOHPendingOrder("12:00","小明","1234567890","华师","巴拉巴拉巴拉巴拉","12",R.drawable.user_image);
+        MOHPendingOrder order0 = new MOHPendingOrder("12:00","小李","1234567890","华师","","12￥",R.drawable.user_image);
+        MOHPendingOrder order1 = new MOHPendingOrder("12:00","小黑","1234567890","华师","","12￥",R.drawable.user_image);
+        MOHPendingOrder order2 = new MOHPendingOrder("12:00","小红","1234567890","华师","快点","12￥",R.drawable.user_image);
+        MOHPendingOrder order3 = new MOHPendingOrder("12:00","小百","1234567890","华师","hahaha","12￥",R.drawable.user_image);
+        MOHPendingOrder order4 = new MOHPendingOrder("12:00","小和","1234567890","华师","取消","12￥",R.drawable.user_image);
+        MOHPendingOrder order5 = new MOHPendingOrder("12:00","小明","1234567890","华师","巴拉巴拉巴拉巴拉","12￥",R.drawable.user_image);
         datas.add(order0);
         datas.add(order1);
         datas.add(order2);

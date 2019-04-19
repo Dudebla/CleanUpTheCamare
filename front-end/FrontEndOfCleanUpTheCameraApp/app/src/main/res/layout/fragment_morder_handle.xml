@@ -21,7 +21,7 @@
         app:tabPaddingEnd="5dip"
         app:tabSelectedTextColor="@color/colorBlack"
         app:tabTextAppearance="@style/tab_head"
-        app:tabTextColor="@color/lightGrey"
+        app:tabTextColor="@color/deepGrey"
         />
 
     <android.support.v4.view.ViewPager
