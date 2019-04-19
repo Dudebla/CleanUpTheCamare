@@ -101,13 +101,13 @@ public class LogIn_Activity extends AppCompatActivity {
                 if(!"".equals(tipMsg)) {
                     Toast.makeText(v.getContext(), tipMsg, Toast.LENGTH_SHORT).show();
                 }else{
-//                    Intent intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
-//                    startActivity(intent);
+                    Intent intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
+                    startActivity(intent);
 
                     //================================
                     //  test login
                     //================================
-                    sendLoginMessage();
+                    //sendLoginMessage();
 
                 }
             }
@@ -162,7 +162,7 @@ public class LogIn_Activity extends AppCompatActivity {
                     connection.setReadTimeout(8000);
                     connection.setRequestMethod("POST");
                     connection.setDoInput(true);
-                    connection.setDoInput(true);
+                    connection.setDoOutput(true);
                     connection.connect();
 
                     OutputStream outputStream = connection.getOutputStream();
@@ -178,8 +178,10 @@ public class LogIn_Activity extends AppCompatActivity {
                     String line;
                     while((line = reader.readLine()) != null){
                         respond.append(line);
+                        Log.d("jsonObj1", line);
                     }
                     JSONObject jsonObject = new JSONObject(respond.toString());
+                    Log.d("jsonObj2", respond.toString());
                     String result = jsonObject.getString("result");
                     if(result!=null){
                         switch (result){

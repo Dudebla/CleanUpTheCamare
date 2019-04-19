@@ -16,7 +16,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
+import com.example.front_end_of_clean_up_the_camera_app.MessageCalss.SellerMessage;
+
 import java.util.List;
 
 public class SellerItemAdapter extends RecyclerView.Adapter<SellerItemAdapter.SMViewHolder> {
