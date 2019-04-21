@@ -9,9 +9,16 @@ public class MOHGoingOrder {
     private String userAddress;
     private String userRemarks;
     private String estimatedAmount;
+
+    public String getOrderNumber() {
+        return orderNumber;
+    }
+
+    private String orderNumber;
+
     private int userImage;
 
-    public MOHGoingOrder(String orderTime,String reciveTime,String userName,String userPhone,String userAddress,String userRemarks,String estimatedAmount,int userImage) {
+    public MOHGoingOrder(String orderTime,String reciveTime,String userName,String userPhone,String userAddress,String userRemarks,String estimatedAmount,String orderNumber, int userImage) {
         this.reciveTime=reciveTime;
         this.orderTime=orderTime;
         this.userName=userName;
@@ -19,6 +26,7 @@ public class MOHGoingOrder {
         this.userAddress=userAddress;
         this.userRemarks=userRemarks;
         this.estimatedAmount=estimatedAmount;
+        this.orderNumber = orderNumber;
         this.userImage=userImage;
     }
 
@@ -71,12 +79,15 @@ public class MOHGoingOrder {
         this.estimatedAmount=estimatedAmount;
     }
 
-    public int getUserImage(){
+    public int getUserImage() {
         return userImage;
     }
-    public void setUserImage(int userImage){
-        this.userImage=userImage;
+
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
-
+    public void setUserImage(int userImage) {
+        this.userImage = userImage;
+    }
 }

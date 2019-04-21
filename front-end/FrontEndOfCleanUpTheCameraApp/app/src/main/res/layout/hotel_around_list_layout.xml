@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.front_end_of_clean_up_the_camera_app.Seller_List_Activity">
+    tools:context=".HotelAroundActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
         <android.support.v7.widget.Toolbar
-            android:id="@+id/seller_list_toolBar"
+            android:id="@+id/hotel_around_list_toolBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:popupTheme="@style/AppTheme.PopupOverlay">
@@ -20,11 +21,11 @@
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/seller_list_recyclerView"
-        android:orientation="vertical"
+        android:id="@+id/hotel_around_list_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        />
+        android:orientation="vertical"
+        >
+    </android.support.v7.widget.RecyclerView>
 
-</RelativeLayout>
+</LinearLayout>

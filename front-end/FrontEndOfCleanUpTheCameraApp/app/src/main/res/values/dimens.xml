@@ -80,6 +80,10 @@
     <dimen name="mechant_order_inqury_dividerHeight">10dip</dimen>
 
 
+    <!--textSize of textView of discussions-->
+    <dimen name="discuss_date_textSize">10dp</dimen>
 
+    <!--widget height of bar at seller msg layout-->
+    <dimen name="app_bar_height">180dp</dimen>
 
 </resources>

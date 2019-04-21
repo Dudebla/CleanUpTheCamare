@@ -73,6 +73,8 @@ public class MOHGoingOrderAdapter extends BaseAdapter {
 
             viewHolder.estimatedAmount=(TextView)view.findViewById(R.id.tv_estimatedAmount);
 
+            viewHolder.orderNumber = (TextView)view.findViewById(R.id.tv_orderNumber);
+
             view.setTag(viewHolder);
         }
 
@@ -100,6 +102,8 @@ public class MOHGoingOrderAdapter extends BaseAdapter {
 
         viewHolder.userImage.setImageResource(mohGoingOrder.getUserImage());
 
+        viewHolder.orderNumber.setText(mohGoingOrder.getOrderNumber());
+
         return view;
 
     }
@@ -122,6 +126,7 @@ public class MOHGoingOrderAdapter extends BaseAdapter {
 
         TextView estimatedAmount;
 
+        TextView orderNumber;
     }
 
 }

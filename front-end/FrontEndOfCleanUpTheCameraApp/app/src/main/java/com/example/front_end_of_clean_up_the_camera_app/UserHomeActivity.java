@@ -22,7 +22,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.front_end_of_clean_up_the_camera_app.UserAdapter.ContentUserHomeFragmentAdapter;
+import com.example.front_end_of_clean_up_the_camera_app.Adapter.ContentUserHomeFragmentAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,7 +36,7 @@ public class UserHomeActivity extends AppCompatActivity
     //  title
     private final int[] USER_TAB_TITLE = new int[]{
             R.string.user_home, R.string.user_order, R.string.user_chat};
-    private final int[] USER_TAB_IMGS = new int[]{R.drawable.tab_morder_inqury_selector,
+    private final int[] USER_TAB_IMGS = new int[]{R.drawable.tab_morder_userhome_selector,
             R.drawable.tab_morder_inqury_selector, R.drawable.tab_morder_chat_selector};
 
     @BindView(R.id.content_user_home_pager)
@@ -58,6 +58,8 @@ public class UserHomeActivity extends AppCompatActivity
 
         //  init pager
         initPager();
+
+        setTitle("主页");
 
         setTabs(tabLayout, getLayoutInflater(), USER_TAB_TITLE, USER_TAB_IMGS);
 
@@ -125,6 +127,18 @@ public class UserHomeActivity extends AppCompatActivity
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition(), false);
+                switch (tab.getPosition()){
+                    case 0:
+                        setTitle("主页");
+                        break;
+                    case 1:
+                        setTitle("订单");
+                        break;
+                    case 2:
+                        setTitle("消息");
+                        break;
+                    default:
+                }
             }
 
             @Override

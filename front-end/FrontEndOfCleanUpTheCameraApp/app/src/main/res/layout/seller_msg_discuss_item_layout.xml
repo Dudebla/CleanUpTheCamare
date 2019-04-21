@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/seller_item_marginHorizontal"
+    android:background="@drawable/round_corner_border_edittext_layout"
+    >
+
+    <TextView
+        android:id="@+id/discuss_username_textView"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/seller_item_left_widget_marginLeft"
+        android:layout_marginTop="@dimen/seller_item_top_widget_marginTop"
+        android:maxLines="1"
+        android:text="username"
+        android:textSize="@dimen/seller_item_subTitle_size" />
+
+    <TextView
+        android:id="@+id/discuss_score_textView"
+        android:layout_width="@dimen/seller_item_sellerScore_size"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/seller_item_top_widget_marginTop"
+        android:layout_toRightOf="@+id/discuss_username_textView"
+        android:textSize="@dimen/seller_item_subTitle_size"
+        android:text="5.0"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/discuss_content_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/seller_item_marginHorizontal"
+        android:layout_marginVertical="@dimen/seller_item_marginVertical"
+        android:layout_below="@+id/discuss_username_textView"
+        android:textSize="@dimen/seller_item_subTitle_size"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:text="bbbbbbbbbblblblblblblbbbbbbbbbbbbbbbbbbbbbbbbbbblalalalalalblalalalalabllablallblablabla"
+        />
+
+    <TextView
+        android:id="@+id/discuss_time_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/discuss_content_textView"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/seller_item_marginHorizontal"
+        android:maxLines="1"
+        android:textSize="@dimen/discuss_date_textSize"
+        android:text="2019年4月18日"/>
+
+</RelativeLayout>

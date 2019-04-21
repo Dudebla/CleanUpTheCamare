@@ -1,19 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.front_end_of_clean_up_the_camera_app.UserFragment.CUHMainFragment">
+    tools:context="com.example.front_end_of_clean_up_the_camera_app.UserFragment.CUHMainFragment"
+    android:background="@color/grayBackground">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This is main page"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:textColor="@color/colorBlack"
+    <com.youth.banner.Banner
+        android:id="@+id/cuh_main_cycle_photo_banner"
+        app:layout_heightPercent="30%"
+        app:layout_widthPercent="100%"
+        android:layout_margin="@dimen/seller_item_top_widget_marginTop"
         />
 
-</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/cuh_main_make_order_relativeLayout"
+        app:layout_heightPercent="20%"
+        app:layout_widthPercent="100%"
+        android:layout_below="@id/cuh_main_cycle_photo_banner"
+        android:layout_margin="5dp"
+        android:background="@drawable/round_conner_green_background"
+        android:clickable="true"
+        >
+
+        <ImageView
+            android:id="@+id/cuh_main_make_order_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:background="@drawable/round_imageview_background"
+            android:src="@drawable/make_order_icon"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:text="下        单"
+            android:textColor="@color/colorBlack"
+            android:textSize="45dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cuh_main_hotel_around_relativeLayout"
+        app:layout_heightPercent="20%"
+        app:layout_widthPercent="100%"
+        android:layout_below="@id/cuh_main_make_order_relativeLayout"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/round_conner_yellow_background"
+        >
+
+        <ImageView
+            android:id="@+id/cuh_main_hotel_around_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:background="@drawable/round_imageview_background"
+            android:src="@drawable/hotel_icon"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:text="附近酒店"
+            android:textColor="@color/colorBlack"
+            android:textSize="45dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cuh_main_lit_course_relativeLayout"
+        app:layout_heightPercent="20%"
+        app:layout_widthPercent="100%"
+        android:layout_below="@id/cuh_main_hotel_around_relativeLayout"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@drawable/round_conner_red_background"
+        android:text="小课堂"
+        android:textSize="70dp"
+        >
+
+        <ImageView
+            android:id="@+id/cuh_main_lit_course_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:background="@drawable/round_imageview_background"
+            android:src="@drawable/other_icon"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:text="科普课堂"
+            android:textColor="@color/colorBlack"
+            android:textSize="45dp"/>
+
+    </RelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

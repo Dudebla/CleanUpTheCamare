@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.loginview_test"
+        applicationId "com.example.front_end_of_clean_up_the_camera_app"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -40,5 +40,17 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     //多条件筛选顶部菜单
-    'com.github.dongjunkun:DropDownMenu:1.0.4'
+//    implementation 'com.github.dongjunkun:DropDownMenu:1.0.4'
+
+    //  for user main view photo cycle play
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    //  for glide using
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
 }

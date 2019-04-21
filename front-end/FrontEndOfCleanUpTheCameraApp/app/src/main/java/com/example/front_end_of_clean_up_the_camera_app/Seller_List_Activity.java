@@ -4,13 +4,19 @@ package com.example.front_end_of_clean_up_the_camera_app;
 *   smRecyclerView: RecyclerView of seller_list_layout
 *   sellerItemAdapter: sellerAdapter of seller_item
 *   sellerMessageList: List<sellerMessage> */
+import android.content.Intent;
+import android.graphics.Color;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
+
+import com.example.front_end_of_clean_up_the_camera_app.Adapter.SellerItemAdapter;
+import com.example.front_end_of_clean_up_the_camera_app.MessageCalss.SellerMessage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +32,22 @@ public class Seller_List_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.seller_list_layout);
 
+        //  set toolbar
+        Toolbar toolbar = (Toolbar)findViewById(R.id.seller_list_toolBar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        final ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null){
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(true);
+            actionBar.setTitle("选择商家");
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
+        }
 
         initSellerMesssageList();
 
@@ -35,11 +57,13 @@ public class Seller_List_Activity extends AppCompatActivity {
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         smRecyclerView.setLayoutManager(linearLayoutManager);
 
+        //  manage item clicked even
         sellerItemAdapter = new SellerItemAdapter(this, sellerMessageList);
         sellerItemAdapter.setSellerItemOnClickerListener(new SellerItemAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(view.getContext(), "position " + position + " is clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Seller_List_Activity.this, Seller_Msg_Activity.class);
+                startActivity(intent);
             }
         });
 

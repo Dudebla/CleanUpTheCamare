@@ -1,4 +1,4 @@
-package com.example.front_end_of_clean_up_the_camera_app;
+package com.example.front_end_of_clean_up_the_camera_app.MessageCalss;
 //  SellerMessage:
 //      sellerId: String
 //      sellerName: String

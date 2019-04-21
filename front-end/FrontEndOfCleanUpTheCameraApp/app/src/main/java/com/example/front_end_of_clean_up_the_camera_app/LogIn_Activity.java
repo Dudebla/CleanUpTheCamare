@@ -122,12 +122,10 @@ public class LogIn_Activity extends AppCompatActivity {
             }
         });
 
-
         //  Dude Test Button
         dudeTestButton.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LogIn_Activity.this, Seller_List_Activity.class);
+                Intent intent = new Intent(LogIn_Activity.this, Seller_Msg_Activity.class);
                 startActivity(intent);
             }
         });

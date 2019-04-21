@@ -19,4 +19,5 @@
     <string name="morder_handleGoing">进行中</string>
     <string name="morder_handleCanceled">已取消</string>
     <string name="morder_handleCompleted">已完成</string>
+
 </resources>

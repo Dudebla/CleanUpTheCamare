@@ -1,4 +1,4 @@
-package com.example.front_end_of_clean_up_the_camera_app;
+package com.example.front_end_of_clean_up_the_camera_app.Adapter;
 
 
 /*SellerItemAdapter: adapter for sellerItem
@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.front_end_of_clean_up_the_camera_app.MessageCalss.SellerMessage;
+import com.example.front_end_of_clean_up_the_camera_app.R;
 
 import java.util.List;
 

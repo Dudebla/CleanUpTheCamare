@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/seller_item_top_widget_marginTop"
+    android:background="@drawable/round_corner_border_edittext_layout">
+
+    <TextView
+        android:id="@+id/hotel_around_item_hotelName_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/seller_item_title_size"
+        android:maxLines="1"
+        android:textColor="@color/colorBlack"
+        android:text="HotelName"
+        />
+    <TextView
+        android:id="@+id/hotel_around_item_hotelAddress_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotel_around_item_hotelName_textView"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/seller_item_subTitle_size"
+        android:textColor="@color/colorBlack"
+        android:text="HotelAddress"/>
+
+    <TextView
+        android:id="@+id/hotel_around_item_checkedTime_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotel_around_item_hotelAddress_textView"
+        android:layout_marginLeft="5dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="检查次数: "/>
+
+    <TextView
+        android:id="@+id/hotel_around_item_checkedTime_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotel_around_item_hotelAddress_textView"
+        android:layout_toRightOf="@id/hotel_around_item_checkedTime_tag"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorButtonShadow"
+        android:text="10"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotel_around_item_hotelAddress_textView"
+        android:layout_toLeftOf="@id/hotel_around_item_checkedRate_textView"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="查出比率： "
+        />
+
+    <TextView
+        android:id="@+id/hotel_around_item_checkedRate_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotel_around_item_hotelAddress_textView"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/deepOrange"
+        android:text="10.00%"
+        />
+
+
+
+</RelativeLayout>

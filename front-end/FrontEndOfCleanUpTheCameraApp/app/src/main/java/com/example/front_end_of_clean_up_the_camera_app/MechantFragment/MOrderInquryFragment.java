@@ -52,7 +52,7 @@ public class MOrderInquryFragment extends Fragment {
         //绑定页面
         ButterKnife.bind(this, view);
 
-        mDropDownMenu=  view.findViewById( R.id.DropDownMenu);
+        mDropDownMenu=  view.findViewById(R.id.DropDownMenu);
 
         initView();
 

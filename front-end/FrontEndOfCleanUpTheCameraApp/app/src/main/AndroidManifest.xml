@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.front_end_of_clean_up_the_camera_app">
-
+    <!-- for net using -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- for photo cycle play -->
+    <!-- if you want to load images from the internet -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- if you want to load images from a file OR from the internet -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,9 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Seller_Msg_Activity" />
-        <activity android:name=".Seller_List_Activity" />
-        <activity android:name=".ContentUserHomeActivity" />
+        <activity android:name=".HotelAroundActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Seller_Msg_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Seller_List_Activity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".MechanthomeActivity" />
         <activity
             android:name=".UserHomeActivity"

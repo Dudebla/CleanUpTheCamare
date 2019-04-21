@@ -33,7 +33,7 @@
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/nav_userHead_imageView"
         android:textSize="30dp"
-        android:text="username"
+        android:text="李小明"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
@@ -44,6 +44,6 @@
         android:layout_toRightOf="@id/nav_userHead_imageView"
         android:layout_below="@+id/nav_userName_textView"
         android:textSize="15dp"
-        android:text="user_location___" />
+        android:text="广州市天河区" />
 
 </RelativeLayout>

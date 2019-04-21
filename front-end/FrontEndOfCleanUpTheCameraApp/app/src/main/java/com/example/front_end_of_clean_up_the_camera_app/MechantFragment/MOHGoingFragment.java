@@ -60,12 +60,12 @@ public class MOHGoingFragment extends Fragment {
 
     //String orderTime,String reciveTime,String userName,String userPhone,String userAddress,String userRemarks,String estimatedAmount,int userImage) {
     private void initDatas() {
-        MOHGoingOrder order0 = new MOHGoingOrder("12:00","15:00","小红","1234567","华师","","12￥",R.drawable.user_image);
-        MOHGoingOrder order1 = new MOHGoingOrder("12:00","15:00","小李","1234567","华师","嘿嘿","12￥",R.drawable.user_image);
-        MOHGoingOrder order2 = new MOHGoingOrder("12:00","15:00","小明","1234567","华师","检查检查检查","12￥",R.drawable.user_image);
-        MOHGoingOrder order3 = new MOHGoingOrder("12:00","15:00","小黑","1234567","华师","没有","12￥",R.drawable.user_image);
-        MOHGoingOrder order4 = new MOHGoingOrder("12:00","15:00","小白","1234567","华师","啦啦啦啦","12￥",R.drawable.user_image);
-        MOHGoingOrder order5 = new MOHGoingOrder("12:00","15:00","小兰","1234567","华师","哈哈哈哈","12￥",R.drawable.user_image);
+        MOHGoingOrder order0 = new MOHGoingOrder("12:00","12:35","小红","155****0000","广州市珠江东路","","12￥", "0000001", R.drawable.user_image);
+        MOHGoingOrder order1 = new MOHGoingOrder("12:12","13:05","小李","155****1122","广州市海珠区阅江西路","嘿嘿","13￥","0000004", R.drawable.user_image);
+        MOHGoingOrder order2 = new MOHGoingOrder("12:00","15:00","小明","1234567","华师","检查检查检查","12￥","0000010",R.drawable.user_image);
+        MOHGoingOrder order3 = new MOHGoingOrder("12:00","15:00","小黑","1234567","华师","没有","12￥","0000010",R.drawable.user_image);
+        MOHGoingOrder order4 = new MOHGoingOrder("12:00","15:00","小白","1234567","华师","啦啦啦啦","12￥","0000010",R.drawable.user_image);
+        MOHGoingOrder order5 = new MOHGoingOrder("12:00","15:00","小兰","1234567","华师","哈哈哈哈","12￥","0000010",R.drawable.user_image);
         datas.add(order0);
         datas.add(order1);
         datas.add(order2);

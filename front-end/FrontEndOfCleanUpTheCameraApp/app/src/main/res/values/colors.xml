@@ -41,6 +41,10 @@
     <color name="un_press_color">#AEFA0505</color>
     <color name="tab_select_color">#2180F3</color>
 
+    <color name="lightBlue">#8DC8F7</color>
+
+
+    <color name="lightYellow">#ECC03B</color>
 
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.front_end_of_clean_up_the_camera_app.UserAdapter;
+package com.example.front_end_of_clean_up_the_camera_app.Adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

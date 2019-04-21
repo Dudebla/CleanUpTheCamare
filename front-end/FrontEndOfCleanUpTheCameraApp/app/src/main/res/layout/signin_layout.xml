@@ -103,7 +103,7 @@ tip_***_textView: detail require for input, visible while signin_***_textView on
             android:id="@+id/signin_tellNumber_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tip_username_textView"
+            android:layout_below="@id/signin_username_editText"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="4dp"
             android:textColor="@color/colorBlack"
