@@ -31,5 +31,10 @@
         android:layout_height="0dp"
         android:layout_marginTop="0dp"
         android:layout_weight="1"
-        android:background="@color/colorWhite"/>
+        android:background="@color/colorWhite"
+        >
+
+        <include layout="@layout/cuh_order_list_layout"/>
+
+    </android.support.v4.view.ViewPager>
 </LinearLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corner_border_edittext_layout"
+    android:layout_margin="10dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/cuh_order_orderID_relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mechant_order_handle_pending_marginTop"
+        >
+
+        <TextView
+            android:id="@+id/cuh_order_id_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+            android:text="订单编号:"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/cuh_order_id_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0000000"
+            android:textColor="@color/colorBlack"
+            android:layout_toRightOf="@+id/cuh_order_id_label"
+            />
+
+        <TextView
+            android:id="@+id/cuh_order_data_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorBlack"
+            android:text="2019.4.23|10:00pm"
+            />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/cuh_order_dividerOne"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/cuh_order_orderID_relativeLayout"
+        android:layout_marginBottom="5dip"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+        android:background="@color/colorBlack"  />
+
+    <RelativeLayout
+        android:id="@+id/cuh_order_detail_relaticeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cuh_order_dividerOne">
+        <TextView
+            android:id="@+id/cuh_order_spaceType_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBorder"
+            android:text="场地类型:"/>
+        <TextView
+            android:id="@+id/cuh_order_spaceType_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
+            android:layout_toRightOf="@id/cuh_order_spaceType_label"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:text="酒店"/>
+        <TextView
+            android:id="@+id/cuh_order_spaceArea_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cuh_order_spaceType_label"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBorder"
+            android:text="场地面积(平方米):"/>
+
+        <TextView
+            android:id="@+id/cuh_order_spaceArea_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cuh_order_spaceType_label"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="5dp"
+            android:layout_toRightOf="@id/cuh_order_spaceArea_label"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:text="100"/>
+
+        <TextView
+            android:id="@+id/cuh_order_sellerName_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cuh_order_spaceArea_label"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBorder"
+            android:text="商家："/>
+
+        <TextView
+            android:id="@+id/cuh_order_sellerName_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cuh_order_spaceArea_label"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="5dp"
+            android:layout_toRightOf="@id/cuh_order_sellerName_label"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:background="@drawable/white_radius"
+            android:text="CUTC广州分部"
+             />
+
+        <ImageView
+            android:id="@+id/cuh_order_chat_imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/chat"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/cuh_order_spaceType_label"
+            />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/cuh_order_dividerTwo"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/cuh_order_detail_relaticeLayout"
+        android:layout_marginBottom="5dip"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+        android:background="@color/colorBlack"  />
+
+    <RelativeLayout
+        android:id="@+id/cuh_order_userTip_relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cuh_order_dividerTwo">
+
+        <TextView
+            android:id="@+id/cuh_order_userTip_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBorder"
+            android:text="备注："/>
+
+        <TextView
+            android:id="@+id/cuh_order_userTip_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cuh_order_userTip_label"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:text="blablablablablablabbbbbbbbbbbblllllllllllllaaaaaaaaaaaaaaaaaaaaaaa"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/cuh_order_dividerThree"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/cuh_order_userTip_relativeLayout"
+        android:layout_marginBottom="5dip"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+        android:background="@color/colorBlack"  />
+
+    <RelativeLayout
+        android:id="@+id/cuh_order_result_relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cuh_order_dividerThree">
+
+        <TextView
+            android:id="@+id/cuh_order_cost_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBorder"
+            android:text="支付："
+            />
+
+        <TextView
+            android:id="@+id/cuh_order_cost_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/cuh_order_cost_label"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:text="￥20.00"/>
+
+        <Button
+            android:id="@+id/cuh_order_pay_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/button_selector"
+            android:textColor="@color/colorWhite"
+            android:text="支付"/>
+
+        <TextView
+            android:id="@+id/cuh_order_result_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cuh_order_cost_label"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBorder"
+            android:text="排查结果："
+            />
+
+        <TextView
+            android:id="@+id/cuh_order_result_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cuh_order_cost_label"
+            android:layout_toRightOf="@id/cuh_order_result_label"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:text="发现摄像头"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/cuh_order_dividerFour"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/cuh_order_result_relativeLayout"
+        android:layout_marginBottom="5dip"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+        android:background="@color/colorBlack"  />
+
+    <RelativeLayout
+        android:id="@+id/cuh_order_cancel_relaticeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cuh_order_dividerFour">
+
+        <Button
+            android:id="@+id/cuh_order_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/button_selector"
+            android:textColor="@color/colorWhite"
+            android:text="取消订单"/>
+    </RelativeLayout>
+
+</RelativeLayout>
