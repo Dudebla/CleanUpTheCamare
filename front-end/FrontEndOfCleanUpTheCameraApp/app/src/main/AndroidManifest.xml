@@ -23,11 +23,16 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Seller_List_Activity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".MechanthomeActivity" />
+        <activity android:name=".MechanthomeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".UserHomeActivity"
             android:theme="@style/AppTheme.Base" />
         <activity android:name=".SignIn_Activity" />
+        <activity android:name=".MStoreManageSettingActivity"/>
+        <activity android:name=".MStoreManageSettingMessageActivity"/>
+        <activity android:name=".MStoreManageSettingAddressActivity"/>
+        <activity android:name=".MStoreManageSettingNameActivity"/>
         <activity android:name=".LogIn_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

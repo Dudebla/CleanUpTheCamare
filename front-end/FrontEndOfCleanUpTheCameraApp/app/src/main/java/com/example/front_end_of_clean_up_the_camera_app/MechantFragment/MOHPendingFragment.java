@@ -24,8 +24,6 @@ import butterknife.ButterKnife;
 //商家订单处理页面待处理子页
 public class MOHPendingFragment extends Fragment {
 
-    private String name;
-
     private ListView listView;
 
     private List<MOHPendingOrder> datas = new ArrayList<MOHPendingOrder>();

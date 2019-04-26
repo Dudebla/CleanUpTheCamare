@@ -53,6 +53,7 @@
     <dimen name="mechant_order_handle_going_marginLeft">10dip</dimen>
     <dimen name="mechant_order_handle_going_marginTop">10dip</dimen>
     <dimen name="mechant_order_handle_going_marginRight">10dip</dimen>
+    <dimen name="mechant_order_handle_going_marginEnd">10dip</dimen>
     <dimen name="mechant_order_handle_going_marginBottom">10dip</dimen>
     <dimen name="mechant_order_handle_going_marginVertical">10dip</dimen>
     <dimen name="mechant_order_handle_going_marginHorizontal">15dip</dimen>
@@ -68,6 +69,7 @@
     <dimen name="mechant_order_inqury_marginLeft">10dip</dimen>
     <dimen name="mechant_order_inqury_marginTop">10dip</dimen>
     <dimen name="mechant_order_inqury_marginRight">10dip</dimen>
+    <dimen name="mechant_order_inqury_marginEnd">10dip</dimen>
     <dimen name="mechant_order_inqury_marginBottom">10dip</dimen>
     <dimen name="mechant_order_inqury_marginVertical">10dip</dimen>
     <dimen name="mechant_order_inqury_marginHorizontal">15dip</dimen>
@@ -79,11 +81,110 @@
     <dimen name="mechant_order_inqury_paddingVertical">10dip</dimen>
     <dimen name="mechant_order_inqury_dividerHeight">10dip</dimen>
 
+    <!--margin of widget at the left/top/bottom/right of mechant order storeManage-->
+    <dimen name="mechant_order_storeManage_marginLeft">10dip</dimen>
+    <dimen name="mechant_order_storeManage_marginTop">10dip</dimen>
+    <dimen name="mechant_order_storeManage_marginRight">10dip</dimen>
+    <dimen name="mechant_order_storeManage_marginEnd">10dip</dimen>
+    <dimen name="mechant_order_storeManage_marginBottom">10dip</dimen>
+    <dimen name="mechant_order_storeManage_marginVertical">10dip</dimen>
+    <dimen name="mechant_order_storeManage_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_order_storeManage_margin">5dp</dimen>
+
+
+    <!--padding of widget at the left/top/bottom/right of mechant order storeManage-->
+    <dimen name="mechant_order_storeManage_paddingHorizontal">15dip</dimen>
+    <dimen name="mechant_order_storeManage_paddingVertical">10dip</dimen>
+    <dimen name="mechant_order_storeManage_padding">10dip</dimen>
+    <dimen name="mechant_order_storeManage_dividerHeight">10dip</dimen>
+
 
     <!--textSize of textView of discussions-->
     <dimen name="discuss_date_textSize">10dp</dimen>
 
     <!--widget height of bar at seller msg layout-->
     <dimen name="app_bar_height">180dp</dimen>
+
+    <!--margin of widget at the left/top/bottom/right of mechantStoreManageUserComment-->
+    <dimen name="mechant_order_storeManage_userComment_marginLeft">10dp</dimen>
+    <dimen name="mechant_order_storeManage_userComment_marginTop">10dp</dimen>
+    <dimen name="mechant_order_storeManage_userComment_marginRight">10dp</dimen>
+
+    <!--margin of mechantStoreManageUserComment-->
+    <dimen name="mechant_order_storeManage_userComment_marginHorizontal">10dp</dimen>
+    <dimen name="mechant_order_storeManage_userComment_marginVertical">5dp</dimen>
+
+    <!--margin of widget at the left/top/bottom/right of mechant store manage user comment-->
+    <dimen name="mechant_store_manage_user_comment_pending_marginLeft">10dip</dimen>
+    <dimen name="mechant_store_manage_user_comment_pending_marginTop">10dip</dimen>
+    <dimen name="mechant_store_manage_user_comment_pending_marginRight">10dip</dimen>
+    <dimen name="mechant_store_manage_user_comment_pending_marginBottom">10dip</dimen>
+    <dimen name="mechant_store_manage_user_comment_pending_marginVertical">10dip</dimen>
+    <dimen name="mechant_store_manage_user_comment_pending_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_store_manage_user_comment_pending_margin">5dp</dimen>
+
+
+    <!--padding of widget at the left/top/bottom/right of mechant store manage user comment-->
+    <dimen name="mechant_store_manage_user_comment_paddingHorizontal">15dip</dimen>
+    <dimen name="mechant_store_manage_user_comment_paddingVertical">10dip</dimen>
+    <dimen name="mechant_store_manage_user_comment_dividerHeight">10dip</dimen>
+
+
+    <!--margin of widget at the left/top/bottom/right of mechantStoreManageUserComment-->
+    <dimen name="mechant_order_storeManage_incomeRecord_marginLeft">10dp</dimen>
+    <dimen name="mechant_order_storeManage_incomeRecord_marginTop">10dp</dimen>
+    <dimen name="mechant_order_storeManage_incomeRecord_marginRight">10dp</dimen>
+
+    <!--margin of mechantStoreManageUserComment-->
+    <dimen name="mechant_order_storeManage_incomeRecord_marginHorizontal">10dp</dimen>
+    <dimen name="mechant_order_storeManage_incomeRecord_marginVertical">5dp</dimen>
+
+    <!--margin of widget at the left/top/bottom/right of mechant store manage income_record-->
+    <dimen name="mechant_store_manage_income_record_pending_marginLeft">10dip</dimen>
+    <dimen name="mechant_store_manage_income_record_pending_marginTop">10dip</dimen>
+    <dimen name="mechant_store_manage_income_record_pending_marginRight">10dip</dimen>
+    <dimen name="mechant_store_manage_income_record_pending_marginBottom">10dip</dimen>
+    <dimen name="mechant_store_manage_income_record_pending_marginVertical">10dip</dimen>
+    <dimen name="mechant_store_manage_income_record_pending_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_store_manage_income_record_pending_margin">5dp</dimen>
+
+
+    <!--padding of widget at the left/top/bottom/right of mechant store manage income record-->
+    <dimen name="mechant_store_manage_income_record_paddingHorizontal">15dip</dimen>
+    <dimen name="mechant_store_manage_income_record_paddingVertical">10dip</dimen>
+    <dimen name="mechant_store_manage_income_record_dividerHeight">10dip</dimen>
+
+
+    <!--margin of widget at the left/top/bottom/right of mechant order handle cancle-->
+    <dimen name="mechant_order_handle_cancle_marginLeft">10dip</dimen>
+    <dimen name="mechant_order_handle_cancle_marginTop">10dip</dimen>
+    <dimen name="mechant_order_handle_cancle_marginRight">10dip</dimen>
+    <dimen name="mechant_order_handle_cancle_marginBottom">10dip</dimen>
+    <dimen name="mechant_order_handle_cancle_marginVertical">10dip</dimen>
+    <dimen name="mechant_order_handle_cancle_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_order_handle_cancle_margin">5dp</dimen>
+
+    <!--padding of widget at the left/top/bottom/right of mechant order handle cancle-->
+    <dimen name="mechant_order_handle_cancle_paddingHorizontal">15dip</dimen>
+    <dimen name="mechant_order_handle_cancle_paddingVertical">10dip</dimen>
+    <dimen name="mechant_order_handle_cancle_dividerHeight">10dip</dimen>
+
+
+    <!--margin of widget at the left/top/bottom/right of mechant order handle completed-->
+    <dimen name="mechant_order_handle_completed_marginLeft">10dip</dimen>
+    <dimen name="mechant_order_handle_completed_marginTop">10dip</dimen>
+    <dimen name="mechant_order_handle_completed_marginRight">10dip</dimen>
+    <dimen name="mechant_order_handle_completed_marginEnd">10dip</dimen>
+    <dimen name="mechant_order_handle_completed_marginBottom">10dip</dimen>
+    <dimen name="mechant_order_handle_completed_marginVertical">10dip</dimen>
+    <dimen name="mechant_order_handle_completed_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_order_handle_completed_margin">5dp</dimen>
+
+
+    <!--padding of widget at the left/top/bottom/right of mechant order handle completed-->
+    <dimen name="mechant_order_handle_completed_paddingHorizontal">15dip</dimen>
+    <dimen name="mechant_order_handle_completed_paddingVertical">10dip</dimen>
+    <dimen name="mechant_order_handle_completed_dividerHeight">10dip</dimen>
+
 
 </resources>

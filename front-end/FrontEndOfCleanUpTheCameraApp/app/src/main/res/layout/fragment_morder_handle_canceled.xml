@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.front_end_of_clean_up_the_camera_app.MechantFragment.MOHCanceledFragment">
+    android:layout_height="match_parent">
 
-    <TextView
+    <ListView
+        android:id="@+id/lv_morderHandlCancle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="This is order handle canceled page"
-        android:textSize="20dip"
-        android:textColor="@color/colorBlack"
-        android:gravity="center"
-        />
+        android:layout_marginVertical="@dimen/mechant_order_handle_cancle_marginVertical"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_cancle_marginHorizontal"
+        android:layout_alignParentBottom="true"
+        android:dividerHeight="@dimen/mechant_order_handle_cancle_dividerHeight"
+        android:divider="@color/colorWhite"
+        android:layout_marginBottom="20dp" />
 
-
-</LinearLayout>
+</RelativeLayout>

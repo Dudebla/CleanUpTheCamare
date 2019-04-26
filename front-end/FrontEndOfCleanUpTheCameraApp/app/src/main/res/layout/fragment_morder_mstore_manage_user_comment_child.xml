@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mechant_order_storeManage_userComment_marginHorizontal"
+    android:background="@drawable/round_corner_border_edittext_layout"
+    >
+
+    <TextView
+        android:id="@+id/tv_mStoreUserCommentUserName"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mechant_order_storeManage_userComment_marginLeft"
+        android:layout_marginTop="@dimen/mechant_order_storeManage_userComment_marginTop"
+        android:maxLines="1"
+        android:text="username"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_mStoreUserCommentGrade"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mechant_order_storeManage_userComment_marginTop"
+        android:layout_toRightOf="@+id/tv_mStoreUserCommentUserName"
+        android:textSize="15dp"
+        android:text="5.0"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tv_mStoreUserCommentContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/mechant_order_storeManage_userComment_marginHorizontal"
+        android:layout_marginVertical="@dimen/mechant_order_storeManage_userComment_marginVertical"
+        android:layout_below="@+id/tv_mStoreUserCommentUserName"
+        android:textSize="15dp"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:text="bbbbbbbbbblblblblblblbbbbbbbbbbbbbbbbbbbbbbbbbbblalalalalalblalalalalabllablallblablabla"
+        />
+
+    <TextView
+        android:id="@+id/tv_mStoreUserCommentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_mStoreUserCommentContent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/mechant_order_storeManage_userComment_marginRight"
+        android:maxLines="1"
+        android:textSize="10dp"
+        android:text="2019年4月18日"/>
+
+</RelativeLayout>

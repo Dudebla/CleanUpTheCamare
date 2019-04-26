@@ -5,10 +5,10 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/round_corner_border_edittext_layout"
-    android:layout_marginBottom="@dimen/mechant_order_handle_pending_marginBottom"
-    android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
-    android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
-    tools:context="com.example.front_end_of_clean_up_the_camera_app.MechantFragment.MOHGoingFragment">
+    android:layout_marginBottom="@dimen/mechant_order_handle_completed_marginBottom"
+    android:layout_marginHorizontal="@dimen/mechant_order_handle_completed_marginHorizontal"
+    android:layout_marginVertical="@dimen/mechant_order_handle_completed_marginVertical"
+    tools:context="com.example.front_end_of_clean_up_the_camera_app.MechantFragment.MOHCompletedFragment">
 
 
     <RelativeLayout
@@ -55,7 +55,11 @@
         android:id="@+id/rl_orderTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rl_orderNumber"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/mechant_order_inqury_marginRight"
+        android:layout_marginEnd="@dimen/seller_item_right_widget_marginRight"
+        android:gravity="right"
         >
 
         <TextView
@@ -64,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
             android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
-            android:text="下单时间:"
+            android:text="订单日期:"
             android:textSize="10dp"
             android:textColor="@color/deepGrey"/>
 
@@ -84,39 +88,6 @@
     </RelativeLayout>
 
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/rl_orderTime"
-        android:layout_below="@+id/rl_orderNumber"
-        android:layout_marginLeft="@dimen/mechant_order_handle_going_marginLeft">
-
-        <TextView
-            android:id="@+id/tv_reciveTimeLable"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
-            android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
-            android:text="接单时间:"
-            android:textSize="10dp"
-            android:textColor="@color/deepGrey"/>
-
-        <TextView
-            android:id="@+id/tv_reciveTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="15:00"
-            android:textSize="10dp"
-            android:textColor="@color/deepGrey"
-            android:layout_toRightOf="@+id/tv_reciveTimeLable"
-            android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
-            />
-
-    </RelativeLayout>
-
-
-
-
 
     <View
         android:id="@+id/v_dividerTwo"
@@ -127,15 +98,6 @@
         android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
         android:background="@color/colorBlack"  />
 
-    <ImageView
-        android:id="@+id/iv_userImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_below="@id/v_dividerOne"
-        android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
-        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
-        android:src="@drawable/portrait"/>
-
     <TextView
         android:id="@+id/tv_username"
         android:layout_width="wrap_content"
@@ -145,7 +107,7 @@
         android:layout_toRightOf="@+id/iv_userImage"
         android:layout_below="@+id/v_dividerOne"
         android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
-        android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
+        android:layout_marginTop="@dimen/mechant_order_handle_completed_marginTop"
         android:textSize="15dp"
         android:text="用户名"/>
 
@@ -185,70 +147,14 @@
         />
 
 
-
-    <RelativeLayout
-        android:id="@+id/rl_userAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
-        android:layout_below="@+id/iv_userImage">
-
-            <TextView
-                android:id="@+id/tv_userAddressLable"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/mechant_order_handle_going_margin"
-                android:textStyle="bold"
-                android:text="地址："
-                android:textColor="@color/deepOrange"
-                android:textSize="15dp"/>
-
-
-            <TextView
-                android:id="@+id/tv_userAddress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/mechant_order_handle_going_margin"
-                android:text="华南师范大学"
-                android:textColor="@color/colorBlack"
-                android:layout_toRightOf="@+id/tv_userAddressLable"
-                android:textSize="15dip"/>
-
-    </RelativeLayout>
-
-
-
     <RelativeLayout
         android:id="@+id/rl_userRemarks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rl_userAddress"
+        android:layout_below="@+id/tv_userPhone"
         android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
         android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
         >
-
-
-        <TextView
-            android:id="@+id/tv_userRemarksLable"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_margin="@dimen/mechant_order_handle_going_margin"
-            android:text="备注："
-            android:textSize="15dp"
-            android:textColor="@color/deepOrange"
-            />
-
-        <TextView
-            android:id="@+id/tv_userRemarks"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mechant_order_handle_pending_margin"
-            android:text="这是备注这是备注这是备注这是备注这是备注这是备注这是备注这是备注这是备注这是备注"
-            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
-            android:textColor="@color/colorBlack"
-            android:layout_toRightOf="@+id/tv_userRemarksLable"
-            android:textSize="15dip"/>
 
 
     </RelativeLayout>
@@ -269,26 +175,26 @@
         android:layout_below="@id/v_dividerThree">
 
         <TextView
-            android:id="@+id/tv_estimatedAmountLable"
+            android:id="@+id/tv_incomeMoneyLable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="预计金额："
+            android:text="交易金额："
             android:textColor="@color/colorBlack"
             android:textSize="15dp"
-            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
-            android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_completed_marginHorizontal"
+            android:layout_marginVertical="@dimen/mechant_order_handle_completed_marginVertical"
             />
 
         <TextView
-            android:id="@+id/tv_estimatedAmount"
+            android:id="@+id/tv_incomeMoney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:text="22￥"
             android:textSize="15dp"
             android:textColor="@color/deepOrange"
-            android:layout_toRightOf="@+id/tv_estimatedAmountLable"
+            android:layout_toRightOf="@+id/tv_incomeMoneyLable"
             android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"/>
 
 

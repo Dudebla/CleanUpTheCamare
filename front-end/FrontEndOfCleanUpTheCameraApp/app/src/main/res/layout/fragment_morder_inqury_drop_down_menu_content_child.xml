@@ -1,47 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/round_corner_border_edittext_layout"
-    android:layout_marginHorizontal="@dimen/mechant_order_inqury_marginHorizontal"
-    android:layout_marginVertical="@dimen/mechant_order_inqury_marginVertical"
-    >
-    <!--seller_item_sellerName_textView: textView for sellerName showing-->
-    <TextView
-        android:id="@+id/seller_item_sellerName_textView"
-        android:layout_width="@dimen/seller_item_title_width"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/seller_item_left_widget_marginLeft"
-        android:layout_marginTop="@dimen/seller_item_top_widget_marginTop"
-        android:textSize="@dimen/seller_item_title_size"
-        android:maxLines="1"
-        android:textColor="@color/colorBlack"
-        android:text="用户名"/>
+    android:layout_marginBottom="@dimen/mechant_order_handle_pending_marginBottom"
+    android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+    android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+    tools:context="com.example.front_end_of_clean_up_the_camera_app.MechantFragment.MOrderInquryFragment">
 
-    <!--seller_item_sellerAddress_textView: textView for seller address showing-->
-    <TextView
-        android:id="@+id/seller_item_sellerAddress_textView"
-        android:layout_width="@dimen/seller_item_subTitle_width"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/seller_item_sellerName_textView"
-        android:layout_marginLeft="@dimen/seller_item_left_widget_marginLeft"
-        android:layout_marginBottom="@dimen/seller_item_bottom_widget_marginBottom"
-        android:textSize="@dimen/seller_item_subTitle_size"
-        android:textColor="@color/colorPrimaryDark"
-        android:maxLines="1"
-        android:text="SellerAddress"
-        />
 
-    <!--seller_item_sellerScore_textView-->
-    <TextView
-        android:id="@+id/seller_item_sellerScore_textView"
+    <RelativeLayout
+        android:id="@+id/rl_orderNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/seller_item_sellerName_textView"
-        android:layout_marginLeft="@dimen/seller_item_left_widget_marginLeft"
-        android:layout_marginTop="@dimen/seller_item_top_widget_marginTop"
-        android:textSize="@dimen/seller_item_sellerScore_size"
+        android:layout_marginTop="@dimen/mechant_order_handle_pending_marginTop"
+        >
+
+        <TextView
+            android:id="@+id/tv_orderNumberLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+            android:text="订单编号:"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_orderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0000000"
+            android:textColor="@color/colorBlack"
+            android:layout_toRightOf="@+id/tv_orderNumberLable"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_dividerOne"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_orderTime"
+        android:layout_marginBottom="5dip"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+        android:background="@color/colorBlack"  />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_orderTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_orderNumber"
+        >
+
+        <TextView
+            android:id="@+id/tv_orderTimeLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
+            android:text="订单日期:"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/tv_orderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019-4-22"
+            android:textColor="@color/colorBlack"
+            android:layout_toRightOf="@+id/tv_orderTimeLable"
+            android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <View
+        android:id="@+id/v_dividerTwo"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_orderTime"
+        android:layout_marginBottom="5dip"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+        android:background="@color/colorBlack"  />
+
+
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/iv_userImage"
+        android:layout_below="@+id/v_dividerOne"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+        android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
+        android:textSize="20dp"
+        android:text="用户名"/>
+
+    <TextView
+        android:id="@+id/tv_userGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_username"
+        android:layout_below="@id/v_dividerOne"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/mechant_order_inqury_marginTop"
+        android:layout_marginRight="@dimen/mechant_order_inqury_marginRight"
+        android:layout_marginEnd="@dimen/seller_item_right_widget_marginRight"
+        android:gravity="right"
+        android:textSize="20dp"
         android:textStyle="italic"
         android:maxLines="1"
         android:textColor="@color/colorCheckBoxActivity"
@@ -50,19 +129,103 @@
 
 
 
+    <ImageView
+        android:id="@+id/iv_userPhoneImage"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:src="@drawable/phone"
+        android:layout_below="@+id/tv_username"
+        android:layout_toRightOf="@+id/iv_userImage"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+        />
+
     <TextView
-        android:id="@+id/seller_item_sellerCost_textView"
-        android:layout_width="80dp"
+        android:id="@+id/tv_userPhone"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="@dimen/seller_item_top_widget_marginTop"
-        android:layout_marginRight="@dimen/seller_item_right_widget_marginRight"
-        android:layout_marginEnd="@dimen/seller_item_right_widget_marginRight"
-        android:gravity="right"
-        android:maxLines="1"
-        android:textSize="@dimen/seller_item_button_size"
-        android:text="$10.00"/>
+        android:layout_below="@+id/tv_username"
+        android:layout_toRightOf="@+id/iv_userPhoneImage"
+        android:text="11111111"
+        android:textSize="20dp"
+        android:textColor="@color/colorBlack"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_userComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_userPhoneImage"
+        android:layout_marginVertical="@dimen/mechant_order_inqury_marginVertical"
+        android:layout_marginHorizontal="@dimen/mechant_order_inqury_marginHorizontal"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_userCommentLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/mechant_order_handle_going_margin"
+            android:text="评论："
+            android:textSize="20dp"
+            android:textColor="@color/deepOrange"
+            />
+
+        <TextView
+            android:id="@+id/tv_userComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mechant_order_handle_pending_margin"
+            android:text="这是评论这是评论这是评论这是评论"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:textColor="@color/colorBlack"
+            android:layout_toRightOf="@+id/tv_userCommentLable"
+            android:textSize="20dip"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_dividerThree"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_userComment"
+        android:layout_marginBottom="5dip"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+        android:background="@color/colorBlack"  />
+
+    <RelativeLayout
+        android:id="@+id/rl_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v_dividerThree">
+
+        <TextView
+            android:id="@+id/tv_TransactionAmountLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="交易金额："
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
+            android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
+            />
+
+        <TextView
+            android:id="@+id/tv_TransactionAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="22￥"
+            android:textSize="20dp"
+            android:textColor="@color/deepOrange"
+            android:layout_toRightOf="@+id/tv_TransactionAmountLable"
+            android:layout_marginVertical="@dimen/mechant_order_inqury_marginVertical"/>
+
+
+    </RelativeLayout>
 
 
 

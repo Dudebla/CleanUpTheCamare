@@ -1,25 +1,390 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<!--<android.support.design.widget.CoordinatorLayout-->
+    <!--android:id="@+id/CoordinatorLayout_mStoreManageUserComment"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".MechantFragment.MStoreManageFragment">-->
+
+<!--<android.support.design.widget.AppBarLayout-->
+        <!--android:id="@+id/appBarLayout_mechantStoreManage"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fitsSystemWindows="true">-->
+
+        <!--<android.support.design.widget.CollapsingToolbarLayout-->
+            <!--android:id="@+id/collapsing_toolbar_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:contentScrim="#30469b"-->
+            <!--app:expandedTitleMarginStart="48dp"-->
+            <!--app:layout_scrollFlags="scroll|exitUntilCollapsed">-->
+
+
+            <!--<android.support.v7.widget.Toolbar-->
+                <!--android:id="@+id/toolbar_mechantStoreManage"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="?attr/actionBarSize"-->
+                <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+                <!--app:layout_collapseMode="pin"-->
+                <!--android:fitsSystemWindows="true"-->
+                <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+                <!--xmlns:app="http://schemas.android.com/apk/res-auto" />-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_mechantMessage"-->
+                <!--android:fitsSystemWindows="true"-->
+                <!--android:layout_marginTop="?attr/actionBarSize"-->
+                <!--android:layout_marginBottom="?attr/actionBarSize"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<android.widget.ImageView-->
+                    <!--android:id="@+id/iv_mechantImage"-->
+                    <!--android:layout_width="80dp"-->
+                    <!--android:layout_height="80dp"-->
+                    <!--android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"-->
+                    <!--android:background="@drawable/manage_filled"-->
+                    <!--app:layout_collapseMode="parallax"/>-->
+
+                <!--<android.widget.TextView-->
+                    <!--android:id="@+id/tv_mechantName"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:fitsSystemWindows="true"-->
+                    <!--android:layout_toRightOf="@+id/iv_mechantImage"-->
+                    <!--android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"-->
+                    <!--android:textSize="35dp"-->
+                    <!--android:text="CUTM广州分部"-->
+                    <!--android:textColor="@color/colorBlack"-->
+                    <!--android:maxLines="1"-->
+                    <!--/>-->
+
+                <!--<android.widget.TextView-->
+                    <!--android:id="@+id/tv_mechantAddress"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:fitsSystemWindows="true"-->
+                    <!--android:layout_toRightOf="@+id/iv_mechantImage"-->
+                    <!--android:layout_below="@+id/tv_mechantName"-->
+                    <!--android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"-->
+                    <!--android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:text="广州市天河区天河路"-->
+                    <!--android:textColor="@color/colorBlack"-->
+                    <!--/>-->
+
+                <!--<android.widget.TextView-->
+                    <!--android:id="@+id/tv_mechantStoreConditionLable"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/iv_mechantImage"-->
+                    <!--android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"-->
+                    <!--android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:text="店铺状态："/>-->
+
+                <!--<Switch-->
+                    <!--android:id="@+id/switch_mechantStoreConditionControl"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"-->
+                    <!--android:layout_marginRight="@dimen/mechant_order_storeManage_marginRight"-->
+                    <!--android:layout_marginEnd="@dimen/mechant_order_storeManage_marginEnd"-->
+                    <!--android:layout_below="@id/iv_mechantImage"-->
+                    <!--android:layout_toRightOf="@id/tv_mechantStoreCondition"-->
+                    <!--android:gravity="right"-->
+                    <!--android:textOff="暂停营业"-->
+                    <!--android:textOn="开始营业" />-->
+
+                <!--<android.widget.TextView-->
+                    <!--android:id="@+id/tv_mechantStoreCondition"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"-->
+                    <!--android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"-->
+                    <!--android:layout_toRightOf="@+id/tv_mechantStoreConditionLable"-->
+                    <!--android:layout_below="@+id/iv_mechantImage"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:text="营业中"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textColor="@color/deepOrange"/>-->
+
+                <!--<android.widget.TextView-->
+                    <!--android:id="@+id/tv_mechantServiceGradeLable"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/tv_mechantStoreConditionLable"-->
+                    <!--android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"-->
+                    <!--android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:text="服务评分："/>-->
+
+                <!--<android.widget.TextView-->
+                    <!--android:id="@+id/tv_mechantServiceGrade"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/tv_mechantStoreCondition"-->
+                    <!--android:layout_toRightOf="@+id/tv_mechantServiceGradeLable"-->
+                    <!--android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"-->
+                    <!--android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:text="4.9"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textColor="@color/deepOrange"/>-->
+
+
+            <!--</RelativeLayout>-->
+
+
+        <!--</android.support.design.widget.CollapsingToolbarLayout>-->
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+        <!--&gt;-->
+
+        <!--<LinearLayout-->
+            <!--android:focusable="true"-->
+            <!--android:orientation="vertical"-->
+            <!--android:fillViewport="true"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+
+            <!--<android.support.design.widget.TabLayout-->
+                <!--android:id="@+id/tab_layout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dip"-->
+                <!--app:tabBackground="@color/colorWhite"-->
+                <!--app:tabIndicatorColor="@color/colorBlack"-->
+                <!--app:tabGravity="fill"-->
+                <!--app:tabIndicatorHeight="1dip"-->
+                <!--app:tabMode="fixed"-->
+                <!--app:tabMinWidth="40dip"-->
+                <!--app:tabPaddingStart="5dip"-->
+                <!--app:tabPaddingEnd="5dip"-->
+                <!--app:tabSelectedTextColor="@color/colorBlack"-->
+                <!--app:tabTextAppearance="@style/tab_head"-->
+                <!--app:tabTextColor="@color/deepGrey"-->
+                <!--/>-->
+            <!--<com.example.front_end_of_clean_up_the_camera_app.ViewPagerForScrollView.ViewPagerForScrollView-->
+                <!--android:id="@+id/view_pager"-->
+                <!--android:layout_below="@+id/tab_layout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="0dip"-->
+                <!--android:layout_weight="1"-->
+                <!--android:visibility="visible"-->
+                <!--android:background="@color/colorWhite"-->
+
+                <!--/>-->
+
+        <!--</LinearLayout>-->
+
+
+
+
+    <!--</android.support.v4.widget.NestedScrollView>-->
+<!--</android.support.design.widget.CoordinatorLayout>-->
+
+
+<LinearLayout
     android:orientation="vertical"
-    android:gravity="center"
+    android:fillViewport="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-
-    <TextView
-
-        android:layout_width="wrap_content"
-
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_mechantStoreManage"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_collapseMode="pin"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorPrimaryDark"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
 
-        android:layout_centerInParent="true"
 
-        android:text="This is order manage page"
+    <RelativeLayout
+        android:id="@+id/rl_mechantMessage"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/mechant_order_storeManage_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        android:textSize="20dp"
+        <android.widget.ImageView
+        android:id="@+id/iv_mechantImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"
+        android:background="@drawable/manage_filled"
+        app:layout_collapseMode="parallax"/>
 
+        <android.widget.TextView
+        android:id="@+id/tv_mechantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_toRightOf="@+id/iv_mechantImage"
+        android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"
+        android:textSize="25dp"
+        android:text="CUTM广州分部"
+        android:textColor="@color/colorBlack"
+        android:maxLines="1"
+        />
+
+        <android.widget.TextView
+        android:id="@+id/tv_mechantAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_toRightOf="@+id/iv_mechantImage"
+        android:layout_below="@+id/tv_mechantName"
+        android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"
+        android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"
+        android:textSize="12dp"
+        android:text="广州市天河区天河路"
         android:textColor="@color/colorBlack"
         />
 
+        <android.widget.TextView
+        android:id="@+id/tv_mechantStoreConditionLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_mechantImage"
+        android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"
+        android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"
+        android:textSize="18dp"
+        android:text="店铺状态："/>
+
+        <Switch
+        android:id="@+id/switch_mechantStoreConditionControl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"
+        android:layout_marginRight="@dimen/mechant_order_storeManage_marginRight"
+        android:layout_marginEnd="@dimen/mechant_order_storeManage_marginEnd"
+        android:layout_below="@id/iv_mechantImage"
+        android:layout_toRightOf="@id/tv_mechantStoreCondition"
+        android:gravity="right"
+        android:textOff="暂停营业"
+        android:textOn="开始营业" />
+
+        <android.widget.TextView
+        android:id="@+id/tv_mechantStoreCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"
+        android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"
+        android:layout_toRightOf="@+id/tv_mechantStoreConditionLable"
+        android:layout_below="@+id/iv_mechantImage"
+        android:textSize="18dp"
+        android:text="暂停营业"
+        android:textStyle="bold"
+        android:textColor="@color/deepOrange"/>
+
+        <android.widget.TextView
+            android:id="@+id/tv_mechantServiceGradeLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_mechantStoreConditionLable"
+            android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"
+            android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"
+            android:textSize="18dp"
+            android:text="服务评分："/>
+
+        <android.widget.TextView
+        android:id="@+id/tv_mechantServiceGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_mechantStoreCondition"
+        android:layout_toRightOf="@+id/tv_mechantServiceGradeLable"
+        android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"
+        android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"
+        android:textSize="18dp"
+        android:text="4.9"
+        android:textStyle="bold"
+        android:textColor="@color/deepOrange"/>
+
+        <TextView
+            android:id="@+id/tv_mStoreIncomeTotalLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总收入："
+            android:textSize="18dp"
+            android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"
+            android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"
+            android:layout_below="@id/tv_mechantServiceGradeLable"/>
+
+        <android.widget.TextView
+            android:id="@+id/tv_mStoreIncomeTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_mechantServiceGrade"
+            android:layout_toRightOf="@+id/tv_mStoreIncomeTotalLable"
+            android:layout_marginTop="@dimen/mechant_order_storeManage_marginTop"
+            android:layout_marginLeft="@dimen/mechant_order_storeManage_marginLeft"
+            android:textSize="18dp"
+            android:text="999999￥"
+            android:textStyle="bold"
+            android:textColor="@color/deepOrange"/>
+
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        app:tabBackground="@color/colorWhite"
+        app:tabIndicatorColor="@color/colorBlack"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="1dip"
+        app:tabMode="fixed"
+        app:tabMinWidth="40dip"
+        app:tabPaddingStart="5dip"
+        app:tabPaddingEnd="5dip"
+        app:tabSelectedTextColor="@color/colorBlack"
+        app:tabTextAppearance="@style/tab_head"
+        app:tabTextColor="@color/deepGrey"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dip"
+        android:layout_weight="1"
+        android:visibility="visible"
+        android:background="@color/colorWhite"
+
+    />
+
+
+
+
+
+
 </LinearLayout>
+
+

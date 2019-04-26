@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/fragment_morder_mstore_manage_content"
+    tools:context="com.example.front_end_of_clean_up_the_camera_app.MechantFragment.MStoreManageFragment">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        app:tabBackground="@color/colorWhite"
+        app:tabIndicatorColor="@color/colorBlack"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="1dip"
+        app:tabMode="fixed"
+        app:tabMinWidth="40dip"
+        app:tabPaddingStart="5dip"
+        app:tabPaddingEnd="5dip"
+        app:tabSelectedTextColor="@color/colorBlack"
+        app:tabTextAppearance="@style/tab_head"
+        app:tabTextColor="@color/deepGrey"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dip"
+        android:layout_weight="1"
+        android:background="@color/colorWhite" />
+
+
+</LinearLayout>
+

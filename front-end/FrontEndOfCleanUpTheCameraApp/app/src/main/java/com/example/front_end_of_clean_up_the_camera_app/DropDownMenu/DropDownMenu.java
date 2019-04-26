@@ -248,41 +248,6 @@ public class DropDownMenu extends LinearLayout {
                         throw new IllegalArgumentException("the type TYPE_LIST_CITY should mapping String[] and the select_position must be < array length");
 
                     break;
-                    //默认类型
-//                case TYPE_LIST_SIMPLE:
-//
-//                    if (value instanceof String[] && select_position < ((String[]) value).length)
-//
-//                        view = setSimpleListView((String[]) value, i, select_position);
-//
-//                    else
-//
-//                        throw new IllegalArgumentException("the type TYPE_LIST_SIMPLE should mapping String[] and the select_position must be < array length");
-//                    break;
-//
-//                    //默认类型，网格选择
-//                case TYPE_GRID:
-//
-//                    if (value instanceof String[] && select_position < ((String[]) value).length)
-//
-//                        view = setGridView((String[]) value, i, select_position);
-//
-//                    else
-//
-//                        throw new IllegalArgumentException("the type TYPE_GRID should mapping String[] and the select_position must be < array length");
-//
-//                    break;
-//
-//                default:
-//                    //看不懂这啥
-//                    if (value instanceof View)
-//
-//                        view = (View) value;
-//
-//                    else
-//
-//                        throw new IllegalArgumentException("the type TYPE_CUSTOM should mapping View");
-//                    break;
 
             }
             //设置下拉选择菜单参数
@@ -441,13 +406,7 @@ public class DropDownMenu extends LinearLayout {
         tabMenuView.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
 
         tabMenuView.setDividerDrawable(getResources().getDrawable(R.drawable.morder_inqury_divider_line));
-        //添加分割线
-       /* if (i < tabTexts.size() - 1) {
-            View view = new View(getContext());
-            view.setLayoutParams(new LayoutParams(dpTpPx(0.5f), ViewGroup.LayoutParams.MATCH_PARENT));
-            view.setBackgroundColor(dividerColor);
-            tabMenuView.addView(view);
-        }*/
+
     }
 
     /**

@@ -36,7 +36,7 @@ public class MechantFragmentAdapter extends FragmentPagerAdapter {
 
             case 2:
                 //聊天
-                fragment = new MChatFragment();
+               fragment = new MChatFragment();
                 break;
 
             case 3:

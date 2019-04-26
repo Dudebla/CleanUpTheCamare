@@ -20,13 +20,10 @@ import butterknife.ButterKnife;
 //商家订单处理页面进行中子页
 public class MOHGoingFragment extends Fragment {
 
-    private String name;
-
     private ListView listView;
 
     private List<MOHGoingOrder> datas = new ArrayList<MOHGoingOrder>();
 
-    private MOHGoingOrderAdapter mohGoingOrderAdapter;
 
     @Override
 

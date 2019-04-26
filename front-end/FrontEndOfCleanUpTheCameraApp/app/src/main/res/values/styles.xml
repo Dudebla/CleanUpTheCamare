@@ -18,9 +18,20 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="mechant_sotre_manage_APPbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="mechant_sotre_manage_PopupOverly" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- tab标题-->
     <style name="tab_head" parent="TextAppearance.Design.Tab">
@@ -37,8 +48,13 @@
         <item name="android:actionBarSize">46dp</item>
     </style>
 
+<<<<<<< HEAD
+
+
+=======
     <!--allow cuh_order_tab showing adding icon-->
     <style name="CUHOrderTabLayoutStyle" parent="Widget.Design.TabLayout">
         <item name="android:textAllCaps">false</item>
     </style>
+>>>>>>> 5ac1afe3d78a7324027fcbdeacd52245f73265af
 </resources>

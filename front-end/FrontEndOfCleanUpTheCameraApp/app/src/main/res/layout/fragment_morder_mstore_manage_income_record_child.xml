@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mechant_order_storeManage_incomeRecord_marginHorizontal"
+    >
+
+    <TextView
+        android:id="@+id/tv_mStoreIncomeRecordOrderNUmberLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mechant_order_storeManage_incomeRecord_marginLeft"
+        android:layout_marginTop="@dimen/mechant_order_storeManage_incomeRecord_marginTop"
+        android:maxLines="1"
+        android:text="账单号："
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_mStoreIncomeRecordOrderNUmber"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mechant_order_storeManage_incomeRecord_marginTop"
+        android:layout_toRightOf="@+id/tv_mStoreIncomeRecordOrderNUmberLable"
+        android:textSize="15dp"
+        android:text="00000000"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tv_mStoreIncomeRecordMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/mechant_order_storeManage_incomeRecord_marginHorizontal"
+        android:layout_marginTop="@dimen/mechant_order_storeManage_incomeRecord_marginTop"
+        android:textSize="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="right"
+        android:textColor="@color/colorBlack"
+        android:text="12￥"
+        />
+
+    <TextView
+        android:id="@+id/tv_mStoreIncomeRecordUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/mechant_order_storeManage_incomeRecord_marginHorizontal"
+        android:layout_marginVertical="@dimen/mechant_order_storeManage_incomeRecord_marginVertical"
+        android:layout_below="@id/tv_mStoreIncomeRecordOrderNUmberLable"
+        android:maxLines="1"
+        android:textColor="@color/colorBlack"
+        android:textSize="20dp"
+        android:text="用户名"/>
+
+    <TextView
+        android:id="@+id/tv_mStoreINcomeRecordDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="right"
+        android:layout_marginVertical="@dimen/mechant_order_storeManage_incomeRecord_marginVertical"
+        android:text="2019年4月24日"
+        android:layout_below="@id/tv_mStoreIncomeRecordMoney"/>
+
+</RelativeLayout>

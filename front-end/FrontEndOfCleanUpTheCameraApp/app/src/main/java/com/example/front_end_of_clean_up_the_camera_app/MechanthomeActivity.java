@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -54,6 +55,8 @@ public class MechanthomeActivity extends AppCompatActivity {
 
         //设置标题内容
         setTabs(tabLayout, getLayoutInflater(), TAB_TITLES, TAB_IMGS);
+
+        setTitle("");
 
     }
 
@@ -112,5 +115,15 @@ public class MechanthomeActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.mechant_store_manage, menu);
+
+        return super.onCreateOptionsMenu(menu);
+
+    }
+
 
 }

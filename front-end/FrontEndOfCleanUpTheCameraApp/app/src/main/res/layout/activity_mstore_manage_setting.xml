@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_mechantStoreManageSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_collapseMode="pin"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorPrimaryDark"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:navigationIcon="@drawable/mstore_manage_setting_return"
+
+        />
+
+
+    <Button
+        android:id="@+id/btn_mStoreManageSettingImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="商家头像"
+        android:textSize="20dp"
+        android:gravity="left|center"
+        android:paddingLeft="@dimen/mechant_order_storeManage_padding"
+        android:drawableRight="@drawable/mstore_manage_detial"
+        android:background="@color/colorWhite"
+        style="?android:attr/borderlessButtonStyle"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/mechant_order_storeManage_marginHorizontal"
+        android:background="@color/lightGrey"
+        />
+
+    <Button
+        android:id="@+id/btn_mStoreManageSettingName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="商家名"
+        android:textSize="20dp"
+        android:gravity="left|center"
+        android:paddingLeft="@dimen/mechant_order_storeManage_padding"
+        android:drawableRight="@drawable/mstore_manage_detial"
+        android:background="@color/colorWhite"
+        style="?android:attr/borderlessButtonStyle"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/mechant_order_storeManage_marginHorizontal"
+        android:background="@color/lightGrey"
+        />
+
+
+    <Button
+        android:id="@+id/btn_mStoreManageSettingAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="商家地址"
+        android:textSize="20dp"
+        android:gravity="left|center"
+        android:paddingLeft="@dimen/mechant_order_storeManage_padding"
+        android:drawableRight="@drawable/mstore_manage_detial"
+        android:background="@color/colorWhite"
+        style="?android:attr/borderlessButtonStyle"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/mechant_order_storeManage_marginHorizontal"
+        android:background="@color/lightGrey"
+        />
+
+
+    <Button
+        android:id="@+id/btn_mStoreManageSettingMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="商家简介"
+        android:textSize="20dp"
+        android:gravity="left|center"
+        android:paddingLeft="@dimen/mechant_order_storeManage_padding"
+        android:drawableRight="@drawable/mstore_manage_detial"
+        android:background="@color/colorWhite"
+        style="?android:attr/borderlessButtonStyle"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey"
+        />
+
+
+
+
+</LinearLayout>
