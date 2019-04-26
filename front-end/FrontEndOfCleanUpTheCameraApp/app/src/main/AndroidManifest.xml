@@ -29,10 +29,10 @@
             android:name=".UserHomeActivity"
             android:theme="@style/AppTheme.Base" />
         <activity android:name=".SignIn_Activity" />
-        <activity android:name=".MStoreManageSettingActivity"/>
-        <activity android:name=".MStoreManageSettingMessageActivity"/>
-        <activity android:name=".MStoreManageSettingAddressActivity"/>
-        <activity android:name=".MStoreManageSettingNameActivity"/>
+        <activity android:name=".MStoreManageSettingActivity.MStoreManageSettingActivity"/>
+        <activity android:name=".MStoreManageSettingActivity.MStoreManageSettingMessageActivity"/>
+        <activity android:name=".MStoreManageSettingActivity.MStoreManageSettingAddressActivity"/>
+        <activity android:name=".MStoreManageSettingActivity.MStoreManageSettingNameActivity"/>
         <activity android:name=".LogIn_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

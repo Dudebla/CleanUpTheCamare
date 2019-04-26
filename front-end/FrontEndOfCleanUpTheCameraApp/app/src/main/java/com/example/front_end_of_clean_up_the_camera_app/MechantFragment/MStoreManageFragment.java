@@ -18,7 +18,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.example.front_end_of_clean_up_the_camera_app.MStoreManageSettingActivity;
+import com.example.front_end_of_clean_up_the_camera_app.MStoreManageSettingActivity.MStoreManageSettingActivity;
 import com.example.front_end_of_clean_up_the_camera_app.MechantAdapter.MStoreManageContentFragmentAdapter;
 import com.example.front_end_of_clean_up_the_camera_app.R;
 

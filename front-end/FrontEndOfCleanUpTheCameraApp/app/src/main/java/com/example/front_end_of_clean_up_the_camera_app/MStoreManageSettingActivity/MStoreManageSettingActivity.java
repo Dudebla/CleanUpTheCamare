@@ -1,4 +1,4 @@
-package com.example.front_end_of_clean_up_the_camera_app;
+package com.example.front_end_of_clean_up_the_camera_app.MStoreManageSettingActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.front_end_of_clean_up_the_camera_app.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
