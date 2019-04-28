@@ -7,13 +7,28 @@
     android:layout_height="match_parent"
     tools:context="com.example.front_end_of_clean_up_the_camera_app.MechantFragment.MChatFragment">
 
-    <TextView
+
+    <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This is chat page"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:textColor="@color/colorBlack"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="聊天"
+            android:textSize="20dp"
+            android:gravity="center"
+            
         />
+
+    </android.support.v7.widget.Toolbar>
+    <ListView
+        android:id="@+id/lv_mChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </ListView>
 
 </LinearLayout>

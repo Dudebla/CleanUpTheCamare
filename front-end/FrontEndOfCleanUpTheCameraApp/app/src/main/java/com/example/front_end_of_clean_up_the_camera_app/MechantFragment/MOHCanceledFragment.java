@@ -55,12 +55,12 @@ public class MOHCanceledFragment extends Fragment {
     }
 
     private void initDatas() {
-        MOHCanceledOrder order0 = new MOHCanceledOrder("2019年4月25日","小红","123456789");
-        MOHCanceledOrder order1 = new MOHCanceledOrder("2019年4月25日","小李","123456789");
-        MOHCanceledOrder order2 = new MOHCanceledOrder("2019年4月25日","小明","123456789");
-        MOHCanceledOrder order3 = new MOHCanceledOrder("2019年4月25日","小黑","123456789");
-        MOHCanceledOrder order4 = new MOHCanceledOrder("2019年4月25日","小白","123456789");
-        MOHCanceledOrder order5 = new MOHCanceledOrder("2019年4月25日","小兰","123456789");
+        MOHCanceledOrder order0 = new MOHCanceledOrder("2019年4月25日","小红","123****89");
+        MOHCanceledOrder order1 = new MOHCanceledOrder("2019年4月26日","小李","123****89");
+        MOHCanceledOrder order2 = new MOHCanceledOrder("2019年4月29日","小明","123****89");
+        MOHCanceledOrder order3 = new MOHCanceledOrder("2019年4月29日","小黑","123****89");
+        MOHCanceledOrder order4 = new MOHCanceledOrder("2019年4月29日","小白","123****89");
+        MOHCanceledOrder order5 = new MOHCanceledOrder("2019年4月29日","小兰","123****89");
         datas.add(order0);
         datas.add(order1);
         datas.add(order2);

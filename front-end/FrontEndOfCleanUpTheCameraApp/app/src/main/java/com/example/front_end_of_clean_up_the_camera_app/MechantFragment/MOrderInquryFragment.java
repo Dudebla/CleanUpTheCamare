@@ -126,12 +126,12 @@ public class MOrderInquryFragment extends Fragment {
 
 //String orderTime,String userName,String userPhone,String userComment,String TransactionAmount,String orderNumber
     private void initDatas() {
-        MOrderInqury order0 = new MOrderInqury("2019-04-22","小黑","12345678","nice","12￥","00000000");
-        MOrderInqury order1 = new MOrderInqury("2019-04-22","小红","12345678","nice","12￥","00000000");
-        MOrderInqury order2 = new MOrderInqury("2019-04-22","小李","12345678","nice","12￥","00000000");
-        MOrderInqury order3 = new MOrderInqury("2019-04-22","小白","12345678","nice","12￥","00000000");
-        MOrderInqury order4 = new MOrderInqury("2019-04-22","小兰","12345678","balabala","12￥","00000000");
-        MOrderInqury order5 = new MOrderInqury("2019-04-22","小黄","12345678","哈哈啊哈哈哈","12￥","00000000");
+        MOrderInqury order0 = new MOrderInqury("2019-04-22","小黑","12****78","nice","12￥","00000001");
+        MOrderInqury order1 = new MOrderInqury("2019-04-22","小红","12****78","It too late","20￥","00000002");
+        MOrderInqury order2 = new MOrderInqury("2019-04-22","小李","12****78","很好，检查很认真","18￥","00000003");
+        MOrderInqury order3 = new MOrderInqury("2019-04-22","小白","12****78","来的时候比较慢","10￥","00000004");
+        MOrderInqury order4 = new MOrderInqury("2019-04-22","小兰","12****78","","12￥","00000005");
+        MOrderInqury order5 = new MOrderInqury("2019-04-22","小黄","12****78","第一次使用，感觉还不错，检查认真","22￥","00000006");
         datas.add(order0);
         datas.add(order1);
         datas.add(order2);

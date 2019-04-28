@@ -8,6 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:dividerHeight="@dimen/mechant_order_handle_pending_dividerHeight"
+        android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
         android:divider="@color/colorWhite" />
 
 </RelativeLayout>

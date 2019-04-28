@@ -36,12 +36,12 @@
     <dimen name="seller_item_bottom_widget_marginBottom">10dp</dimen>
 
     <!--margin of widget at the left/top/bottom/right of mechant order handle pending-->
-    <dimen name="mechant_order_handle_pending_marginLeft">10dip</dimen>
-    <dimen name="mechant_order_handle_pending_marginTop">10dip</dimen>
-    <dimen name="mechant_order_handle_pending_marginRight">10dip</dimen>
-    <dimen name="mechant_order_handle_pending_marginBottom">10dip</dimen>
-    <dimen name="mechant_order_handle_pending_marginVertical">10dip</dimen>
-    <dimen name="mechant_order_handle_pending_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_order_handle_pending_marginLeft">5dip</dimen>
+    <dimen name="mechant_order_handle_pending_marginTop">5dip</dimen>
+    <dimen name="mechant_order_handle_pending_marginRight">5dip</dimen>
+    <dimen name="mechant_order_handle_pending_marginBottom">5dip</dimen>
+    <dimen name="mechant_order_handle_pending_marginVertical">5dip</dimen>
+    <dimen name="mechant_order_handle_pending_marginHorizontal">5dip</dimen>
     <dimen name="mechant_order_handle_pending_margin">5dp</dimen>
 
     <!--padding of widget at the left/top/bottom/right of mechant order handle pending-->
@@ -50,13 +50,13 @@
     <dimen name="mechant_order_handle_pending_dividerHeight">10dip</dimen>
 
     <!--margin of widget at the left/top/bottom/right of mechant order handle going-->
-    <dimen name="mechant_order_handle_going_marginLeft">10dip</dimen>
-    <dimen name="mechant_order_handle_going_marginTop">10dip</dimen>
-    <dimen name="mechant_order_handle_going_marginRight">10dip</dimen>
-    <dimen name="mechant_order_handle_going_marginEnd">10dip</dimen>
-    <dimen name="mechant_order_handle_going_marginBottom">10dip</dimen>
-    <dimen name="mechant_order_handle_going_marginVertical">10dip</dimen>
-    <dimen name="mechant_order_handle_going_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_order_handle_going_marginLeft">5dip</dimen>
+    <dimen name="mechant_order_handle_going_marginTop">5dip</dimen>
+    <dimen name="mechant_order_handle_going_marginRight">5dip</dimen>
+    <dimen name="mechant_order_handle_going_marginEnd">5dip</dimen>
+    <dimen name="mechant_order_handle_going_marginBottom">5dip</dimen>
+    <dimen name="mechant_order_handle_going_marginVertical">5dip</dimen>
+    <dimen name="mechant_order_handle_going_marginHorizontal">5dip</dimen>
     <dimen name="mechant_order_handle_going_margin">5dp</dimen>
 
 
@@ -156,12 +156,12 @@
 
 
     <!--margin of widget at the left/top/bottom/right of mechant order handle cancle-->
-    <dimen name="mechant_order_handle_cancle_marginLeft">10dip</dimen>
-    <dimen name="mechant_order_handle_cancle_marginTop">10dip</dimen>
-    <dimen name="mechant_order_handle_cancle_marginRight">10dip</dimen>
-    <dimen name="mechant_order_handle_cancle_marginBottom">10dip</dimen>
-    <dimen name="mechant_order_handle_cancle_marginVertical">10dip</dimen>
-    <dimen name="mechant_order_handle_cancle_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_order_handle_cancle_marginLeft">5dip</dimen>
+    <dimen name="mechant_order_handle_cancle_marginTop">5dip</dimen>
+    <dimen name="mechant_order_handle_cancle_marginRight">5dip</dimen>
+    <dimen name="mechant_order_handle_cancle_marginBottom">5dip</dimen>
+    <dimen name="mechant_order_handle_cancle_marginVertical">5dip</dimen>
+    <dimen name="mechant_order_handle_cancle_marginHorizontal">5dip</dimen>
     <dimen name="mechant_order_handle_cancle_margin">5dp</dimen>
 
     <!--padding of widget at the left/top/bottom/right of mechant order handle cancle-->
@@ -185,6 +185,22 @@
     <dimen name="mechant_order_handle_completed_paddingHorizontal">15dip</dimen>
     <dimen name="mechant_order_handle_completed_paddingVertical">10dip</dimen>
     <dimen name="mechant_order_handle_completed_dividerHeight">10dip</dimen>
+
+    <!--margin of widget at the left/top/bottom/right of mechant order chat recyclerView-->
+    <dimen name="mechant_order_chat_recyclerView_marginLeft">10dip</dimen>
+    <dimen name="mechant_order_chat_recyclerView_marginTop">10dip</dimen>
+    <dimen name="mechant_order_chat_recyclerView_marginRight">10dip</dimen>
+    <dimen name="mechant_order_chat_recyclerView_marginEnd">10dip</dimen>
+    <dimen name="mechant_order_chat_recyclerView_marginBottom">10dip</dimen>
+    <dimen name="mechant_order_chat_recyclerView_marginVertical">10dip</dimen>
+    <dimen name="mechant_order_chat_recyclerView_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_order_chat_recyclerView_margin">5dp</dimen>
+
+
+    <!--padding of widget at the left/top/bottom/right of mechant order handle completed-->
+    <dimen name="mechant_order_chat_recyclerView_paddingHorizontal">15dip</dimen>
+    <dimen name="mechant_order_chat_recyclerView_paddingVertical">10dip</dimen>
+    <dimen name="mechant_order_chat_recyclerView_dividerHeight">10dip</dimen>
 
 
 </resources>

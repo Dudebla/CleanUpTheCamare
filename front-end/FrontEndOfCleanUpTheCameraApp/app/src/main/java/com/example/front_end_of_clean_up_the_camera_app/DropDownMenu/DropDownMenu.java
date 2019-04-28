@@ -151,12 +151,6 @@ public class DropDownMenu extends LinearLayout {
     //一共包含四中类型：三种默认和自定义
     public static final int TYPE_LIST_DATE = 1;
 
-//    public static final int TYPE_LIST_SIMPLE = 2;
-//
-//    public static final int TYPE_GRID = 3;
-//
-//    public static final int TYPE_CUSTOM = 4;
-
 
     /**
      * 初始化DropDownMenu
@@ -180,36 +174,28 @@ public class DropDownMenu extends LinearLayout {
         }
        //页面显示内容
         containerView.addView(contentView, 0);
-
         maskView = new View(getContext());
         //为中间灰色层设置布局参数（下拉之后的背景灰色）
-        maskView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+        maskView.setLayoutParams(new FrameLayout.LayoutParams
+                (FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
        //设置背景颜色
         maskView.setBackgroundColor(maskColor);
        //设置点击监听事件
         maskView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                ((TextView) tabMenuView.getChildAt(current_tab_position)).setTextColor(textUnselectedColor);
-
+                ((TextView) tabMenuView.getChildAt
+                        (current_tab_position)).setTextColor(textUnselectedColor);
                 closeMenu();
-
             }
         });
-
         containerView.addView(maskView, 1);
-
         maskView.setVisibility(GONE);
         //下设置拉菜单显示属性
         popupMenuViews = new FrameLayout(getContext());
-
         popupMenuViews.setVisibility(GONE);
-
         containerView.addView(popupMenuViews, 2);
-
         View view = null;
-
         for (int i = 0; i < viewDatas.size(); i++) {
 
             HashMap<String, Object> map = viewDatas.get(i);
@@ -233,7 +219,6 @@ public class DropDownMenu extends LinearLayout {
 
             }
 
-            //Log.d("zxl", "***********" + select_position);
 
             switch (key) {
 

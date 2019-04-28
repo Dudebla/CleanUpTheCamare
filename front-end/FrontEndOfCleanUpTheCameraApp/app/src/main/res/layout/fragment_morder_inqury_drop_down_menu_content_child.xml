@@ -23,9 +23,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+            android:textSize="10dp"
             android:text="订单编号:"
             android:textColor="@color/colorBlack"
-            android:textStyle="bold"
             />
 
         <TextView
@@ -33,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0000000"
+            android:textSize="10dp"
             android:textColor="@color/colorBlack"
             android:layout_toRightOf="@+id/tv_orderNumberLable"
             />
@@ -63,7 +64,7 @@
             android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
             android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
             android:text="订单日期:"
-            android:textStyle="bold"
+            android:textSize="10dp"
             android:textColor="@color/colorBlack"/>
 
         <TextView
@@ -71,6 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2019-4-22"
+            android:textSize="10dp"
             android:textColor="@color/colorBlack"
             android:layout_toRightOf="@+id/tv_orderTimeLable"
             android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
@@ -105,7 +107,7 @@
         android:layout_below="@+id/v_dividerOne"
         android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
         android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:text="用户名"/>
 
     <TextView
@@ -131,8 +133,8 @@
 
     <ImageView
         android:id="@+id/iv_userPhoneImage"
-        android:layout_width="25dip"
-        android:layout_height="25dip"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
         android:src="@drawable/phone"
         android:layout_below="@+id/tv_username"
         android:layout_toRightOf="@+id/iv_userImage"
@@ -146,7 +148,7 @@
         android:layout_below="@+id/tv_username"
         android:layout_toRightOf="@+id/iv_userPhoneImage"
         android:text="11111111"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:textColor="@color/colorBlack"
         />
 
@@ -156,8 +158,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/iv_userPhoneImage"
-        android:layout_marginVertical="@dimen/mechant_order_inqury_marginVertical"
-        android:layout_marginHorizontal="@dimen/mechant_order_inqury_marginHorizontal"
         >
 
 
@@ -168,7 +168,7 @@
             android:textStyle="bold"
             android:layout_margin="@dimen/mechant_order_handle_going_margin"
             android:text="评论："
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textColor="@color/deepOrange"
             />
 
@@ -181,7 +181,7 @@
             android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
             android:textColor="@color/colorBlack"
             android:layout_toRightOf="@+id/tv_userCommentLable"
-            android:textSize="20dip"/>
+            android:textSize="15dip"/>
 
 
     </RelativeLayout>
@@ -199,6 +199,7 @@
         android:id="@+id/rl_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mechant_order_inqury_margin"
         android:layout_below="@id/v_dividerThree">
 
         <TextView
@@ -208,9 +209,7 @@
             android:textStyle="bold"
             android:text="交易金额："
             android:textColor="@color/colorBlack"
-            android:textSize="20dp"
-            android:layout_marginHorizontal="@dimen/mechant_order_handle_going_marginHorizontal"
-            android:layout_marginVertical="@dimen/mechant_order_handle_going_marginVertical"
+            android:textSize="15dp"
             />
 
         <TextView
@@ -219,10 +218,10 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:text="22￥"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textColor="@color/deepOrange"
             android:layout_toRightOf="@+id/tv_TransactionAmountLable"
-            android:layout_marginVertical="@dimen/mechant_order_inqury_marginVertical"/>
+            />
 
 
     </RelativeLayout>

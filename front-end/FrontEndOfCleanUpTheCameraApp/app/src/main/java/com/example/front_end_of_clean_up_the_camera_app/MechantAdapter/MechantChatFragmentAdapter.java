@@ -5,21 +5,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.front_end_of_clean_up_the_camera_app.MechantData.MOHCanceledOrder;
+import com.example.front_end_of_clean_up_the_camera_app.MechantData.MChat;
 import com.example.front_end_of_clean_up_the_camera_app.R;
 
 import java.util.List;
 
-public class MOHCanceledOrderAdapter extends BaseAdapter {
+public class MechantChatFragmentAdapter extends BaseAdapter {
+
 
     private Context context;
 
-    private List<MOHCanceledOrder> datas;
+    private List<MChat> datas;
 
     //构造函数需要传入两个必要的参数：上下文对象和数据源
-    public MOHCanceledOrderAdapter(Context context,List<MOHCanceledOrder> datas) {
+    public MechantChatFragmentAdapter(Context context,List<MChat> datas) {
 
         this.context=context;
         //list类型的数据,多个对象
@@ -45,23 +47,25 @@ public class MOHCanceledOrderAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        MOHCanceledOrder mohCanceledOrder= (MOHCanceledOrder) getItem(position);
+        MChat mChat= (MChat) getItem(position);
 
         View view;
         //创建内部类ViewHolder，可以避免每次调用getView方法
-        MOHCanceledOrderAdapter.ViewHolder viewHolder;
+        MechantChatFragmentAdapter.ViewHolder viewHolder;
 
         if(convertView==null){
 
-            view = LayoutInflater.from(context).inflate(R.layout.fragment_morder_handle_canceled_child,null);
+            view = LayoutInflater.from(context).inflate(R.layout.fragment_mchat_child,null);
 
-            viewHolder=new MOHCanceledOrderAdapter.ViewHolder();
+            viewHolder=new MechantChatFragmentAdapter.ViewHolder();
 
-            viewHolder.orderTime=(TextView)view.findViewById(R.id.tv_orderTime);
+            viewHolder.chatName=(TextView)view.findViewById(R.id.tv_mChatName);
 
-            viewHolder.userName=(TextView)view.findViewById(R.id.tv_username) ;
+            viewHolder.chatDate=(TextView)view.findViewById(R.id.tv_mChatDate) ;
 
-            viewHolder.userPhone=(TextView)view.findViewById(R.id.tv_userPhone);
+            viewHolder.chatLatestMessage=(TextView)view.findViewById(R.id.tv_mChatLatestMessage);
+
+            viewHolder.chatImage=(ImageView)view.findViewById(R.id.iv_mChatImage);
 
             view.setTag(viewHolder);
         }
@@ -70,15 +74,17 @@ public class MOHCanceledOrderAdapter extends BaseAdapter {
 
             view=convertView;
 
-            viewHolder= (MOHCanceledOrderAdapter.ViewHolder) view.getTag();
+            viewHolder= (MechantChatFragmentAdapter.ViewHolder) view.getTag();
 
         }
 
-        viewHolder.orderTime.setText(mohCanceledOrder.getOrderTime());
+        viewHolder.chatName.setText(mChat.getChatName());
 
-        viewHolder.userName.setText(mohCanceledOrder.getUserName());
+        viewHolder.chatDate.setText(mChat.getChatDate());
 
-        viewHolder.userPhone.setText(mohCanceledOrder.getUserPhone());
+        viewHolder.chatLatestMessage.setText(mChat.getChatLatestMessage());
+
+        viewHolder.chatImage.setImageResource(mChat.getChatImage());
 
         return view;
 
@@ -86,11 +92,13 @@ public class MOHCanceledOrderAdapter extends BaseAdapter {
     //创建ViewHolder类
     class ViewHolder{
 
-        TextView userName;
+        TextView chatName;
 
-        TextView orderTime;
+        TextView chatDate;
 
-        TextView userPhone;
+        TextView chatLatestMessage;
+
+        ImageView chatImage;
 
     }
 }

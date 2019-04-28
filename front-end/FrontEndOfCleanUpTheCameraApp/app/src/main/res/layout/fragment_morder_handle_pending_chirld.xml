@@ -111,7 +111,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
-        android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
         android:layout_below="@+id/iv_userImage">
 
         <TextView
@@ -123,7 +122,6 @@
             android:text="地址："
             android:textColor="@color/deepOrange"
             android:textSize="15dp"/>
-
 
         <TextView
             android:id="@+id/tv_userAddress"
@@ -137,14 +135,42 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/rl_userAddressSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+        android:layout_below="@+id/rl_userAddress">
+
+
+        <TextView
+            android:id="@+id/tv_userAddressSizeLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="场地大小："
+            android:layout_margin="@dimen/mechant_order_handle_pending_margin"
+            android:textColor="@color/deepOrange"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_userAddressSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="约40平米"
+            android:layout_margin="@dimen/mechant_order_handle_pending_margin"
+            android:textColor="@color/colorBlack"
+            android:layout_toRightOf="@id/tv_userAddressSizeLable"/>
+    </RelativeLayout>
+
 
 
     <RelativeLayout
         android:id="@+id/rl_userRemarks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rl_userAddress"
-        android:layout_marginVertical="@dimen/mechant_order_handle_pending_marginVertical"
+        android:layout_below="@+id/rl_userAddressSize"
         android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
         >
 
@@ -188,7 +214,9 @@
         android:id="@+id/rl_estimatedAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/v_dividerTwo">
+        android:layout_below="@id/v_dividerTwo"
+        android:layout_marginHorizontal="@dimen/mechant_order_handle_pending_marginHorizontal"
+        >
 
         <TextView
             android:id="@+id/tv_estimatedAmountLable"

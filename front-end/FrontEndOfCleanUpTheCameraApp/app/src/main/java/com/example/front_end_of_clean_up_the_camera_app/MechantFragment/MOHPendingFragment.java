@@ -63,7 +63,7 @@ public class MOHPendingFragment extends Fragment {
     //String orderTime,String userName,String userPhone,String userAddress,String userRemarks,String estimatedAmount,int userImage
     private void initDatas() {
         MOHPendingOrder order0 = new MOHPendingOrder("12:00","小李","123****890","广州市体育西路","","12￥",R.drawable.user_image);
-        MOHPendingOrder order1 = new MOHPendingOrder("12:00","小黑","124****890","华师","","12￥",R.drawable.user_image);
+        MOHPendingOrder order1 = new MOHPendingOrder("12:00","小黄","124****890","广州市天河区中山大道","尽量快一点","14￥",R.drawable.user_image);
         MOHPendingOrder order2 = new MOHPendingOrder("12:00","小红","1234567890","华师","快点","12￥",R.drawable.user_image);
         MOHPendingOrder order3 = new MOHPendingOrder("12:00","小百","1234567890","华师","hahaha","12￥",R.drawable.user_image);
         MOHPendingOrder order4 = new MOHPendingOrder("12:00","小和","1234567890","华师","取消","12￥",R.drawable.user_image);

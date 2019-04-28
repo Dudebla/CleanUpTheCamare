@@ -19,37 +19,29 @@ public class MechantFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
-
         Fragment fragment = null;
         //根据item的值新建相应的fragment并返回
         switch (i) {
-
             case 0:
                 //订单处理
                 fragment = new MOrderHandleFragment();
                 break;
-
             case 1:
                 //订单查询
                 fragment = new MOrderInquryFragment();
                 break;
-
             case 2:
                 //聊天
                fragment = new MChatFragment();
                 break;
-
             case 3:
                 //店铺管理
                 fragment = new MStoreManageFragment();
                 break;
-
             default:
                 break;
         }
-
         return fragment;
-
     }
 
     //共有四个底部导航栏

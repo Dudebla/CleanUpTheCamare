@@ -89,6 +89,8 @@ public class MOrderInquryContentFragmentAdapter extends BaseAdapter {
 
         viewHolder.orderNumber.setText(mOrderInqury.getOrderNumber());
 
+        viewHolder.userComment.setText(mOrderInqury.getUserComment());
+
         return view;
 
     }
