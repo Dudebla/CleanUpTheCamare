@@ -88,6 +88,8 @@ public class MStoreManageFragmentAdapter extends BaseAdapter {
 
         viewHolder.MechantImage.setImageResource(mStoreManageMessage.getMechantImage());
 
+        viewHolder.MechantIncome.setText(mStoreManageMessage.getMechantIncome());
+
         return view;
 
     }
@@ -103,6 +105,8 @@ public class MStoreManageFragmentAdapter extends BaseAdapter {
         TextView MechantStoreCondition;
 
         TextView MechantServiceGrade;
+
+        TextView MechantIncome;
 
     }
 

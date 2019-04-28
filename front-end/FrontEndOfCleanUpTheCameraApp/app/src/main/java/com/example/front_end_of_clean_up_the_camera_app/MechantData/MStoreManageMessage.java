@@ -14,10 +14,10 @@ public class MStoreManageMessage {
 
     private String MechantServiceGrade;
 
-    private String MechantServicePrice;
+    private String MechantIncome;
 
 
-    MStoreManageMessage(int MechantImage,String MechantName,String MechantAddress,String MechantStoreCondition,String MechantServiceGrade,String MechantServicePrice){
+    MStoreManageMessage(int MechantImage,String MechantName,String MechantAddress,String MechantStoreCondition,String MechantServiceGrade,String MechantIncome){
 
         this.MechantImage=MechantImage;
 
@@ -27,7 +27,7 @@ public class MStoreManageMessage {
 
         this.MechantServiceGrade=MechantServiceGrade;
 
-        this.MechantServicePrice=MechantServicePrice;
+        this.MechantIncome=MechantIncome;
 
         this.MechantStoreCondition=MechantStoreCondition;
 
@@ -65,8 +65,8 @@ public class MStoreManageMessage {
     public String getMechantServiceGrade(){return MechantServiceGrade;}
     public void setMechantServiceGrade(String MechantServiceGrade){this.MechantServiceGrade=MechantServiceGrade;}
 
-    public String getMechantServicePrice(){return MechantServicePrice;}
-    public void setMechantServicePrice(String MechantServicePrice){this.MechantServicePrice=MechantServicePrice;}
+    public String getMechantIncome(){return MechantIncome;}
+    public void setMechantIncome(String MechantMechantIncome){this.MechantIncome=MechantIncome;}
 
 
 }

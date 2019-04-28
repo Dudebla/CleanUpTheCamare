@@ -45,6 +45,9 @@ public class MStoreManageFragment extends Fragment {
     @BindView(R.id.tv_mechantStoreCondition)
     TextView mStoreCondition;
 
+    @BindView(R.id.tv_mStoreIncomeTotal)
+    TextView mStoreIncomeTotal;
+
     private List<String> titles;
 
     private MStoreManageContentFragmentAdapter adapter;
@@ -125,6 +128,8 @@ public class MStoreManageFragment extends Fragment {
             }
         });
 
+        mStoreIncomeTotal.setText("2422￥");
+
 
         adapter.setList(titles);
 
@@ -141,9 +146,6 @@ public class MStoreManageFragment extends Fragment {
         inflater.inflate(R.menu.mechant_store_manage, menu);
 
         MenuItem item=menu.findItem(R.id.item_mechantStoreManageSetting);
-
-
-
 
         super.onCreateOptionsMenu(menu, inflater);
 

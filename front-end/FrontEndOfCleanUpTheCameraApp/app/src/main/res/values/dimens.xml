@@ -82,13 +82,13 @@
     <dimen name="mechant_order_inqury_dividerHeight">10dip</dimen>
 
     <!--margin of widget at the left/top/bottom/right of mechant order storeManage-->
-    <dimen name="mechant_order_storeManage_marginLeft">10dip</dimen>
-    <dimen name="mechant_order_storeManage_marginTop">10dip</dimen>
-    <dimen name="mechant_order_storeManage_marginRight">10dip</dimen>
-    <dimen name="mechant_order_storeManage_marginEnd">10dip</dimen>
-    <dimen name="mechant_order_storeManage_marginBottom">10dip</dimen>
-    <dimen name="mechant_order_storeManage_marginVertical">10dip</dimen>
-    <dimen name="mechant_order_storeManage_marginHorizontal">15dip</dimen>
+    <dimen name="mechant_order_storeManage_marginLeft">5dip</dimen>
+    <dimen name="mechant_order_storeManage_marginTop">5dip</dimen>
+    <dimen name="mechant_order_storeManage_marginRight">5dip</dimen>
+    <dimen name="mechant_order_storeManage_marginEnd">5dip</dimen>
+    <dimen name="mechant_order_storeManage_marginBottom">5dip</dimen>
+    <dimen name="mechant_order_storeManage_marginVertical">5dip</dimen>
+    <dimen name="mechant_order_storeManage_marginHorizontal">5dip</dimen>
     <dimen name="mechant_order_storeManage_margin">5dp</dimen>
 
 

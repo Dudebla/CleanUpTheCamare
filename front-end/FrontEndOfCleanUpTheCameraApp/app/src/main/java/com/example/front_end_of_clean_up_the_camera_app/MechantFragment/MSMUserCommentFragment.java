@@ -52,14 +52,14 @@ public class MSMUserCommentFragment extends Fragment {
 
    // String userName,String commentGrade,String commentContent,String commentDate
     private void initDatas() {
-        MStoreManageUserComment order0 = new MStoreManageUserComment("小李","5.0","goodgoodgoodgoodgoodgood","2019年4月24日");
-        MStoreManageUserComment order1 = new MStoreManageUserComment("小黑","5.0","","2019年4月24日");
-        MStoreManageUserComment order2 = new MStoreManageUserComment("小红","5.0","啦啦","2019年4月24日");
-        MStoreManageUserComment order3 = new MStoreManageUserComment("小白","5.0","棒","2019年4月24日");
-        MStoreManageUserComment order4 = new MStoreManageUserComment("小兰","5.0","赞","2019年4月24日");
-        MStoreManageUserComment order5 = new MStoreManageUserComment("小小","5.0","还可以","2019年4月24日");
-        MStoreManageUserComment order6 = new MStoreManageUserComment("小明","5.0","还可以","2019年4月24日");
-        MStoreManageUserComment order7 = new MStoreManageUserComment("小明","5.0","还可以","2019年4月24日");
+        MStoreManageUserComment order0 = new MStoreManageUserComment("小李","5.0","检查很认真，值得信赖","2019年4月24日");
+        MStoreManageUserComment order1 = new MStoreManageUserComment("小黑","4.6","","2019年4月25日");
+        MStoreManageUserComment order2 = new MStoreManageUserComment("小红","3.7","来的速度太慢了，还催了店家几次","2019年4月26日");
+        MStoreManageUserComment order3 = new MStoreManageUserComment("小白","4.6","第一次体验，蛮新奇的","2019年4月26日");
+        MStoreManageUserComment order4 = new MStoreManageUserComment("小兰","5.0","居然能查出来了，太意外了","2019年4月27日");
+        MStoreManageUserComment order5 = new MStoreManageUserComment("小小","3.3","还可以吧","2019年4月28日");
+        MStoreManageUserComment order6 = new MStoreManageUserComment("小明","4.1","","2019年4月29日");
+        MStoreManageUserComment order7 = new MStoreManageUserComment("小明","4.4","","2019年4月29日");
         datas.add(order0);
         datas.add(order1);
         datas.add(order2);
