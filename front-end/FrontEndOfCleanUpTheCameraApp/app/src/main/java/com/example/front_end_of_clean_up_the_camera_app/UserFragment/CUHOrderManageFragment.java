@@ -76,9 +76,8 @@ public class CUHOrderManageFragment extends Fragment {
 
         datas = new ArrayList<>();
         Date date = new Date(System.currentTimeMillis());
-        String userTip = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbllllllllllllllllllllllaaaaaaaaaaaaaaaaaaaaaaaaaaaaablablabbbbbbbbbbbbbbbbbbllllllllllllllllllllllaaa]" +
-                "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB";
-        CUHOrderMessage orderMessage = new CUHOrderMessage("00000000", 0, "0000001", "0000001", date, 20.0, "广州市天河区", userTip, "酒店", 30, 0);
+        String userTip = "无";
+        CUHOrderMessage orderMessage = new CUHOrderMessage("00000001", 0, "李小明", "CUTC广州分部", date, 20.0, "广州市天河区", userTip, "酒店", 30, 0);
         datas.add(orderMessage);
     }
 }

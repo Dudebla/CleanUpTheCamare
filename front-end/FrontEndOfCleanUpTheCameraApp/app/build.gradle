@@ -45,6 +45,10 @@ dependencies {
     //  for glide using
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    //  for chatView using
+//    implementation 'com.github.bassaer:chatmessageview:2.0.1'
+
 }
 
 repositories {

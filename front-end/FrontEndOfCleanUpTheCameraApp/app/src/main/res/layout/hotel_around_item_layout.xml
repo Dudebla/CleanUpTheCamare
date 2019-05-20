@@ -15,7 +15,7 @@
         android:textSize="@dimen/seller_item_title_size"
         android:maxLines="1"
         android:textColor="@color/colorBlack"
-        android:text="HotelName"
+        android:text="XX酒店"
         />
     <TextView
         android:id="@+id/hotel_around_item_hotelAddress_textView"
@@ -25,7 +25,7 @@
         android:layout_margin="5dp"
         android:textSize="@dimen/seller_item_subTitle_size"
         android:textColor="@color/colorBlack"
-        android:text="HotelAddress"/>
+        android:text="广州市天河区"/>
 
     <TextView
         android:id="@+id/hotel_around_item_checkedTime_tag"

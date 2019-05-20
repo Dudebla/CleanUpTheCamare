@@ -19,6 +19,7 @@ import com.example.front_end_of_clean_up_the_camera_app.UserHomeActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
+import com.youth.banner.listener.OnBannerListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +57,14 @@ public class CUHMainFragment extends Fragment {
         banner.setDelayTime(1500);
         //  set location of indicator
         banner.setIndicatorGravity(BannerConfig.CENTER);
+
+        banner.setOnBannerListener(new OnBannerListener() {
+            @Override
+            public void OnBannerClick(int position) {
+                //  manager banner photos clicked
+                Toast.makeText(getContext(), position + "on clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         banner.start();
 

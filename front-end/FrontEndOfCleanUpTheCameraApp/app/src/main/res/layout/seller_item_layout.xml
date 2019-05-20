@@ -17,7 +17,7 @@
         android:textSize="@dimen/seller_item_title_size"
         android:maxLines="1"
         android:textColor="@color/colorBlack"
-        android:text="SellerName"/>
+        android:text="CUTC广州分部"/>
 
     <!--seller_item_sellerAddress_textView: textView for seller address showing-->
     <TextView
@@ -30,7 +30,7 @@
         android:textSize="@dimen/seller_item_subTitle_size"
         android:textColor="@color/colorPrimaryDark"
         android:maxLines="1"
-        android:text="SellerAddress"
+        android:text="广州市天河区"
         />
 
     <!--seller_item_sellerScore_textView-->

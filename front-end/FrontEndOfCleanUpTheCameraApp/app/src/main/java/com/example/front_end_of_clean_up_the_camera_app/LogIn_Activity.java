@@ -3,6 +3,8 @@ package com.example.front_end_of_clean_up_the_camera_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -11,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.front_end_of_clean_up_the_camera_app.MessageCalss.UserMeaasge;
 
 import org.json.JSONObject;
 
@@ -28,6 +32,7 @@ public class LogIn_Activity extends AppCompatActivity {
     private EditText username_editText, password_editText;
     private TextView signin_textView, forgetPW_textView;
     private Button login_button;
+    private UserMeaasge userMeaasge;
 
 
     //  statement of username and password
@@ -101,13 +106,13 @@ public class LogIn_Activity extends AppCompatActivity {
                 if(!"".equals(tipMsg)) {
                     Toast.makeText(v.getContext(), tipMsg, Toast.LENGTH_SHORT).show();
                 }else{
-                    Intent intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
-                    startActivity(intent);
+//                    Intent intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
+//                    startActivity(intent);
 
                     //================================
-                    //  test login
+                    //    login
                     //================================
-                    //sendLoginMessage();
+                    sendLoginMessage();
 
                 }
             }
@@ -185,10 +190,16 @@ public class LogIn_Activity extends AppCompatActivity {
                         switch (result){
                             case "200":
                                 //  login
-                                String userType = jsonObject.getString("flag");
-                                Intent intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
-                                intent.putExtra("username", username_editText.getText().toString());
-                                intent.putExtra("userType", userType);
+                                int userType = jsonObject.getInt("flag");
+                                Intent intent;
+                                if(userType == 1){//user
+                                    intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
+                                }else{
+                                    intent = new Intent(LogIn_Activity.this, MechanthomeActivity.class);
+
+                                }
+                                userMeaasge =new UserMeaasge(username_editText.getText().toString(), userType, "");
+                                intent.putExtra("userMessage", userMeaasge.toString());
                                 startActivity(intent);
                                 break;
                             case "404":

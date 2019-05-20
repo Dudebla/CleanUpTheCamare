@@ -80,6 +80,7 @@ public class UserHomeActivity extends AppCompatActivity
         Menu menu = navigationView.getMenu();
         MenuItem menuItem = menu.findItem(R.id.nav_sound);
         View actionView  = MenuItemCompat.getActionView(menuItem);
+        
 
         sound_switcher = (SwitchCompat)actionView.findViewById(R.id.nav_sound);
         sound_switcher.setChecked(true);
@@ -89,8 +90,32 @@ public class UserHomeActivity extends AppCompatActivity
                 Toast.makeText(buttonView.getContext(), "onCheckChanged", Toast.LENGTH_SHORT).show();
                 if(isChecked){
                     //  enable the sound of app
+                    Toast.makeText(buttonView.getContext(), "onCheckChanged" + String.valueOf(isChecked), Toast.LENGTH_SHORT).show();
+
                 }else{
                     //  disable the sound
+                    Toast.makeText(buttonView.getContext(), "onCheckChanged" + String.valueOf(isChecked), Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+
+        menuItem = menu.findItem(R.id.nav_shake);
+        actionView  = MenuItemCompat.getActionView(menuItem);
+        shake_switcher = (SwitchCompat)actionView.findViewById(R.id.nav_shake);
+        shake_switcher.setChecked(true);
+        shake_switcher.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                Toast.makeText(buttonView.getContext(), "onCheckChanged", Toast.LENGTH_SHORT).show();
+                if(isChecked){
+                    //  enable the sound of app
+                    Toast.makeText(buttonView.getContext(), "onCheckChanged" + String.valueOf(isChecked), Toast.LENGTH_SHORT).show();
+
+                }else{
+                    //  disable the sound
+                    Toast.makeText(buttonView.getContext(), "onCheckChanged" + String.valueOf(isChecked), Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
