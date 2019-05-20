@@ -1,5 +1,7 @@
 package com.example.front_end_of_clean_up_the_camera_app;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -32,6 +34,8 @@ public class UserHomeActivity extends AppCompatActivity
 
     private SwitchCompat sound_switcher;
     private SwitchCompat shake_switcher;
+    private TextView userName_TextView;
+    private TextView userLocation_TextView;
 
     //  title
     private final int[] USER_TAB_TITLE = new int[]{
@@ -52,6 +56,10 @@ public class UserHomeActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_home_layout);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+        String userName  = sharedPreferences.getString("userName", "");
+        int userType = sharedPreferences.getInt("userType", -1);
 
         //  bind
         ButterKnife.bind(this);
@@ -76,6 +84,13 @@ public class UserHomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //  set username, set userLocation
+        View headerView = navigationView.getHeaderView(0);
+        userName_TextView = headerView.findViewById(R.id.nav_userName_textView);
+        userName_TextView.setText(userName);
+        userLocation_TextView = headerView.findViewById(R.id.nav_userLocation_textView);
+//        userLocation_TextView =
 
         Menu menu = navigationView.getMenu();
         MenuItem menuItem = menu.findItem(R.id.nav_sound);

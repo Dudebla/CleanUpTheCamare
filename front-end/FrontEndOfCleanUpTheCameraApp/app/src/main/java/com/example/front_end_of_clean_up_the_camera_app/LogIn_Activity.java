@@ -1,7 +1,9 @@
 //  LogIn_Activity.java   ----    login_activity.xml
 package com.example.front_end_of_clean_up_the_camera_app;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -57,6 +59,20 @@ public class LogIn_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
+
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
+        String userName = sharedPreferences.getString("userName", null);
+        int userType = sharedPreferences.getInt("userType", -1);
+        Intent intent;
+        if(userName != null){
+            if(userType==1){//is user
+                intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
+            }else{
+                intent = new Intent(LogIn_Activity.this, MechanthomeActivity.class);
+            }
+            startActivity(intent);
+            finish();
+        }
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
@@ -198,8 +214,12 @@ public class LogIn_Activity extends AppCompatActivity {
                                     intent = new Intent(LogIn_Activity.this, MechanthomeActivity.class);
 
                                 }
+                                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putString("userName", username_editText.getText().toString());
+                                editor.putInt("userType", userType);
                                 userMeaasge =new UserMeaasge(username_editText.getText().toString(), userType, "");
-                                intent.putExtra("userMessage", userMeaasge.toString());
+//                                intent.putExtra("userMessage", userMeaasge.toString());
                                 startActivity(intent);
                                 break;
                             case "404":
