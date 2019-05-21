@@ -4,6 +4,7 @@ package com.example.front_end_of_clean_up_the_camera_app.MechantFragment;
 //import android.app.Fragment;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -30,6 +31,30 @@ public class MOHPendingFragment extends Fragment {
 
     private MOHPendingOrderAdapter mohPendingOrderAdapter;
 
+    //定时刷新界面
+    private Handler handler = new Handler();
+
+    private Runnable runnable = new Runnable() {
+
+        public void run() {
+
+            this.update();
+
+            handler.postDelayed(this, 1000 * 120);// 间隔120秒
+
+        }
+
+        void update() {
+            //刷新msg的内容
+            //清空原有数据
+            datas.clear();
+            //加载数据
+            initDatas();
+
+            mohPendingOrderAdapter.notifyDataSetChanged();
+        }
+    };
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,11 +80,21 @@ public class MOHPendingFragment extends Fragment {
 
         listView.setAdapter(mohPendingOrderAdapter);
 
+        handler.post(runnable);
+
         return view;
 
     }
 
 
+    @Override
+    public void onDestroy() {
+        handler.removeCallbacks(runnable); //停止刷新
+        super.onDestroy();
+    }
+
+
+    //获取数据并刷新
     //String orderTime,String userName,String userPhone,String userAddress,String userRemarks,String estimatedAmount,int userImage
     private void initDatas() {
         MOHPendingOrder order0 = new MOHPendingOrder("12:00","小李","123****890","广州市体育西路","","12￥",R.drawable.user_image);
