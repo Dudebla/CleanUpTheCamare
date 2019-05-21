@@ -1,6 +1,7 @@
 package com.example.front_end_of_clean_up_the_camera_app;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -9,6 +10,7 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.SwitchCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -24,13 +26,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClient;
+import com.amap.api.location.AMapLocationClientOption;
+import com.amap.api.location.AMapLocationListener;
 import com.example.front_end_of_clean_up_the_camera_app.Adapter.ContentUserHomeFragmentAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class UserHomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, AMapLocationListener {
 
     private SwitchCompat sound_switcher;
     private SwitchCompat shake_switcher;
@@ -51,15 +57,25 @@ public class UserHomeActivity extends AppCompatActivity
     //  pager adapter
     private PagerAdapter pagerAdapter;
 
+    //  for location
+    private AMapLocationClient aMapLocationClient = null;
+    private AMapLocationClientOption aMapLocationClientOption = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_home_layout);
 
+
+
         SharedPreferences sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
         String userName  = sharedPreferences.getString("userName", "");
         int userType = sharedPreferences.getInt("userType", -1);
+        String location = sharedPreferences.getString("location", "");
+
+        //  init Location
+        initLocation();
 
         //  bind
         ButterKnife.bind(this);
@@ -90,7 +106,7 @@ public class UserHomeActivity extends AppCompatActivity
         userName_TextView = headerView.findViewById(R.id.nav_userName_textView);
         userName_TextView.setText(userName);
         userLocation_TextView = headerView.findViewById(R.id.nav_userLocation_textView);
-//        userLocation_TextView =
+        userLocation_TextView.setText(location);
 
         Menu menu = navigationView.getMenu();
         MenuItem menuItem = menu.findItem(R.id.nav_sound);
@@ -250,6 +266,13 @@ public class UserHomeActivity extends AppCompatActivity
             case R.id.nav_about:
                 Toast.makeText(this.getApplicationContext(), "tag nav_about", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.nav_logout://log out
+                SharedPreferences sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+                sharedPreferences.edit().clear().apply();
+                Intent intent = new Intent(UserHomeActivity.this, LogIn_Activity.class);
+                startActivity(intent);
+                finish();
+                break;
                 default:
         }
 
@@ -257,4 +280,50 @@ public class UserHomeActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private void initLocation(){
+
+        //  init location param
+        AMapLocationClient.setApiKey("67681b729e757654d7984604d1c54c7a");// set aMap api key
+        aMapLocationClient = new AMapLocationClient(getApplicationContext());
+        aMapLocationClientOption = new AMapLocationClientOption();
+        aMapLocationClient.setLocationListener(this);//  set location listener
+        //  locationMode: high_accuracy, .., device_sensors
+        aMapLocationClientOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Battery_Saving);
+        aMapLocationClientOption.setInterval(2000); //  default = 2000ms
+        aMapLocationClientOption.setOnceLocation(true);//   location once time, default = false
+        aMapLocationClientOption.setOnceLocationLatest(true);// return best location in 3s while location
+        aMapLocationClient.setLocationOption(aMapLocationClientOption);//   set option
+        aMapLocationClientOption.setLocationPurpose(AMapLocationClientOption.AMapLocationPurpose.SignIn);
+        if(aMapLocationClient != null){
+            aMapLocationClient.setLocationOption(aMapLocationClientOption);
+            aMapLocationClient.stopLocation();
+        }
+        aMapLocationClient.startLocation();
+    }
+
+    @Override
+    public void onLocationChanged(AMapLocation aMapLocation) {
+        if (aMapLocation != null) {
+            if(aMapLocation.getErrorCode() == 0){
+                String location = aMapLocation.getAddress();
+                SharedPreferences sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+                sharedPreferences.edit().putString("location", location).apply();
+                if(userLocation_TextView != null){
+                    userLocation_TextView.setText(location);
+                }
+
+            }else{
+                Log.e("AMapError", "location Error, ErrCode:" + aMapLocation.getErrorCode() + "errorInfo: " + aMapLocation.getErrorInfo());
+            }
+        }
+    }
+
+    @Override
+    protected void onDestroy() {//destroy locationClient
+        super.onDestroy();
+        aMapLocationClient.unRegisterLocationListener(this);
+        aMapLocationClient = null;
+    }
+
 }

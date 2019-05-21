@@ -9,10 +9,14 @@
     <uses-permission android:name="android.permission.INTERNET" /> <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <!-- gps location -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- network location -->
+    <!-- using AMap api-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
 
     <application
@@ -22,6 +26,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- key using AMap api-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="67681b729e757654d7984604d1c54c7a"/>
+        <service android:name="com.amap.api.location.APSService"></service>
         <activity android:name=".HotelAroundActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity

@@ -218,6 +218,7 @@ public class LogIn_Activity extends AppCompatActivity {
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
                                 editor.putString("userName", username_editText.getText().toString());
                                 editor.putInt("userType", userType);
+                                editor.apply();
                                 userMeaasge =new UserMeaasge(username_editText.getText().toString(), userType, "");
 //                                intent.putExtra("userMessage", userMeaasge.toString());
                                 startActivity(intent);
