@@ -1,35 +1,15 @@
 package domain;
 
 public class Merchant {
-    private String userName;
-    private String passWord;
-    private String Id;
-    private String Phone;
-    private String Email;
+    private String ID;
+    private String Name;
     private String Address;
     private String Status;
     private String Introduction;
     private double score;
-    private String path;            //图片存储路径
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public String getPassWord() {
-        return passWord;
-    }
-
-    public String getId() {
-        return Id;
-    }
-
-    public String getPhone() {
-        return Phone;
-    }
-
-    public String getEmail() {
-        return Email;
+    public String getName() {
+        return Name;
     }
 
     public String getAddress() {
@@ -44,32 +24,16 @@ public class Merchant {
         return Introduction;
     }
 
+    public String getID() { return ID; }
+
     public double getScore() {
         return score;
     }
 
-    public String getPath() {
-        return path;
-    }
+    public void setID(String ID) { this.ID = ID; }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }
-
-    public void setId(String id) {
-        Id = id;
-    }
-
-    public void setPhone(String phone) {
-        Phone = phone;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     public void setAddress(String address) {
@@ -86,9 +50,5 @@ public class Merchant {
 
     public void setScore(double score) {
         this.score = score;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
     }
 }

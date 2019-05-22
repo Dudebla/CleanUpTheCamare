@@ -9,8 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import domain.User;
 
-import javax.jws.soap.SOAPBinding;
-
 @Repository
 public class userDao {
     private JdbcTemplate jdbcTemplate;
