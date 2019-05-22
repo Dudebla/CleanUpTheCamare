@@ -31,7 +31,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,6 +70,8 @@ public class Seller_List_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.seller_list_layout);
+
+
 
         getUserMassage();
 
@@ -135,19 +136,19 @@ public class Seller_List_Activity extends AppCompatActivity {
     private void initSellerMesssageList(){
 //          init massage for test
         sellerMessageList = new ArrayList<SellerMessage>();
-        SellerMessage sellerMessage = new SellerMessage("0","第一个商家名字","blablablablablablabla","距离2.3km","4.5","￥50.00");
-        sellerMessageList.add(sellerMessage);
-        sellerMessage = new SellerMessage("1","第二个商家名字","blablablablablablabla","距离1.2km","5.0","￥40.00");
-        sellerMessageList.add(sellerMessage);
-        sellerMessage = new SellerMessage("2","第三个商家名字","blablablablabl","距离0km","3.9","￥50.00");
-        sellerMessageList.add(sellerMessage);
-        sellerMessage = new SellerMessage("3","第四个商家名字aaaa",
-                "blablablablablablablabbbbbbbbbbbbbbbbbbbbbbbbbbbbb","距离2.3km","4.5","￥100.00");
-        sellerMessageList.add(sellerMessage);
-        sellerMessage = new SellerMessage("4","第555555555个商家名字","blablablablabl555555555555555ablabla","距离1.2km","5.0","￥1000.00");
-        sellerMessageList.add(sellerMessage);
-        sellerMessage = new SellerMessage("5","第666666666666个商家名字","blablablablabl","距离0km","3.9","￥5000.00");
-        sellerMessageList.add(sellerMessage);
+//        SellerMessage sellerMessage = new SellerMessage("0","第一个商家名字","blablablablablablabla","距离2.3km","4.5","￥50.00");
+//        sellerMessageList.add(sellerMessage);
+//        sellerMessage = new SellerMessage("1","第二个商家名字","blablablablablablabla","距离1.2km","5.0","￥40.00");
+//        sellerMessageList.add(sellerMessage);
+//        sellerMessage = new SellerMessage("2","第三个商家名字","blablablablabl","距离0km","3.9","￥50.00");
+//        sellerMessageList.add(sellerMessage);
+//        sellerMessage = new SellerMessage("3","第四个商家名字aaaa",
+//                "blablablablablablablabbbbbbbbbbbbbbbbbbbbbbbbbbbbb","距离2.3km","4.5","￥100.00");
+//        sellerMessageList.add(sellerMessage);
+//        sellerMessage = new SellerMessage("4","第555555555个商家名字","blablablablabl555555555555555ablabla","距离1.2km","5.0","￥1000.00");
+//        sellerMessageList.add(sellerMessage);
+//        sellerMessage = new SellerMessage("5","第666666666666个商家名字","blablablablabl","距离0km","3.9","￥5000.00");
+//        sellerMessageList.add(sellerMessage);
     }
 
     private void sendRequset(){
