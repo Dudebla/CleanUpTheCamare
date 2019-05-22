@@ -1,4 +1,4 @@
-package com.example.front_end_of_clean_up_the_camera_app;
+package com.example.front_end_of_clean_up_the_camera_app.Tools;
 
 import android.content.Context;
 import android.widget.ImageView;

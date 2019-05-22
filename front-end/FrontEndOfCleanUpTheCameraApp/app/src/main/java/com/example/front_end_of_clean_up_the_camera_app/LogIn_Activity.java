@@ -15,8 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.front_end_of_clean_up_the_camera_app.MessageCalss.UserMeaasge;
+import com.example.front_end_of_clean_up_the_camera_app.Tools.LoadingWindow;
+import com.example.front_end_of_clean_up_the_camera_app.Tools.ServerConnection;
 
 import org.json.JSONObject;
 
@@ -25,7 +25,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -36,6 +35,7 @@ public class LogIn_Activity extends AppCompatActivity {
     private Button login_button;
     private String userName;
     private int userType;
+    private LoadingWindow loadingWindow = null;
 
 
     //  statement of username and password
@@ -63,6 +63,7 @@ public class LogIn_Activity extends AppCompatActivity {
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
+            loadingWindow.dismiss();
             switch (msg.what){
                 case success:
                     Intent intent;
@@ -177,8 +178,7 @@ public class LogIn_Activity extends AppCompatActivity {
         //  Dude Test Button
         dudeTestButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
-                startActivity(intent);
+//
             }
         });
 
@@ -199,6 +199,8 @@ public class LogIn_Activity extends AppCompatActivity {
     //  send login message
     private void sendLoginMessage(){
         //  create new thread
+        loadingWindow = new LoadingWindow(LogIn_Activity.this);
+        loadingWindow.show();
         new Thread(new Runnable() {
             @Override
             public void run() {

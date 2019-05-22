@@ -31,12 +31,12 @@
             android:name="com.amap.api.v2.apikey"
             android:value="67681b729e757654d7984604d1c54c7a"/>
         <service android:name="com.amap.api.location.APSService"></service>
-        <activity android:name=".HotelAroundActivity"
+        <activity android:name=".UserHome.HotelAroundActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".Seller_Msg_Activity"
+            android:name=".UserHome.Seller_Msg_Activity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Seller_List_Activity"
+        <activity android:name=".UserHome.Seller_List_Activity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".MechanthomeActivity"
             android:theme="@style/AppTheme.NoActionBar"/>

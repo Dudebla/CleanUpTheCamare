@@ -1,4 +1,4 @@
-package com.example.front_end_of_clean_up_the_camera_app;
+package com.example.front_end_of_clean_up_the_camera_app.UserHome;
 
 /*HotelAroundActivity:  activity manege even at hotel_around_
 * */
@@ -14,6 +14,7 @@ import android.view.View;
 
 import com.example.front_end_of_clean_up_the_camera_app.Adapter.HotelMessageAdaper;
 import com.example.front_end_of_clean_up_the_camera_app.MessageCalss.HotelMessage;
+import com.example.front_end_of_clean_up_the_camera_app.R;
 
 import java.util.ArrayList;
 import java.util.List;

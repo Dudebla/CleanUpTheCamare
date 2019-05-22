@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.front_end_of_clean_up_the_camera_app.Seller_Msg_Activity">
+    tools:context="com.example.front_end_of_clean_up_the_camera_app.UserHome.Seller_Msg_Activity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/seller_msg_bar"

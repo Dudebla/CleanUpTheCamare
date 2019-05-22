@@ -1,4 +1,4 @@
-package com.example.front_end_of_clean_up_the_camera_app;
+package com.example.front_end_of_clean_up_the_camera_app.UserHome;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.front_end_of_clean_up_the_camera_app.Adapter.DiscussMessageAdapter;
 import com.example.front_end_of_clean_up_the_camera_app.MessageCalss.DiscussMessage;
+import com.example.front_end_of_clean_up_the_camera_app.R;
 
 import java.util.ArrayList;
 import java.util.Date;

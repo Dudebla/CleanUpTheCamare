@@ -1,4 +1,4 @@
-package com.example.front_end_of_clean_up_the_camera_app;
+package com.example.front_end_of_clean_up_the_camera_app.UserHome;
 
 /*Seller_List_Activity  --  seller_item_layout.xml
 *   smRecyclerView: RecyclerView of seller_list_layout
@@ -17,11 +17,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
 import com.example.front_end_of_clean_up_the_camera_app.Adapter.SellerItemAdapter;
 import com.example.front_end_of_clean_up_the_camera_app.MessageCalss.SellerMessage;
+import com.example.front_end_of_clean_up_the_camera_app.R;
+import com.example.front_end_of_clean_up_the_camera_app.Tools.ServerConnection;
 
 import org.json.JSONObject;
 
