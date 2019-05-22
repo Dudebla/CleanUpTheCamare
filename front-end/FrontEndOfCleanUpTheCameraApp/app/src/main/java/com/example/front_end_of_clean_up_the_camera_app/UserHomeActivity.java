@@ -306,6 +306,7 @@ public class UserHomeActivity extends AppCompatActivity
     public void onLocationChanged(AMapLocation aMapLocation) {
         if (aMapLocation != null) {
             if(aMapLocation.getErrorCode() == 0){
+                //  set location at nav_page
                 String location = aMapLocation.getAddress();
                 SharedPreferences sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
                 sharedPreferences.edit().putString("location", location).apply();

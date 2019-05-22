@@ -34,7 +34,8 @@ public class LogIn_Activity extends AppCompatActivity {
     private EditText username_editText, password_editText;
     private TextView signin_textView, forgetPW_textView;
     private Button login_button;
-    private UserMeaasge userMeaasge;
+    private String userName;
+    private int userType;
 
 
     //  statement of username and password
@@ -46,6 +47,10 @@ public class LogIn_Activity extends AppCompatActivity {
     private static final int MSG_LEGAL = 5;
     private static final int USERNAME_NOT_FOUND = 6;
 
+    public final int success = 1;// success login
+    public final int password_error = 2;//
+    public final int no_user = 3;//user not exit
+
     //  dude TestButton
     private Button dudeTestButton;
     //  test for login
@@ -54,6 +59,32 @@ public class LogIn_Activity extends AppCompatActivity {
     //PH TestButton
     private Button PHtestButton;
 
+
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case success:
+                    Intent intent;
+                    if(userType == 1){//user
+                        intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
+                    }else{
+                        intent = new Intent(LogIn_Activity.this, MechanthomeActivity.class);
+
+                    }
+                    startActivity(intent);
+                    finish();
+                    break;
+                case password_error:
+                    Toast.makeText(LogIn_Activity.this, "用户名或密码不正确，请重新输入", Toast.LENGTH_SHORT).show();
+                    break;
+                case no_user:
+                    Toast.makeText(LogIn_Activity.this, "用户名不存在，请重新输入", Toast.LENGTH_SHORT).show();
+                    break;
+
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -174,12 +205,8 @@ public class LogIn_Activity extends AppCompatActivity {
                 HttpURLConnection connection = null;
                 BufferedReader reader = null;
                 try{
-                    String urlString = "http://" + IP + ":8080/login";
-                    URL url = new URL(urlString);
-                    connection = (HttpURLConnection)url.openConnection();
-                    connection.setConnectTimeout(8000);
-                    connection.setReadTimeout(8000);
-                    connection.setRequestMethod("POST");
+
+                    connection = new ServerConnection("login", "POST").getConnection();
                     connection.setDoInput(true);
                     connection.setDoOutput(true);
                     connection.connect();
@@ -193,43 +220,39 @@ public class LogIn_Activity extends AppCompatActivity {
 
                     InputStream inputStream = connection.getInputStream();
                     reader = new BufferedReader(new InputStreamReader(inputStream));
-                    StringBuffer respond = new StringBuffer();
+                    StringBuilder respond = new StringBuilder();
                     String line;
                     while((line = reader.readLine()) != null){
                         respond.append(line);
-                        Log.d("jsonObj1", line);
                     }
                     JSONObject jsonObject = new JSONObject(respond.toString());
                     Log.d("jsonObj2", respond.toString());
                     String result = jsonObject.getString("result");
                     if(result!=null){
+                        Message msg = new Message();
                         switch (result){
                             case "200":
                                 //  login
-                                int userType = jsonObject.getInt("flag");
-                                Intent intent;
-                                if(userType == 1){//user
-                                    intent = new Intent(LogIn_Activity.this, UserHomeActivity.class);
-                                }else{
-                                    intent = new Intent(LogIn_Activity.this, MechanthomeActivity.class);
+                                msg.what = success;
+                                userType = jsonObject.getInt("flag");
+                                userName = username_editText.getText().toString();
 
-                                }
                                 SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                                editor.putString("userName", username_editText.getText().toString());
+                                editor.putString("userName", userName);
                                 editor.putInt("userType", userType);
                                 editor.apply();
-                                userMeaasge =new UserMeaasge(username_editText.getText().toString(), userType, "");
-//                                intent.putExtra("userMessage", userMeaasge.toString());
-                                startActivity(intent);
+                                handler.sendMessage(msg);
                                 break;
                             case "404":
                                 //  username not exited
-                                Toast.makeText(LogIn_Activity.this, "用户名不存在，请重新输入", Toast.LENGTH_SHORT).show();
+                                msg.what = no_user;
+                                handler.sendMessage(msg);
                                 break;
                             case "401":
                                 //  wrong password
-                                Toast.makeText(LogIn_Activity.this, "用户名或密码不正确，请重新输入", Toast.LENGTH_SHORT).show();
+                                msg.what = password_error;
+                                handler.sendMessage(msg);
                                 break;
                                 default:
                         }
