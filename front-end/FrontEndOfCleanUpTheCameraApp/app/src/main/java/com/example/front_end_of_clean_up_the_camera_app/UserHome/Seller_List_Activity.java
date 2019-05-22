@@ -22,6 +22,7 @@ import android.support.v7.widget.Toolbar;
 import com.example.front_end_of_clean_up_the_camera_app.Adapter.SellerItemAdapter;
 import com.example.front_end_of_clean_up_the_camera_app.MessageCalss.SellerMessage;
 import com.example.front_end_of_clean_up_the_camera_app.R;
+import com.example.front_end_of_clean_up_the_camera_app.Tools.LoadingWindow;
 import com.example.front_end_of_clean_up_the_camera_app.Tools.ServerConnection;
 
 import org.json.JSONObject;
@@ -31,10 +32,15 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Seller_List_Activity extends AppCompatActivity {
+
+    public static final int MAKEORDER = 1;
+    public static final int GETDETAIL = 2;
+    public static final int VIEWDETAIL = 3;
 
     private RecyclerView smRecyclerView;
     private SellerItemAdapter sellerItemAdapter;
@@ -42,15 +48,21 @@ public class Seller_List_Activity extends AppCompatActivity {
     private String userName;
     private String location;
 
+    private static LoadingWindow loadingWindow = null;
+
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
+            if(loadingWindow != null){
+                loadingWindow.dismiss();
+                loadingWindow = null;
+            }
             switch (msg.what){
-                case 0:
+                case MAKEORDER://
                     break;
-                case 1:
+                case GETDETAIL:
                     break;
-                case 2:
+                case VIEWDETAIL:
                     break;
             }
         }
@@ -93,12 +105,19 @@ public class Seller_List_Activity extends AppCompatActivity {
         smRecyclerView.setLayoutManager(linearLayoutManager);
 
         //  manage item clicked even
-        sellerItemAdapter = new SellerItemAdapter(this, sellerMessageList);
+        sellerItemAdapter = new SellerItemAdapter(this, sellerMessageList, handler);
         sellerItemAdapter.setSellerItemOnClickerListener(new SellerItemAdapter.OnItemClickListener() {
             @Override
-            public void onItemClick(View view, int position) {
-                Intent intent = new Intent(Seller_List_Activity.this, Seller_Msg_Activity.class);
-                startActivity(intent);
+            public void onItemClick(View view, int position) {// view seller detail
+//                Intent intent = new Intent(Seller_List_Activity.this, Seller_Msg_Activity.class);
+//                startActivity(intent);
+                Message msg = new Message();
+                msg.what = Seller_List_Activity.GETDETAIL;
+                msg.arg1 = position;
+                Bundle bundle = new Bundle();
+                bundle.putInt("position", position);
+                msg.setData(bundle);
+                handler.sendMessage(msg);
             }
         });
 
@@ -181,5 +200,57 @@ public class Seller_List_Activity extends AppCompatActivity {
             }
         }).start();
 
+    }
+
+    //  send makeOrder request
+    private void makeOrder(int position){
+
+        loadingWindow = new LoadingWindow(this);
+        loadingWindow.show();
+        SellerMessage sellerMessage = sellerMessageList.get(position);
+        final String sellerID = sellerMessage.getSellerId();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                HttpURLConnection connection = new ServerConnection("makeOrder", "POST").getConnection();
+                BufferedReader reader = null;
+                try{
+
+                    connection.setDoInput(true);
+                    connection.setDoOutput(true);
+                    connection.connect();
+
+                    OutputStream outputStream = connection.getOutputStream();
+                    String orderMsg = "userName=" + userName + "&sellerId=" + sellerID;
+                    outputStream.write(orderMsg.getBytes());
+                    outputStream.flush();
+                    outputStream.close();
+
+                    InputStream inputStream = connection.getInputStream();
+                    reader = new BufferedReader(new InputStreamReader(inputStream));
+                    StringBuilder respond = new StringBuilder();
+                    String line;
+                    while ((line = reader.readLine()) != null){
+                        respond.append(line);
+                    }
+                    JSONObject jsonObject = new JSONObject(respond.toString());
+                    String result = jsonObject.getString("result");
+                    if(result != null){
+                        switch (result){
+                            case "200":
+                                break;
+                            case "404":
+                                break;
+                            default:
+                        }
+                    }
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                    Log.e("makeOrderError: ", e + e.getMessage());
+                }
+            }
+        }).start();
     }
 }

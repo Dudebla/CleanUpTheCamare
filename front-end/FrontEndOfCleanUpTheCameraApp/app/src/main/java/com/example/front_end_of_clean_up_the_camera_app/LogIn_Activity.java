@@ -34,6 +34,7 @@ public class LogIn_Activity extends AppCompatActivity {
     private TextView signin_textView, forgetPW_textView;
     private Button login_button;
     private String userName;
+    private String userId;
     private int userType;
     private LoadingWindow loadingWindow = null;
 
@@ -237,11 +238,13 @@ public class LogIn_Activity extends AppCompatActivity {
                                 //  login
                                 msg.what = success;
                                 userType = jsonObject.getInt("flag");
+                                userId = jsonObject.getString("id");
                                 userName = username_editText.getText().toString();
 
                                 SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
                                 editor.putString("userName", userName);
+                                editor.putString("userId", userId);
                                 editor.putInt("userType", userType);
                                 editor.apply();
                                 handler.sendMessage(msg);

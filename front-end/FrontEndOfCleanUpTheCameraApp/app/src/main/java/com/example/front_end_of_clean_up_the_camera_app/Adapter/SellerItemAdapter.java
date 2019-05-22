@@ -6,7 +6,11 @@ package com.example.front_end_of_clean_up_the_camera_app.Adapter;
  *  sellerInflater: LayoutInflater  -- for recyclerView layoutManager
  *  OnItemClickListener:  interface -- for OnClick event listening of sellerItem*/
 
+import android.app.Application;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,7 +22,9 @@ import android.widget.Toast;
 
 import com.example.front_end_of_clean_up_the_camera_app.MessageCalss.SellerMessage;
 import com.example.front_end_of_clean_up_the_camera_app.R;
+import com.example.front_end_of_clean_up_the_camera_app.UserHome.Seller_List_Activity;
 
+import android.os.Handler;
 import java.util.List;
 
 public class SellerItemAdapter extends RecyclerView.Adapter<SellerItemAdapter.SMViewHolder> {
@@ -26,6 +32,7 @@ public class SellerItemAdapter extends RecyclerView.Adapter<SellerItemAdapter.SM
     private List<SellerMessage> sellerMessageList;
     private LayoutInflater sellerInflater;
     private OnItemClickListener sellerItemOnClickerListener;
+    private Handler handler;//  root handler
 
     //  declare OnClicked event Listener
     public interface OnItemClickListener{
@@ -36,9 +43,10 @@ public class SellerItemAdapter extends RecyclerView.Adapter<SellerItemAdapter.SM
     }
 
     //  define adapter
-    public SellerItemAdapter(Context context, List<SellerMessage> sellerMessageList){
+    public SellerItemAdapter(Context context, List<SellerMessage> sellerMessageList, Handler handler){
         this.sellerMessageList = sellerMessageList;
         this.sellerInflater = LayoutInflater.from(context);
+        this.handler = handler;
     }
 
     //  define viewHolder
@@ -97,6 +105,13 @@ public class SellerItemAdapter extends RecyclerView.Adapter<SellerItemAdapter.SM
                 public void onClick(View v) {
                     //  take order action
                     Toast.makeText(v.getContext(), "button" + position + " onClicked", Toast.LENGTH_SHORT).show();
+                    Message msg = new Message();
+                    msg.what = Seller_List_Activity.MAKEORDER;
+                    msg.arg1 = position;
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("position", position);
+                    msg.setData(bundle);
+                    handler.sendMessage(msg);// send msg to root handle
                 }
             });
         }
@@ -106,4 +121,6 @@ public class SellerItemAdapter extends RecyclerView.Adapter<SellerItemAdapter.SM
     public int getItemCount() {
         return sellerMessageList.size();
     }
+
+
 }

@@ -72,6 +72,7 @@ public class UserHomeActivity extends AppCompatActivity
         SharedPreferences sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
         String userName  = sharedPreferences.getString("userName", "");
         int userType = sharedPreferences.getInt("userType", -1);
+        String userId = sharedPreferences.getString("userId", "");
         String location = sharedPreferences.getString("location", "");
 
         //  init Location
