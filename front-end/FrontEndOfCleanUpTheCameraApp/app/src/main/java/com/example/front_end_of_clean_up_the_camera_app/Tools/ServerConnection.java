@@ -10,7 +10,9 @@ public class ServerConnection  {
 
     public HttpURLConnection connection = null;
 
-    private static String IP = "http://54.37.47.153:8080/";
+//    private static String IP = "http://54.37.47.153:8080/";
+
+    private static String IP = "http://192.168.43.86:8080/";
 
     private String server;
 

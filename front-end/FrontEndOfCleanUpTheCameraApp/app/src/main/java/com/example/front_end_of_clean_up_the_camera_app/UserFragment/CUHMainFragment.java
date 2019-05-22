@@ -95,7 +95,8 @@ public class CUHMainFragment extends Fragment {
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
         final String userName = sharedPreferences.getString("userName", null);
-        final String userLocation = sharedPreferences.getString("locaiton", null);
+        final String userLocation = sharedPreferences.getString("location", null);
+
 
         //  set onClickListener
         makeOrderRelativeLayout.setOnClickListener(new View.OnClickListener() {

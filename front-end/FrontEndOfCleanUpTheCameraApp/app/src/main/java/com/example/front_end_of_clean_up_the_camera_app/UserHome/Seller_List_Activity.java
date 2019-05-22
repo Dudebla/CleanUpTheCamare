@@ -5,7 +5,6 @@ package com.example.front_end_of_clean_up_the_camera_app.UserHome;
 *   sellerItemAdapter: sellerAdapter of seller_item
 *   sellerMessageList: List<sellerMessage> */
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Handler;
