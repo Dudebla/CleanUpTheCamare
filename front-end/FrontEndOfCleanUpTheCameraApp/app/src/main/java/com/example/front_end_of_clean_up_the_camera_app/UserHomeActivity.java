@@ -6,6 +6,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -31,6 +34,7 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.example.front_end_of_clean_up_the_camera_app.Adapter.ContentUserHomeFragmentAdapter;
+import com.example.front_end_of_clean_up_the_camera_app.UserFragment.CUHOrderFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -151,6 +155,11 @@ public class UserHomeActivity extends AppCompatActivity
                 }
             }
         });
+
+        Boolean toOrderFragment = getIntent().getBooleanExtra("toOrderFragment", false);
+        if(toOrderFragment){
+            tabLayout.getTabAt(1).select();
+        }
 
 
     }

@@ -14,7 +14,6 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.front_end_of_clean_up_the_camera_app.Tools.GlideImageLoader;
-import com.example.front_end_of_clean_up_the_camera_app.Tools.LoadingWindow;
 import com.example.front_end_of_clean_up_the_camera_app.UserHome.HotelAroundActivity;
 import com.example.front_end_of_clean_up_the_camera_app.R;
 import com.example.front_end_of_clean_up_the_camera_app.UserHome.Seller_List_Activity;
@@ -97,12 +96,13 @@ public class CUHMainFragment extends Fragment {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
         final String userName = sharedPreferences.getString("userName", null);
         final String userLocation = sharedPreferences.getString("location", null);
-
+        final String userId = sharedPreferences.getString("userId", "");
 
         //  set onClickListener
         makeOrderRelativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getContext(), "userId: " + userId, Toast.LENGTH_SHORT).show();
                 if(userLocation == null){
                     Toast.makeText(getContext(), "获取当前定位失败，请稍后重试", Toast.LENGTH_SHORT).show();
                 }else {

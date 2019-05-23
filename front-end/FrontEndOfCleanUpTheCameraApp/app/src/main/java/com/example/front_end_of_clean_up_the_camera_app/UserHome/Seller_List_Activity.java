@@ -5,6 +5,7 @@ package com.example.front_end_of_clean_up_the_camera_app.UserHome;
 *   sellerItemAdapter: sellerAdapter of seller_item
 *   sellerMessageList: List<sellerMessage> */
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Handler;
@@ -17,6 +18,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import com.example.front_end_of_clean_up_the_camera_app.Adapter.SellerItemAdapter;
 import com.example.front_end_of_clean_up_the_camera_app.MessageCalss.SellerMessage;
@@ -36,6 +38,7 @@ import java.util.List;
 
 public class Seller_List_Activity extends AppCompatActivity {
 
+    public static final int FAILED = -1;
     public static final int MAKEORDER = 1;
     public static final int GETDETAIL = 2;
     public static final int VIEWDETAIL = 3;
@@ -45,6 +48,7 @@ public class Seller_List_Activity extends AppCompatActivity {
     private List<SellerMessage> sellerMessageList;
     private String userName;
     private String location;
+    private String userId;
 
     private static LoadingWindow loadingWindow = null;
 
@@ -58,7 +62,13 @@ public class Seller_List_Activity extends AppCompatActivity {
             switch (msg.what){
                 case MAKEORDER://
                     break;
-                case GETDETAIL:
+                case GETDETAIL://   get message of seller
+                    Bundle bundle = msg.getData();
+                    int position = bundle.getInt("position");
+                    SellerMessage sellerMessage = sellerMessageList.get(position);
+                    Intent intent = new Intent(Seller_List_Activity.this, Seller_Msg_Activity.class);
+                    intent.putExtra("sellerId", sellerMessage.getSellerId());
+                    startActivity(intent);
                     break;
                 case VIEWDETAIL:
                     break;
@@ -71,9 +81,10 @@ public class Seller_List_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.seller_list_layout);
 
+        loadingWindow = new LoadingWindow(this);
+        loadingWindow.show();
 
-
-        getUserMassage();
+        initSellerMesssageList();
 
         //  send request for sellers' message
         sendRequset();
@@ -96,7 +107,7 @@ public class Seller_List_Activity extends AppCompatActivity {
             });
         }
 
-        initSellerMesssageList();
+
 
         smRecyclerView = (RecyclerView)findViewById(R.id.seller_list_recyclerView);
 
@@ -130,12 +141,14 @@ public class Seller_List_Activity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
         userName = sharedPreferences.getString("userName", "");
         location = sharedPreferences.getString("location", "");
+        userId = sharedPreferences.getString("userId", "");
     }
 
     //      init the sellerMessageList
     private void initSellerMesssageList(){
 //          init massage for test
         sellerMessageList = new ArrayList<SellerMessage>();
+        getUserMassage();
 //        SellerMessage sellerMessage = new SellerMessage("0","第一个商家名字","blablablablablablabla","距离2.3km","4.5","￥50.00");
 //        sellerMessageList.add(sellerMessage);
 //        sellerMessage = new SellerMessage("1","第二个商家名字","blablablablablablabla","距离1.2km","5.0","￥40.00");
@@ -151,6 +164,7 @@ public class Seller_List_Activity extends AppCompatActivity {
 //        sellerMessageList.add(sellerMessage);
     }
 
+    //  ask for seller list
     private void sendRequset(){
 
         new Thread(new Runnable() {
@@ -159,13 +173,13 @@ public class Seller_List_Activity extends AppCompatActivity {
                 HttpURLConnection connection = null;
                 BufferedReader reader;
                 try{
-                    connection = new ServerConnection("getSellerList", "POST").getConnection();
+                    connection = new ServerConnection("getShopList", "POST").getConnection();
                     connection.setDoOutput(true);
                     connection.setDoInput(true);
                     connection.connect();
 
                     OutputStream outputStream = connection.getOutputStream();
-                    String sendMsg = "userName=" + userName + "&location=" + location;
+                    String sendMsg = "userId=" + userId + "&location=" + location;
                     outputStream.write(sendMsg.getBytes());
                     outputStream.flush();
                     outputStream.close();
@@ -183,10 +197,20 @@ public class Seller_List_Activity extends AppCompatActivity {
 
                     String result = jsonObject.getString("result");
                     if(result != null){
+                        Message msg;
                         switch (result){
                             case "200":
+                                msg = new Message();
+                                msg.what = GETDETAIL;
+                                Bundle bundle = new Bundle();
+                                bundle.putString("result", result);
+                                msg.setData(bundle);
+                                handler.sendMessage(msg);
                                 break;
                             case "404":
+                                msg = new Message();
+                                msg.what = FAILED;
+                                handler.sendMessage(msg);
                                 break;
                             default:
                         }

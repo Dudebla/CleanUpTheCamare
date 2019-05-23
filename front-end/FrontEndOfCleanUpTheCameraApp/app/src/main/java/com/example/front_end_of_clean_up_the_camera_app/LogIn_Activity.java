@@ -221,6 +221,8 @@ public class LogIn_Activity extends AppCompatActivity {
                     outputStream.flush();
                     outputStream.close();
 
+//                    int code = connection.getResponseCode();
+
                     InputStream inputStream = connection.getInputStream();
                     reader = new BufferedReader(new InputStreamReader(inputStream));
                     StringBuilder respond = new StringBuilder();
