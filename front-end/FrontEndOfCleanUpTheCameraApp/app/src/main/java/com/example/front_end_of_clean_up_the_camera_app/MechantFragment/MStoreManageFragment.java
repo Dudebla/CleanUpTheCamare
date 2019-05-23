@@ -1,13 +1,17 @@
 package com.example.front_end_of_clean_up_the_camera_app.MechantFragment;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,11 +21,20 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.front_end_of_clean_up_the_camera_app.MStoreManageSettingActivity.MStoreManageSettingActivity;
 import com.example.front_end_of_clean_up_the_camera_app.MechantAdapter.MStoreManageContentFragmentAdapter;
 import com.example.front_end_of_clean_up_the_camera_app.R;
+import com.example.front_end_of_clean_up_the_camera_app.Tools.ServerConnection;
 
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,6 +60,9 @@ public class MStoreManageFragment extends Fragment {
 
     @BindView(R.id.tv_mStoreIncomeTotal)
     TextView mStoreIncomeTotal;
+
+    @BindView(R.id.tv_mechantName)
+    TextView mechantName;
 
     private List<String> titles;
 
@@ -85,6 +101,11 @@ public class MStoreManageFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
+        String id = sharedPreferences.getString("userId", "");
+        String userName = sharedPreferences.getString("userName", "");
+        Toast.makeText(getContext(), "userId: " + id +"userName: " + userName, Toast.LENGTH_SHORT).show();
 
         setHasOptionsMenu(true);
 
@@ -133,6 +154,7 @@ public class MStoreManageFragment extends Fragment {
 
         adapter.setList(titles);
 
+        sendMechantMessage();
 
         return view;
 
@@ -160,6 +182,72 @@ public class MStoreManageFragment extends Fragment {
         titles.add("收入记录");
 
     }
+
+
+    //  send login message
+    private void sendMechantMessage(){
+        //  create new thread
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                HttpURLConnection connection = null;
+                BufferedReader reader = null;
+                try{
+
+                    connection = new ServerConnection("getShopInfo", "POST").getConnection();
+                    connection.setDoInput(true);
+                    connection.setDoOutput(true);
+                    connection.connect();
+
+                    SharedPreferences sharedPreferences = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
+                    String userId = sharedPreferences.getString("userId", null);
+
+                    OutputStream outputStream = connection.getOutputStream();
+                    String loginMsg = "id=" + userId;
+                    outputStream.write(loginMsg.getBytes());
+                    outputStream.flush();
+                    outputStream.close();
+
+                    InputStream inputStream = connection.getInputStream();
+                    reader = new BufferedReader(new InputStreamReader(inputStream));
+                    StringBuilder respond = new StringBuilder();
+                    String line;
+                    while((line = reader.readLine()) != null){
+                        respond.append(line);
+                    }
+                    JSONObject jsonObject = new JSONObject(respond.toString());
+                    Log.d("jsonObj2", respond.toString());
+                    String result = jsonObject.getString("result");
+                    if(result!=null){
+                        Message msg = new Message();
+                        switch (result){
+                            case "200":
+
+                                mechantName.setText(jsonObject.getString("name"));
+//                                userType = jsonObject.getInt("flag");
+//                                userName = username_editText.getText().toString();
+
+
+                                break;
+                            case "404":
+
+                                break;
+                            case "401":
+
+                                break;
+                            default:
+                        }
+                    }
+
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                    Log.d("Login_Activity", e + e.getMessage());
+                }
+            }
+        }).start();
+    }
+
 
 
 

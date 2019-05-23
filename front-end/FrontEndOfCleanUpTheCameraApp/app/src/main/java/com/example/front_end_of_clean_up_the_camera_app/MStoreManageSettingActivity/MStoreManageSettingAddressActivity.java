@@ -95,7 +95,7 @@ public class MStoreManageSettingAddressActivity extends AppCompatActivity {
 
                     //发送商家地址信息
                     OutputStream outputStream = connection.getOutputStream();
-                    String setAddressMsg = "mechantAddress=" + et_mechantAddress.getText().toString() ;
+                    String setAddressMsg = "score=" + 22 +"address=suibian" + "intro= 231" + "name=213" + "status= fahsdfk";
                     outputStream.write(setAddressMsg.getBytes());
                     outputStream.flush();
                     outputStream.close();
@@ -115,6 +115,7 @@ public class MStoreManageSettingAddressActivity extends AppCompatActivity {
                     if(result!=null){
                         switch (result){
                             case "200":
+                                //mechantName.setText(jsonObject.getString("name"));
                                 Toast.makeText(MStoreManageSettingAddressActivity.this, "保存成功！", Toast.LENGTH_SHORT).show();
                                 break;
                             case "404":

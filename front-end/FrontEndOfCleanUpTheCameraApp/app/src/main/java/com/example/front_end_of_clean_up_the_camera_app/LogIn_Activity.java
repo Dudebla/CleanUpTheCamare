@@ -55,7 +55,7 @@ public class LogIn_Activity extends AppCompatActivity {
     //  dude TestButton
     private Button dudeTestButton;
     //  test for login
-    private String IP = "54.37.47.153";
+    private String IP = "192.168.43.86";
 
     //PH TestButton
     private Button PHtestButton;
@@ -240,11 +240,15 @@ public class LogIn_Activity extends AppCompatActivity {
                                 userType = jsonObject.getInt("flag");
                                 userId = jsonObject.getString("id");
                                 userName = username_editText.getText().toString();
-
+                                userId = jsonObject.getString("id");
                                 SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
                                 editor.putString("userName", userName);
+
                                 editor.putString("userId", userId);
+
+                                editor.putString("userId",userId);
+
                                 editor.putInt("userType", userType);
                                 editor.apply();
                                 handler.sendMessage(msg);
